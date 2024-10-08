@@ -1,1 +1,0 @@
-# Snake_game_LTTQ
