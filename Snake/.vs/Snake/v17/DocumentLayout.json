@@ -1,0 +1,129 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|d:\\hoc tap\\n\u0103m 2\\lttq\\doan\\snake\\asset\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|solutionrelative:asset\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|d:\\hoc tap\\n\u0103m 2\\lttq\\doan\\snake\\asset\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|solutionrelative:asset\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|d:\\hoc tap\\n\u0103m 2\\lttq\\doan\\snake\\asset\\gridvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|solutionrelative:asset\\gridvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|d:\\hoc tap\\n\u0103m 2\\lttq\\doan\\snake\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|d:\\hoc tap\\n\u0103m 2\\lttq\\doan\\snake\\snake.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|solutionrelative:snake.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|d:\\hoc tap\\n\u0103m 2\\lttq\\doan\\snake\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C8801BB-BF32-475C-8979-7D2B9F7FE0BA}|Snake.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Position.cs",
+              "DocumentMoniker": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\Asset\\Position.cs",
+              "RelativeDocumentMoniker": "Asset\\Position.cs",
+              "ToolTip": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\Asset\\Position.cs",
+              "RelativeToolTip": "Asset\\Position.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T22:53:20.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Direction.cs",
+              "DocumentMoniker": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\Asset\\Direction.cs",
+              "RelativeDocumentMoniker": "Asset\\Direction.cs",
+              "ToolTip": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\Asset\\Direction.cs",
+              "RelativeToolTip": "Asset\\Direction.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAiwC0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T22:44:17.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GridValue.cs",
+              "DocumentMoniker": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\Asset\\GridValue.cs",
+              "RelativeDocumentMoniker": "Asset\\GridValue.cs",
+              "ToolTip": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\Asset\\GridValue.cs",
+              "RelativeToolTip": "Asset\\GridValue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T22:40:39.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Snake",
+              "DocumentMoniker": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\Snake.csproj",
+              "RelativeDocumentMoniker": "Snake.csproj",
+              "ToolTip": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\Snake.csproj",
+              "RelativeToolTip": "Snake.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-08T22:34:10.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-08T22:31:39.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\HOC TAP\\N\u0103m 2\\LTTQ\\DoAn\\Snake\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T22:31:13.039Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

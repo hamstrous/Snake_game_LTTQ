@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Asset\Body.png" />
+    <None Remove="Asset\DeadBody.png" />
+    <None Remove="Asset\DeadHead.png" />
+    <None Remove="Asset\DroidSansMono.ttf" />
+    <None Remove="Asset\Empty.png" />
+    <None Remove="Asset\Food.png" />
+    <None Remove="Asset\Head.png" />
+    <None Remove="Asset\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Asset\Body.png" />
+    <Resource Include="Asset\DeadBody.png" />
+    <Resource Include="Asset\DeadHead.png" />
+    <Resource Include="Asset\DroidSansMono.ttf" />
+    <Resource Include="Asset\Empty.png" />
+    <Resource Include="Asset\Food.png" />
+    <Resource Include="Asset\Head.png" />
+    <Resource Include="Asset\icon.ico" />
+  </ItemGroup>
+
+</Project>
