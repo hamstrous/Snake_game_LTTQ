@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HOC TAP\\Năm 2\\LTTQ\\DoAn\\Snake\\Snake.csproj",
+      "projectUniqueName": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
       "projectName": "Snake",
-      "projectPath": "D:\\HOC TAP\\Năm 2\\LTTQ\\DoAn\\Snake\\Snake.csproj",
+      "projectPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\HOC TAP\\Năm 2\\LTTQ\\DoAn\\Snake\\obj\\",
+      "outputPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

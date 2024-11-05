@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snake.Asset
+namespace Snake
 {
     public class Position
     {
         public int Row { get; }
         public int Col { get; }
 
-        public Position (int row, int col)
+        public Position(int row, int col)
         {
             Row = row;
             Col = col;

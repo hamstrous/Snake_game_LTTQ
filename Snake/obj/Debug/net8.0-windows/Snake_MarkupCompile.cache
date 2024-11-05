@@ -1,18 +1,18 @@
 ﻿Snake
-1.0.0.0
+
 
 winexe
 C#
 .cs
-D:\HOC TAP\Năm 2\LTTQ\DoAn\Snake\obj\Debug\net8.0-windows\
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\
 Snake
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\HOC TAP\Năm 2\LTTQ\DoAn\Snake\App.xaml
+D:\Github\Snake_game_LTTQ\Snake\App.xaml
 11407045341
 
-988123261
+71084812356
 198-635017904
 MainWindow.xaml;
 
