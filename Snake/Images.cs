@@ -1,20 +1,22 @@
 ﻿using System;
-using System.Windows.Media.Imaging;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Snake
 {
-    public static class Images
+    public class Images
     {
-        public static ImageSource Head => LoadImage("Head.png");
-        public static ImageSource DeadHead => LoadImage("DeadHead.png");
-        public static ImageSource Body => LoadImage("Body.png");
-        public static ImageSource DeadBody => LoadImage("DeadBody.png");
-        public static ImageSource Food => LoadImage("Food.png");
-        public static ImageSource Empty => LoadImage("Empty.png");
+        public readonly static ImageSource Empty = LoadImage("Empty.png");
+        public readonly static ImageSource Body = LoadImage("Body.png");
+        public readonly static ImageSource Head = LoadImage("Head.png");
+        public readonly static ImageSource Food = LoadImage("Food.png");
+        public readonly static ImageSource DeadBody = LoadImage("DeadBody.png");
+        public readonly static ImageSource DeadHead = LoadImage("DeadHead.png");
         private static ImageSource LoadImage(string fileName)
         {
             return new BitmapImage(new Uri($"Assets/{fileName}", UriKind.Relative));
         }
+
+
     }
 }
