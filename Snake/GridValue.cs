@@ -5,6 +5,8 @@
         Empty, 
         Snake,
         Food,
+        Box,
+        Wall,
         Outside
     }
 }
