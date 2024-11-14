@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -7,35 +8,36 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
+    public enum GameMode
+    {
+        Normal,
+        Box
+    }
    public class GameState
     {
-        public int Rows { get; }
-        public int Cols { get; }
+        public int Rows { get; protected set; }
+        public int Cols { get; protected set; }
 
-        public GridValue[,] Grid {  get; }
+        public GridValue[,] Grid {  get; protected set; }
 
-        public Directions Dir { get; private set; }
-        public int Score { get; private set; }
+        public Directions Dir { get; protected set; }
+        public int Score { get; protected set; }
         
-        public int HighScore { get; private set; }
-        public bool GameOver { get; private set; }
+        public int HighScore { get; protected set; }
+        public bool GameOver { get; protected set; }
 
-        private readonly LinkedList<Directions> dirChanges = new LinkedList<Directions>();
-        private readonly LinkedList<Positions> snakePositions = new LinkedList<Positions>();
-        private readonly Random random = new Random();
+        public GameMode Mode { get; protected set; }
+
+        protected readonly LinkedList<Directions> dirChanges = new LinkedList<Directions>();
+        protected LinkedList<Positions> snakePositions = new LinkedList<Positions>();
+        protected readonly Random random = new Random();
 
         public GameState(int rows , int cols)
         {
-            Rows = rows;
-            Cols = cols;
-            Grid = new GridValue[rows, cols];
-            Dir = Directions.Right;
-            LoadHighScore();
-            AddSnake();
-            AddFood();
+            
         }
 
-        private void AddSnake()
+        protected void AddSnake()
         {
             int r = Rows / 2;
             
@@ -46,7 +48,7 @@ namespace Snake
             }
         }
 
-        private IEnumerable<Positions> EmptyPositions()
+        protected virtual IEnumerable<Positions> EmptyPositions()
         {
             for (int r = 0;  r < Rows; r++)
             {
@@ -60,17 +62,29 @@ namespace Snake
             }
         }
 
-        private void AddFood()
+        protected void AddObject(GridValue ob, int x = -1, int y = -1)
         {
             List<Positions> empty = new List<Positions>(EmptyPositions());
-            
+
             if (empty.Count == 0)
             {
                 return;
             }
 
-            Positions pos = empty[random.Next(empty.Count)];
-            Grid[pos.Row , pos.Column] = GridValue.Food;
+            Positions pos = (x == -1) ? empty[random.Next(empty.Count)] : new Positions(x, y);
+            Grid[pos.Row, pos.Column] = ob;
+        }
+        protected void AddFood(int x = -1 ,int y = -1)
+        {
+            List<Positions> empty = new List<Positions>(EmptyPositions());
+
+            if (empty.Count == 0)
+            {
+                return;
+            }
+
+            Positions pos = (x == -1) ? empty[random.Next(empty.Count)]:new Positions(x,y);
+            Grid[pos.Row, pos.Column] = GridValue.Food;
         }
 
         public Positions HeadPosition()
@@ -88,20 +102,20 @@ namespace Snake
             return snakePositions;
         }
 
-        private void AddHead(Positions pos)
+        protected void AddHead(Positions pos)
         {
             snakePositions.AddFirst(pos);
             Grid[pos.Row, pos.Column] = GridValue.Snake;
         }
 
-        private void RemoveTail()
+        protected void RemoveTail()
         {
             Positions tail = snakePositions.Last.Value;
             Grid[tail.Row, tail.Column] = GridValue.Empty;
             snakePositions.RemoveLast();
         }
 
-        private Directions GetLastDirection()
+        protected Directions GetLastDirection()
         {
             if (dirChanges.Count == 0)
             {
@@ -111,7 +125,7 @@ namespace Snake
             return dirChanges.Last.Value;
         }
 
-        private bool CanChangeDirection(Directions newDir)
+        protected bool CanChangeDirection(Directions newDir)
         {
             if (dirChanges.Count == 2)
             {
@@ -130,12 +144,12 @@ namespace Snake
             }
         }
 
-        private bool OutsideGrid(Positions pos)
+        protected bool OutsideGrid(Positions pos)
         {
             return pos.Row < 0 || pos.Column < 0 || pos.Row >= Rows || pos.Column >= Cols;
         }
 
-        private GridValue WillHit(Positions newHeadPos)
+        protected GridValue WillHit(Positions newHeadPos)
         {
             if (OutsideGrid(newHeadPos))
             {
@@ -150,7 +164,7 @@ namespace Snake
             return Grid[newHeadPos.Row, newHeadPos.Column];
         }
 
-        public void Move()
+        public virtual void Move()
         {
             if (dirChanges.Count > 0)
             {

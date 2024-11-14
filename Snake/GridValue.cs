@@ -6,6 +6,7 @@
         Snake,
         Food,
         Box,
+        Goal,
         Wall,
         Outside
     }
