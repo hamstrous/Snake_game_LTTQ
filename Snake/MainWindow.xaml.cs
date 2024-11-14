@@ -17,7 +17,10 @@ namespace Snake
         {
             { GridValue.Empty, Images.Empty },
             { GridValue.Snake, Images.Body },
-            { GridValue.Food, Images.Food }
+            { GridValue.Food, Images.Food },
+            { GridValue.Box, Images.Box },
+            { GridValue.Goal, Images.Goal },
+            { GridValue.Wall, Images.Wall }
         };
 
         private readonly Dictionary<Directions, int> dirToRotation = new()
@@ -37,7 +40,7 @@ namespace Snake
         {
             InitializeComponent();
             gridImages = SetupGrid();
-            gameState = new GameState(rows, cols);
+            gameState = new ReverseModeState(rows, cols);
         }
 
         private async Task RunGame()
@@ -47,7 +50,7 @@ namespace Snake
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            gameState = new GameState(rows, cols);
+            gameState = new ReverseModeState(rows, cols);
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -93,7 +96,7 @@ namespace Snake
         {
             while (!gameState.GameOver)
             {
-                await Task.Delay(75);
+                await Task.Delay(100);
                 gameState.Move();
                 Draw();
             }
@@ -179,7 +182,7 @@ namespace Snake
         private async Task ShowGameOver()
         {
             await DrawDeadSnake();
-            await Task.Delay(1000);
+            await Task.Delay(500);
             Overlay.Visibility = Visibility.Visible;
             OverlayText.Text = "Ấn để bắt đầu!!";
         }
