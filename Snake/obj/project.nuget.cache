@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hlJgsJZnz5c=",
+  "dgSpecHash": "YsY3lbtxnKIlrHGHld5Zk+Hl0EPieGkjgCMLOMsz7QOEiVIUlnawgTGmt6V9akzrFDrsXPrBHVhgPHQKq/oF9A==",
   "success": true,
-  "projectFilePath": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\materialdesigncolors\\3.1.0\\materialdesigncolors.3.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\materialdesignthemes\\5.1.0\\materialdesignthemes.5.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }
