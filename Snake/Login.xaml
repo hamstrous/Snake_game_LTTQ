@@ -47,14 +47,14 @@
                         <StackPanel Margin="0 15 0 0" HorizontalAlignment="Center">
                             <Button  Style="{StaticResource signinbutton}"                                
                                     BorderThickness="2" 
-                                    x:Name="btnLogin" Click="btnLogin_Click" Content="Login" Width="112" FontSize="18"/>
+                                    x:Name="btnLogin" Click="btnLogin_Click" Content="Log in" Width="112" FontSize="18"/>
                         </StackPanel>
 
                         <StackPanel Margin="10" HorizontalAlignment="Center">
                             <Button Style="{StaticResource button}"
                                     BorderThickness="2" 
                                     
-                                    x:Name="btnSignin" Click="btnSignin_Click" Content="Signin" Width="101" Height="53" FontSize="16"/>
+                                    x:Name="btnSignin" Click="btnSignin_Click" Content="Sign in" Width="101" Height="53" FontSize="16"/>
 
 
                         </StackPanel>

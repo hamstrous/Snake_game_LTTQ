@@ -40,7 +40,7 @@ namespace Snake
         {
             InitializeComponent();
             gridImages = SetupGrid();
-            gameState = new ReverseModeState(rows, cols);
+            gameState = new BoxModeState(rows, cols);
         }
 
         private async Task RunGame()
@@ -50,7 +50,7 @@ namespace Snake
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            gameState = new ReverseModeState(rows, cols);
+            gameState = new BoxModeState(rows, cols);
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
