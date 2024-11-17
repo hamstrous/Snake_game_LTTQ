@@ -20,6 +20,7 @@
     <None Remove="Assets\Head.png" />
     <None Remove="Assets\icon.ico" />
     <None Remove="Assets\Wall.png" />
+    <None Remove="Resources\background.jpg" />
     <None Remove="Resources\snake.jpg" />
   </ItemGroup>
 
@@ -44,6 +45,7 @@
     <Resource Include="Assets\Head.png" />
     <Resource Include="Assets\icon.ico" />
     <Resource Include="Assets\Wall.png" />
+    <Resource Include="Resources\background.jpg" />
     <Resource Include="Resources\dic.xaml" />
     <Resource Include="Resources\snake.jpg" />
   </ItemGroup>
