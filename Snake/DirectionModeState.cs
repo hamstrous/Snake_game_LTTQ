@@ -65,6 +65,7 @@ namespace Snake
             {
                 DeleteObject(newHeadPos);
                 AddHead(newHeadPos);
+                AddFood();
                 Score++;
                 if (Score > HighScore)
                 {

@@ -36,12 +36,39 @@ namespace Snake
         private readonly Image[,] gridImages;   
         private GameState gameState;
         private bool gameRunning;
+        private GameInit GameInit { get; set; }
+        private GameState Mode { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
+            GameInit = new GameInit(GameSize.Medium, GameSpeed.Medium, GameBackgroundColor.Dark, SnakeColor.Green, GameMode.Reverse);
+            switch(GameInit.GameSize)
+            {
+                case GameSize.Small:
+                    rows = 13;
+                    cols = 11;
+                    break;
+                case GameSize.Medium:
+                    rows = 17;
+                    cols = 15;
+                    break;
+                case GameSize.Large:
+                    rows = 21;
+                    cols = 19;
+                    break;
+            }
+            Mode = GameInit.GameMode switch
+            {
+                GameMode.Normal => new NormalModeState(rows, cols),
+                GameMode.Box => new BoxModeState(rows, cols),
+                GameMode.Wall => new WallModeState(rows, cols),
+                GameMode.Direction => new DirectionModeState(rows, cols),
+                GameMode.Reverse => new ReverseModeState(rows, cols),
+                _ => new NormalModeState(rows, cols)
+            };
             gridImages = SetupGrid();
-            gameState = new DirectionModeState(rows, cols);
+            gameState = Mode;
         }
 
         private async Task RunGame()
@@ -51,7 +78,7 @@ namespace Snake
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            gameState = new DirectionModeState(rows, cols);
+            gameState = Mode;
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -95,9 +122,16 @@ namespace Snake
 
         private async Task GameLoop()
         {
+            int delay = GameInit.GameSpeed switch
+            {
+                GameSpeed.Slow => 200,
+                GameSpeed.Medium => 100,
+                GameSpeed.Fast => 50,
+                _ => 100
+            };
             while (!gameState.GameOver)
             {
-                await Task.Delay(100);
+                await Task.Delay(delay);
                 gameState.Move();
                 Draw();
             }
