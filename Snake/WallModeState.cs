@@ -9,12 +9,7 @@ namespace Snake
     public class WallModeState : GameState
     {
         public WallModeState(int rows, int cols) : base(rows, cols)
-        {
-            Rows = rows;
-            Cols = cols;
-            Grid = new GridValue[rows, cols];
-            Dir = Directions.Right;
-            LoadHighScore();
+        {   
             AddSnake();
             AddFood();
         }
@@ -26,7 +21,7 @@ namespace Snake
             for (int i = 0; i < 8; i++)
             {
                 Positions nPos = new Positions(pos.Row + dx[i], pos.Column + dy[i]);
-                if(!OutsideGrid(nPos) && Grid[nPos.Row, nPos.Column] == GridValue.Wall)
+                if(!OutsideGrid(nPos) && Grid[nPos.Row, nPos.Column].First.Value == GridValue.Wall)
                 {
                     return true;
                 }
@@ -40,7 +35,7 @@ namespace Snake
             {
                 for (int c = 0; c < Cols; c++)
                 {
-                    if (Grid[r, c] == GridValue.Empty && !WallAround(new Positions(r, c)))
+                    if (Grid[r, c].Last.Value == GridValue.Empty && !WallAround(new Positions(r, c)))
                     {
                         yield return new Positions(r, c);
                     }
@@ -59,7 +54,7 @@ namespace Snake
             }
 
             Positions pos = empty[random.Next(empty.Count)];
-            Grid[pos.Row, pos.Column] = GridValue.Wall;
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Wall, Directions.Up));
             
         }
 
@@ -86,6 +81,7 @@ namespace Snake
             }
             else if (hit == GridValue.Food)
             {
+                DeleteObject(newHeadPos);
                 AddHead(newHeadPos);
                 Score++;
                 if (Score > HighScore)

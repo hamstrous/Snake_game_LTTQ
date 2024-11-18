@@ -149,19 +149,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+      "projectUniqueName": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
       "projectName": "Snake",
-      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Snake.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\obj\\",
+      "projectPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -220,7 +220,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -15,6 +15,7 @@ namespace Snake
         public readonly static ImageSource Box = LoadImage("Box.png");
         public readonly static ImageSource Goal = LoadImage("Goal.png");
         public readonly static ImageSource Wall = LoadImage("Wall.png");
+        public readonly static ImageSource DirectionPad = LoadImage("DirectionPad.png");
         private static ImageSource LoadImage(string fileName)
         {
             return new BitmapImage(new Uri($"Assets/{fileName}", UriKind.Relative));

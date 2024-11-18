@@ -20,7 +20,8 @@ namespace Snake
             { GridValue.Food, Images.Food },
             { GridValue.Box, Images.Box },
             { GridValue.Goal, Images.Goal },
-            { GridValue.Wall, Images.Wall }
+            { GridValue.Wall, Images.Wall },
+            { GridValue.DirectionPad, Images.DirectionPad }
         };
 
         private readonly Dictionary<Directions, int> dirToRotation = new()
@@ -40,7 +41,7 @@ namespace Snake
         {
             InitializeComponent();
             gridImages = SetupGrid();
-            gameState = new BoxModeState(rows, cols);
+            gameState = new DirectionModeState(rows, cols);
         }
 
         private async Task RunGame()
@@ -50,7 +51,7 @@ namespace Snake
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            gameState = new BoxModeState(rows, cols);
+            gameState = new DirectionModeState(rows, cols);
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -141,9 +142,11 @@ namespace Snake
             {
                 for (int c = 0; c < cols; c++)
                 {
-                    GridValue gridVal = gameState.Grid[r, c];
+                    GridValue gridVal = gameState.Grid[r, c].First.Value.First;
+                    int rotation = dirToRotation[gameState.Grid[r, c].First.Value.Second];
+
                     gridImages[r, c].Source = gridValtoImage[gridVal];
-                    gridImages[r, c].RenderTransform = Transform.Identity;
+                    gridImages[r, c].RenderTransform = new RotateTransform(rotation);
                 }
             }
         }
@@ -153,9 +156,6 @@ namespace Snake
             Positions headPos = gameState.HeadPosition();
             Image image = gridImages[headPos.Row, headPos.Column];
             image.Source = Images.Head;
-
-            int rotation = dirToRotation[gameState.Dir];
-            image.RenderTransform = new RotateTransform(rotation);
         }
 
         private async Task DrawDeadSnake()

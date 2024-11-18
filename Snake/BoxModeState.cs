@@ -10,18 +10,13 @@ namespace Snake
     {
         public BoxModeState(int rows, int cols) : base(rows, cols)
         {
-            Rows = rows;
-            Cols = cols;
-            Grid = new GridValue[rows, cols];
-            Dir = Directions.Right;
-            LoadHighScore();
             AddSnake();
             AddBox(true);
         }
 
         protected void MoveBox(Positions pos)
         {
-            Grid[pos.Row, pos.Column] = GridValue.Box;
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Box, Directions.Up));
         }
 
         protected IEnumerable<Positions> EmptyNotNearOutsidePosition()
@@ -30,7 +25,7 @@ namespace Snake
             {
                 for (int c = 1; c < Cols - 1; c++)
                 {
-                    if (Grid[r, c] == GridValue.Empty)
+                    if (Grid[r, c].First.Value == GridValue.Empty)
                     {
                         yield return new Positions(r, c);
                     }
@@ -48,7 +43,7 @@ namespace Snake
             }
 
             Positions pos = empty[random.Next(empty.Count)];
-            Grid[pos.Row, pos.Column] = GridValue.Box;
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Box, Directions.Up));
             if(addGoal) AddGoal();
         }
 
@@ -62,7 +57,7 @@ namespace Snake
             }
 
             Positions pos = empty[random.Next(empty.Count)];
-            Grid[pos.Row, pos.Column] = GridValue.Goal;
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Goal, Directions.Up));
         }
 
         public override void Move()
@@ -81,13 +76,14 @@ namespace Snake
                 GameOver = true;
                 SaveHighScore();
             }
-            else if (hit == GridValue.Empty)
+            else if (hit == GridValue.Empty || hit == GridValue.Goal)
             {
                 RemoveTail();
                 AddHead(newHeadPos);
             }
             else if (hit == GridValue.Food)
             {
+                DeleteObject(newHeadPos);
                 AddHead(newHeadPos);
                 Score++;
                 if (Score > HighScore)
@@ -101,6 +97,7 @@ namespace Snake
                 GridValue boxHit = WillHit(newBoxPos);
                 if(boxHit == GridValue.Outside)
                 {
+                    DeleteObject(newHeadPos);
                     AddBox(false);
                     RemoveTail();
                     AddHead(newHeadPos);
@@ -112,12 +109,15 @@ namespace Snake
                 }
                 else if (boxHit == GridValue.Goal)
                 {
+                    DeleteObject(newHeadPos);
+                    DeleteObject(newBoxPos);
                     RemoveTail();
                     AddFood(newBoxPos.Row, newBoxPos.Column);
                     AddHead(newHeadPos);
                 }
                 else
                 {
+                    DeleteObject(newHeadPos);
                     RemoveTail();
                     AddHead(newHeadPos);
                     MoveBox(newBoxPos);
