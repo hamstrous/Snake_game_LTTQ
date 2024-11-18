@@ -8,11 +8,6 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    public enum GameMode
-    {
-        Normal,
-        Box
-    }
    public class GameState
     {
         public int Rows { get; protected set; }

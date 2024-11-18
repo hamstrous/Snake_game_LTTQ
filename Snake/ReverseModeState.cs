@@ -27,6 +27,7 @@ namespace Snake
                     currentNode = currentNode.Next;
                 }
                 snakePositions = reversedList;
+                Grid[HeadPosition().Row, HeadPosition().Column].First.Value.Second = Dir;
             }
         }
 
@@ -88,9 +89,11 @@ namespace Snake
             else if (hit == GridValue.Food)
             {
                 Directions nDir = TailDirection();
+                DeleteObject(newHeadPos);
+                Dir = nDir;
                 AddHead(newHeadPos);
                 SwapSnake();
-                Dir = nDir;
+                
                 eaten = 3;
                 Score++;
                 if (Score > HighScore)
