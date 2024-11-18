@@ -141,7 +141,7 @@ namespace Snake
             {
                 for (int c = 0; c < cols; c++)
                 {
-                    GridValue gridVal = gameState.Grid[r, c];
+                    GridValue gridVal = gameState.Grid[r, c].First.Value;
                     gridImages[r, c].Source = gridValtoImage[gridVal];
                     gridImages[r, c].RenderTransform = Transform.Identity;
                 }

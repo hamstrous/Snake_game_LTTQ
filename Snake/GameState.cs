@@ -18,7 +18,7 @@ namespace Snake
         public int Rows { get; protected set; }
         public int Cols { get; protected set; }
 
-        public GridValue[,] Grid {  get; protected set; }
+        public LinkedList<GridValue>[,] Grid {  get; protected set; }
 
         public Directions Dir { get; protected set; }
         public int Score { get; protected set; }
@@ -34,7 +34,19 @@ namespace Snake
 
         public GameState(int rows , int cols)
         {
-            
+            Grid = new LinkedList<GridValue>[rows, cols];
+            Dir = Directions.Right;
+            Rows = rows;
+            Cols = cols;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    Grid[i, j] = new LinkedList<GridValue>();
+                    Grid[i, j].AddFirst(GridValue.Empty);
+                }
+            }
+            LoadHighScore();
         }
 
         protected void AddSnake()
@@ -43,7 +55,7 @@ namespace Snake
             
             for (int c = 1; c <= 3; c++)
             {
-                Grid[r, c] = GridValue.Snake;
+                Grid[r, c].AddFirst(GridValue.Snake);
                 snakePositions.AddFirst(new  Positions(r, c));
             }
         }
@@ -54,12 +66,18 @@ namespace Snake
             {
                 for (int c = 0; c < Cols; c++)
                 {
-                    if (Grid[r , c] == GridValue.Empty)
+                    if (Grid[r , c].First.Value == GridValue.Empty)
                     {
                         yield return new Positions(r, c);
                     }
                 }
             }
+        }
+
+        // Delete upper object
+        protected void DeleteObject(Positions pos)
+        {
+            Grid[pos.Row, pos.Column].RemoveFirst();
         }
 
         protected void AddObject(GridValue ob, int x = -1, int y = -1)
@@ -72,7 +90,7 @@ namespace Snake
             }
 
             Positions pos = (x == -1) ? empty[random.Next(empty.Count)] : new Positions(x, y);
-            Grid[pos.Row, pos.Column] = ob;
+            Grid[pos.Row, pos.Column].AddFirst(ob);
         }
         protected void AddFood(int x = -1 ,int y = -1)
         {
@@ -84,7 +102,7 @@ namespace Snake
             }
 
             Positions pos = (x == -1) ? empty[random.Next(empty.Count)]:new Positions(x,y);
-            Grid[pos.Row, pos.Column] = GridValue.Food;
+            Grid[pos.Row, pos.Column].AddFirst(GridValue.Food);
         }
 
         public Positions HeadPosition()
@@ -105,13 +123,13 @@ namespace Snake
         protected void AddHead(Positions pos)
         {
             snakePositions.AddFirst(pos);
-            Grid[pos.Row, pos.Column] = GridValue.Snake;
+            Grid[pos.Row, pos.Column].AddFirst(GridValue.Snake);
         }
 
         protected void RemoveTail()
         {
             Positions tail = snakePositions.Last.Value;
-            Grid[tail.Row, tail.Column] = GridValue.Empty;
+            DeleteObject(tail);
             snakePositions.RemoveLast();
         }
 
@@ -161,7 +179,7 @@ namespace Snake
                 return GridValue.Empty;
             }
 
-            return Grid[newHeadPos.Row, newHeadPos.Column];
+            return Grid[newHeadPos.Row, newHeadPos.Column].First.Value;
         }
 
         public virtual void Move()
@@ -187,6 +205,7 @@ namespace Snake
             }
             else if (hit == GridValue.Food)
             {
+                DeleteObject(newHeadPos);
                 AddHead(newHeadPos);
                 Score++;
                 if (Score > HighScore)
