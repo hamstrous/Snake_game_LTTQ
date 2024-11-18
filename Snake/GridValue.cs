@@ -8,6 +8,7 @@
         Box,
         Goal,
         Wall,
+        DirectionPad,
         Outside
     }
 }

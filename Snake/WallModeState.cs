@@ -54,7 +54,7 @@ namespace Snake
             }
 
             Positions pos = empty[random.Next(empty.Count)];
-            Grid[pos.Row, pos.Column].AddFirst(GridValue.Wall);
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Wall, Directions.Up));
             
         }
 

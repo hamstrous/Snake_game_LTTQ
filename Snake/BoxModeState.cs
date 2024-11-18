@@ -16,7 +16,7 @@ namespace Snake
 
         protected void MoveBox(Positions pos)
         {
-            Grid[pos.Row, pos.Column].AddFirst(GridValue.Box);
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Box, Directions.Up));
         }
 
         protected IEnumerable<Positions> EmptyNotNearOutsidePosition()
@@ -43,7 +43,7 @@ namespace Snake
             }
 
             Positions pos = empty[random.Next(empty.Count)];
-            Grid[pos.Row, pos.Column].AddFirst(GridValue.Box);
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Box, Directions.Up));
             if(addGoal) AddGoal();
         }
 
@@ -57,7 +57,7 @@ namespace Snake
             }
 
             Positions pos = empty[random.Next(empty.Count)];
-            Grid[pos.Row, pos.Column].AddFirst(GridValue.Goal);
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Goal, Directions.Up));
         }
 
         public override void Move()
