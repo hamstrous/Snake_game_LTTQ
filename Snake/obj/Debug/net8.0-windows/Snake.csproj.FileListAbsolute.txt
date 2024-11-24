@@ -123,3 +123,9 @@ D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\Microsoft.Xaml.Behavior
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Login.baml
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Signin.baml
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.csproj.Up2Date
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll

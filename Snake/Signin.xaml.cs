@@ -19,19 +19,25 @@ namespace Snake
     /// </summary>
     public partial class Signin : Window
     {
+        Database dtb;
         public Signin()
         {
             InitializeComponent();
+            dtb = new Database();
         }
 
         private void btnLogin2_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1 login = new Window1();
+            login.Show();
+            this.Close();
         }
 
         private void btnSignin2_Click(object sender, RoutedEventArgs e)
         {
-
+            string inputUser = txtUser.Text.Trim();
+            string inputPassword = txtPass.Text.Trim();
+            dtb.add(inputUser, inputPassword);
         }
     }
 }
