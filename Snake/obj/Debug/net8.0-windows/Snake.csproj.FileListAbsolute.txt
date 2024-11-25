@@ -129,3 +129,5 @@ D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-x64\native
 D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
 D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
 D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\MainMenu.g.cs
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\MainMenu.baml
