@@ -105,8 +105,6 @@ C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\r
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.pdb
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.genruntimeconfig.cache
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ref\Snake.dll
-C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Window1.g.cs
-C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Window1.baml
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.csproj.AssemblyReference.cache
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\MaterialDesignColors.dll
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
@@ -129,3 +127,15 @@ D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-x64\native
 D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
 D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
 D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Login.g.cs
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Login.baml
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseMode.g.cs
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseMode.baml
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Setting.g.cs
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Setting.baml

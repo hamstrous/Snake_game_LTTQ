@@ -32,12 +32,12 @@
                        Foreground="#31511E">
             </TextBlock>
             <TextBlock Height="37"
-           Text="Username"
-           HorizontalAlignment="Center"
-           FontWeight="Light"
-           FontSize="30"
-           FontFamily="Gloucester MT Extra Condensed"
-           Foreground="#54473F" Width="286">
+                       Text="Username"
+                       HorizontalAlignment="Center"
+                       FontWeight="Light"
+                       FontSize="30"
+                       FontFamily="Gloucester MT Extra Condensed"
+                       Foreground="#54473F" Width="286">    
             </TextBlock>
 
             <TextBox x:Name="txtUser"
@@ -65,14 +65,14 @@
             </TextBlock>
 
             <TextBox x:Name="txtPass"
-          FontSize="20"
-          FontWeight="Medium"
-          Background="Transparent"
-          CaretBrush="Black"
-          Foreground="#54473F"
-          BorderBrush="Black"
-          BorderThickness="0,0,0,1"
-          Margin="0,5,0,40" Width="285">
+                     FontSize="20"
+                     FontWeight="Medium"
+                     Background="Transparent"
+                     CaretBrush="Black"
+                     Foreground="#54473F"
+                     BorderBrush="Black"
+                     BorderThickness="0,0,0,1"
+                     Margin="0,5,0,40" Width="285">
                 
             </TextBox>
 
