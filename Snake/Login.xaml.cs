@@ -22,23 +22,23 @@ namespace Snake
     /// </summary>
     public partial class Window1 : Window
     {
-        Database dtb;
         public Window1()
         {
             InitializeComponent();
-            dtb = new Database();
         }
 
         private void btnLogin_Click (object sender, RoutedEventArgs e)
         {
-            string inputUser = txtusername.Text.Trim();
-            string inputPassword = txtpassword.Password.Trim();
-            if (dtb.checkLogin(inputUser, inputPassword))
+            string username = txtusername.Text;
+            string password = txtpassword.Password;
+
+            if (Database.ValidateUser(username, password))
             {
-                //Nhảy tới màn hình chọn trò chơi
-            } else
+                MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
             {
-                MessageBox.Show("Invalid username or password!!");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu!!");
             }
         }
 

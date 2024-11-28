@@ -1,5 +1,3 @@
-create QLTK
-go
 use QLTK
 go
 
