@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Snake
 {
@@ -26,12 +29,24 @@ namespace Snake
 
         private void btnLogin_Click (object sender, RoutedEventArgs e)
         {
+            string username = txtusername.Text;
+            string password = txtpassword.Password;
 
+            if (Database.ValidateUser(username, password))
+            {
+                MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu!!");
+            }
         }
 
         private void btnSignin_Click(object sender, RoutedEventArgs e)
         {
-
+            Signin signInWindow = new Signin();
+            signInWindow.Show();
+            this.Close();
         }
     }
 }

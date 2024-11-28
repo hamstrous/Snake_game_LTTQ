@@ -26,12 +26,30 @@ namespace Snake
 
         private void btnLogin2_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1 login = new Window1();
+            login.Show();
+            this.Close();
         }
 
         private void btnSignin2_Click(object sender, RoutedEventArgs e)
         {
+            string username = txtUser.Text;
+            string password = txtPass.Text;
 
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Vui lòng nhập tài khoản mật khẩu!");
+                return;
+            }
+
+            if (Database.RegisterUser(username, password))
+            {
+                MessageBox.Show("Đăng kí thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản đã tồn tại!");
+            }
         }
     }
 }
