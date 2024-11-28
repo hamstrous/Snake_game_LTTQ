@@ -20,7 +20,6 @@
     <None Remove="Assets\Goal.png" />
     <None Remove="Assets\Head.png" />
     <None Remove="Assets\icon.ico" />
-    <None Remove="Assets\MainMenuBackground.jpg" />
     <None Remove="Assets\Wall.png" />
     <None Remove="Resources\background.jpg" />
     <None Remove="Resources\snake.jpg" />
@@ -48,7 +47,6 @@
     <Resource Include="Assets\Goal.png" />
     <Resource Include="Assets\Head.png" />
     <Resource Include="Assets\icon.ico" />
-    <Resource Include="Assets\MainMenuBackground.jpg" />
     <Resource Include="Assets\Wall.png" />
     <Resource Include="Resources\background.jpg" />
     <Resource Include="Resources\dic.xaml" />
