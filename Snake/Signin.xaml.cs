@@ -19,11 +19,9 @@ namespace Snake
     /// </summary>
     public partial class Signin : Window
     {
-        Database dtb;
         public Signin()
         {
             InitializeComponent();
-            dtb = new Database();
         }
 
         private void btnLogin2_Click(object sender, RoutedEventArgs e)
@@ -35,9 +33,23 @@ namespace Snake
 
         private void btnSignin2_Click(object sender, RoutedEventArgs e)
         {
-            string inputUser = txtUser.Text.Trim();
-            string inputPassword = txtPass.Text.Trim();
-            dtb.add(inputUser, inputPassword);
+            string username = txtUser.Text;
+            string password = txtPass.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Vui lòng nhập tài khoản mật khẩu!");
+                return;
+            }
+
+            if (Database.RegisterUser(username, password))
+            {
+                MessageBox.Show("Đăng kí thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản đã tồn tại!");
+            }
         }
     }
 }
