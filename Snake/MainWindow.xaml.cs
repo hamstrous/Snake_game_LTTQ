@@ -39,6 +39,18 @@ namespace Snake
         private GameInit GameInit { get; set; }
         private GameState Mode { get; set; }
 
+        public void NewGame()
+        {
+            gameState = GameInit.GameMode switch
+            {
+                GameMode.Normal => new NormalModeState(rows, cols),
+                GameMode.Box => new BoxModeState(rows, cols),
+                GameMode.Wall => new WallModeState(rows, cols),
+                GameMode.Direction => new DirectionModeState(rows, cols),
+                GameMode.Reverse => new ReverseModeState(rows, cols),
+                _ => new NormalModeState(rows, cols)
+            }; ;
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -58,17 +70,8 @@ namespace Snake
                     cols = 19;
                     break;
             }
-            Mode = GameInit.GameMode switch
-            {
-                GameMode.Normal => new NormalModeState(rows, cols),
-                GameMode.Box => new BoxModeState(rows, cols),
-                GameMode.Wall => new WallModeState(rows, cols),
-                GameMode.Direction => new DirectionModeState(rows, cols),
-                GameMode.Reverse => new ReverseModeState(rows, cols),
-                _ => new NormalModeState(rows, cols)
-            };
             gridImages = SetupGrid();
-            gameState = Mode;
+            NewGame();
         }
 
         private async Task RunGame()
@@ -78,7 +81,7 @@ namespace Snake
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            gameState = Mode;
+            NewGame();
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
