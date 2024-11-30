@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Github\Snake_game_LTTQ\Snake\App.xaml
-3-34141640
+4-1015982195
 
-20-1141283921
+2017273218
 2022064643878
-Login.xaml;MainWindow.xaml;Signin.xaml;
+Login.xaml;MainMenu.xaml;MainWindow.xaml;Signin.xaml;
 
 False
 
