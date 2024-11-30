@@ -11,45 +11,42 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Snake
 {
     /// <summary>
-    /// Interaction logic for Signin.xaml
+    /// Interaction logic for SignIn.xaml
     /// </summary>
-    public partial class Signin : Window
+    public partial class SignIn : Window
     {
-        public Signin()
+        public SignIn()
         {
             InitializeComponent();
         }
 
-        private void btnLogin2_Click(object sender, RoutedEventArgs e)
+        private void btnSignIn_Click (object sender, RoutedEventArgs e)
         {
-            Window1 login = new Window1();
-            login.Show();
-            this.Close();
-        }
+            string username = txtusername.Text;
+            string password = txtpassword.Password;
 
-        private void btnSignin2_Click(object sender, RoutedEventArgs e)
-        {
-            string username = txtUser.Text;
-            string password = txtPass.Text;
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (Database.ValidateUser(username, password))
             {
-                MessageBox.Show("Vui lòng nhập tài khoản mật khẩu!");
-                return;
-            }
-
-            if (Database.RegisterUser(username, password))
-            {
-                MessageBox.Show("Đăng kí thành công!");
+                MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("Tài khoản đã tồn tại!");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu!!");
             }
+        }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            SignUp signInWindow = new SignUp();
+            signInWindow.Show();
+            this.Close();
         }
     }
 }
