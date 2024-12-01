@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Threading.Tasks;
 using System.Windows;
 using Npgsql;
 
@@ -8,75 +9,89 @@ namespace Snake
     public static class Database
     {
         private static readonly string ConnectionString =
-            ConfigurationManager.ConnectionStrings["SupabaseConnection"].ConnectionString;
+            ConfigurationManager.ConnectionStrings["SupabaseConnection"]?.ConnectionString;
 
-        public static bool RegisterUser(string username, string password)
+        public static async Task<bool> RegisterUserAsync(string username, string password)
         {
+            if (string.IsNullOrEmpty(ConnectionString))
+            {
+                MessageBox.Show("Không tìm thấy chuỗi kết nối! Vui lòng kiểm tra file cấu hình.");
+                return false;
+            }
+
             using (NpgsqlConnection connection = new NpgsqlConnection(ConnectionString))
             {
-                connection.Open();
-                string checkUserQuery = "SELECT COUNT(*) FROM \"User\" WHERE Username = @Username";
-                using (NpgsqlCommand checkCommand = new NpgsqlCommand(checkUserQuery, connection))
+                try
                 {
-                    checkCommand.Parameters.AddWithValue("@Username", username);
+                    await connection.OpenAsync();
 
-                    int userCount = Convert.ToInt32(checkCommand.ExecuteScalar());
-                    if (userCount > 0)
+                    // Kiểm tra xem user đã tồn tại chưa
+                    string checkUserQuery = "SELECT 1 FROM \"User\" WHERE Username = @Username LIMIT 1;";
+                    using (NpgsqlCommand checkCommand = new NpgsqlCommand(checkUserQuery, connection))
                     {
-                        return false;
+                        checkCommand.Parameters.AddWithValue("@Username", username);
+
+                        var result = await checkCommand.ExecuteScalarAsync();
+                        if (result != null)
+                        {
+                            return false;
+                        }
                     }
-                }
 
-                string insertUserQuery = "INSERT INTO \"User\" (Id, Username, \"Password\") " +
-                                         "VALUES (gen_random_uuid(), @Username, @Password)";
-                using (NpgsqlCommand command = new NpgsqlCommand(insertUserQuery, connection))
-                {
-                    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
-
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", hashedPassword);
-
-                    try
+                    // Thêm người dùng mới
+                    string insertUserQuery = "INSERT INTO \"User\" (Id, Username, \"Password\") VALUES (gen_random_uuid(), @Username, @Password);";
+                    using (NpgsqlCommand command = new NpgsqlCommand(insertUserQuery, connection))
                     {
-                        command.ExecuteNonQuery();
+                        string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.Parameters.AddWithValue("@Password", hashedPassword);
+
+                        await command.ExecuteNonQueryAsync();
                         return true;
                     }
-                    catch (NpgsqlException ex)
-                    {
-                        MessageBox.Show("Đã có lỗi trong quá trình đăng ký: " + ex.Message);
-                        return false;
-                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    MessageBox.Show("Lỗi cơ sở dữ liệu: " + ex.Message);
+                    return false;
                 }
             }
         }
 
-        public static bool ValidateUser(string username, string password)
+        public static async Task<bool> ValidateUserAsync(string username, string password)
         {
+            if (string.IsNullOrEmpty(ConnectionString))
+            {
+                MessageBox.Show("Không tìm thấy chuỗi kết nối! Vui lòng kiểm tra file cấu hình.");
+                return false;
+            }
+
             using (NpgsqlConnection connection = new NpgsqlConnection(ConnectionString))
             {
-                connection.Open();
-
-                string query = "SELECT \"Password\" FROM \"User\" WHERE Username = @Username";
-
-                using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                try
                 {
-                    command.Parameters.AddWithValue("@Username", username);
+                    await connection.OpenAsync();
 
-                    string storedHash = command.ExecuteScalar()?.ToString();
-                    if (storedHash == null)
+                    string query = "SELECT \"Password\" FROM \"User\" WHERE Username = @Username";
+                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
                     {
-                        MessageBox.Show("Người dùng không tồn tại!");
-                        return false;
+                        command.Parameters.AddWithValue("@Username", username);
+
+                        string storedHash = (await command.ExecuteScalarAsync())?.ToString();
+                        if (storedHash == null)
+                        {
+                            return false;
+                        }
+
+                        bool isValid = BCrypt.Net.BCrypt.Verify(password, storedHash);
+
+                        return isValid;
                     }
-
-                    bool isValid = BCrypt.Net.BCrypt.Verify(password, storedHash);
-
-                    if (!isValid)
-                    {
-                        MessageBox.Show("Mật khẩu không đúng!");
-                    }
-
-                    return isValid;
+                }
+                catch (NpgsqlException ex)
+                {
+                    MessageBox.Show("Lỗi cơ sở dữ liệu: " + ex.Message);
+                    return false;
                 }
             }
         }

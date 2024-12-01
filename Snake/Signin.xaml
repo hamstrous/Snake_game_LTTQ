@@ -33,11 +33,16 @@
 
                 <StackPanel Width="306" Height="422">
                     <StackPanel Margin="5 70" Width="230">
-                        <TextBlock Text="SIGN IN" Margin="20" Foreground="#31511E" TextAlignment="Center" FontSize="55" FontFamily="Gloucester MT Extra Condensed" Height="57"/>
+                        <TextBlock Text="SIGN IN" Margin="20,20,20,10" Foreground="#31511E" TextAlignment="Center" FontSize="55" FontFamily="Gloucester MT Extra Condensed" Height="57"/>
+
+                        <TextBlock x:Name="txtErrorMessage" Text="" Foreground="Red" FontSize="14" HorizontalAlignment="Center" Margin="0,0,0,10" Visibility="Collapsed"/>
+
                         <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
                             <TextBlock x:Name="textusername" Text="Username" Style="{StaticResource textHint}" Width="67"/>
                             <TextBox x:Name="txtusername" Margin="10 0" Width="132" Height="21"/>
+                            
                         </StackPanel>
+
                         
                         <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
                             <TextBlock x:Name="textpassword" Text="Password" Style="{StaticResource textHint}" Width="68"/>
@@ -55,13 +60,8 @@
                                     BorderThickness="2" 
                                     
                                     x:Name="btnSignUp" Click="btnSignUp_Click" Content="Sign up" Width="101" Height="53" FontSize="16"/>
-
-
                         </StackPanel>
-
-
-
-
+                        
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
