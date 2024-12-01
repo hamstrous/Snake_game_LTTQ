@@ -27,18 +27,28 @@ namespace Snake
             InitializeComponent();
         }
 
-        private void btnSignIn_Click (object sender, RoutedEventArgs e)
+        private async void btnSignIn_Click (object sender, RoutedEventArgs e)
         {
             string username = txtusername.Text;
             string password = txtpassword.Password;
 
-            if (Database.ValidateUser(username, password))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                txtErrorMessage.Text = "Please enter all the required information.";
+                txtErrorMessage.Visibility = Visibility.Visible;
+                return;
+            }
+
+            bool isValidUser = await Database.ValidateUserAsync(username, password);
+            if (isValidUser)
+            {
+                txtErrorMessage.Text = "Login successful!!";
+                txtErrorMessage.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu!!");
+                txtErrorMessage.Text = "Incorrect username or password!!";
+                txtErrorMessage.Visibility = Visibility.Visible;
             }
         }
 
@@ -46,7 +56,13 @@ namespace Snake
         {
             SignUp signInWindow = new SignUp();
             signInWindow.Show();
+            txtErrorMessage.Visibility = Visibility.Collapsed;
             this.Close();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

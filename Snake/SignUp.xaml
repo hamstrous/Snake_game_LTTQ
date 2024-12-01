@@ -31,6 +31,10 @@
                        FontFamily="Gloucester MT Extra Condensed"
                        Foreground="#31511E">
             </TextBlock>
+
+            <TextBlock x:Name="txtErrorMessage" Text="" Foreground="Red" FontSize="25" HorizontalAlignment="Center" Margin="0,0,0,10" Visibility="Collapsed"/>
+
+
             <TextBlock Height="37"
            Text="Username"
            HorizontalAlignment="Center"
