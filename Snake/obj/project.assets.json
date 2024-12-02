@@ -534,11 +534,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
       "projectName": "Snake",
-      "projectPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

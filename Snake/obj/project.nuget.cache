@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NksfNBadI1o=",
+  "dgSpecHash": "ZPOBN/0OaoM=",
   "success": true,
-  "projectFilePath": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\materialdesigncolors\\3.1.0\\materialdesigncolors.3.1.0.nupkg.sha512",

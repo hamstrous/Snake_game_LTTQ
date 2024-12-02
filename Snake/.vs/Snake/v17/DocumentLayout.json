@@ -1,25 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\choosescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:choosescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\choosescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\lenovo\\downloads\\compressed\\snake\\choosescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:choosescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\gameinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\lenovo\\downloads\\compressed\\snake\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\lenovo\\downloads\\compressed\\snake\\choosescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:choosescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\lenovo\\downloads\\compressed\\snake\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\lenovo\\downloads\\compressed\\snake\\signin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:signin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\lenovo\\downloads\\compressed\\snake\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\lenovo\\downloads\\compressed\\snake\\mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\lenovo\\downloads\\compressed\\snake\\gameinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:gameinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,51 +54,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Signin.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Signin.xaml",
+              "RelativeDocumentMoniker": "Signin.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Signin.xaml",
+              "RelativeToolTip": "Signin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-02T10:28:59.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SignUp.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\SignUp.xaml",
+              "RelativeDocumentMoniker": "SignUp.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\SignUp.xaml",
+              "RelativeToolTip": "SignUp.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-02T10:28:58.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-02T10:28:45.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainMenu.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainMenu.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\MainMenu.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainMenu.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\MainMenu.xaml.cs",
               "RelativeToolTip": "MainMenu.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAArAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T01:56:44.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MainMenu.xaml",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainMenu.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\MainMenu.xaml",
               "RelativeDocumentMoniker": "MainMenu.xaml",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainMenu.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\MainMenu.xaml",
               "RelativeToolTip": "MainMenu.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-02T01:56:39.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T01:56:39.708Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "GameInit.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\GameInit.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\GameInit.cs",
               "RelativeDocumentMoniker": "GameInit.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\GameInit.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\GameInit.cs",
               "RelativeToolTip": "GameInit.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T01:54:20.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T01:54:20.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ChooseScreen.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\ChooseScreen.xaml.cs",
               "RelativeDocumentMoniker": "ChooseScreen.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\ChooseScreen.xaml.cs",
               "RelativeToolTip": "ChooseScreen.xaml.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAD0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T01:37:40.249Z",
               "EditorCaption": ""
@@ -95,9 +140,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ChooseScreen.xaml",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\ChooseScreen.xaml",
               "RelativeDocumentMoniker": "ChooseScreen.xaml",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\ChooseScreen.xaml",
               "RelativeToolTip": "ChooseScreen.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-02T01:37:37.753Z",
