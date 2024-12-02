@@ -68,7 +68,19 @@
                        Margin="0,25,0,0">
             </TextBlock>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <PasswordBox x:Name="txtPass"
+=======
             <TextBox x:Name="txtPass"
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+            <TextBox x:Name="txtPass"
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+            <TextBox x:Name="txtPass"
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
           FontSize="20"
           FontWeight="Medium"
           Background="Transparent"
@@ -78,7 +90,19 @@
           BorderThickness="0,0,0,1"
           Margin="0,5,0,40" Width="285">
                 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </PasswordBox>
+=======
             </TextBox>
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+            </TextBox>
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+            </TextBox>
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 
             <Grid Height="44">
                 <Grid.ColumnDefinitions>

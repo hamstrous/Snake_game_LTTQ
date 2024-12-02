@@ -19,6 +19,9 @@
     <Compile Update="SignIn.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ChooseScreen.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignIn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Window1.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Resource Update="Resources\dic.xaml">

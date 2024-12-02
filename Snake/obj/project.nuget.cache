@@ -1,21 +1,39 @@
 {
   "version": 2,
-  "dgSpecHash": "NksfNBadI1o=",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "dgSpecHash": "TqAhSfd71gVjGyz+Q51UfSmx/wBTRNuKJhXujugj9yJOj7bpMUcBkjUIXIW9GFotXxdDJSVojBKTIIrqX37M7w==",
   "success": true,
-  "projectFilePath": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+=======
+  "dgSpecHash": "ZPOBN/0OaoM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+  "dgSpecHash": "ZPOBN/0OaoM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+  "dgSpecHash": "ZPOBN/0OaoM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
   "expectedPackageFiles": [
-    "C:\\Users\\LENOVO\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\materialdesigncolors\\3.1.0\\materialdesigncolors.3.1.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\materialdesignthemes\\5.1.0\\materialdesignthemes.5.1.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\npgsql\\9.0.1\\npgsql.9.0.1.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\materialdesigncolors\\3.1.0\\materialdesigncolors.3.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\materialdesignthemes\\5.1.0\\materialdesignthemes.5.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\npgsql\\9.0.1\\npgsql.9.0.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512"
   ],
   "logs": []
 }

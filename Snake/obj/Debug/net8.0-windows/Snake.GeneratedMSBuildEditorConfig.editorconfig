@@ -8,6 +8,18 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Snake
-build_property.ProjectDir = D:\Github\Snake_game_LTTQ\Snake\
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\
+=======
+build_property.ProjectDir = C:\Users\LENOVO\Downloads\Compressed\Snake\
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+build_property.ProjectDir = C:\Users\LENOVO\Downloads\Compressed\Snake\
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+build_property.ProjectDir = C:\Users\LENOVO\Downloads\Compressed\Snake\
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

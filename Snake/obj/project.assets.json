@@ -529,19 +529,43 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Snake.csproj",
       "projectName": "Snake",
-      "projectPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Snake.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
+      "projectName": "Snake",
+      "projectPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\obj\\",
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+      "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
+      "projectName": "Snake",
+      "projectPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\obj\\",
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+      "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
+      "projectName": "Snake",
+      "projectPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\obj\\",
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -612,7 +636,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

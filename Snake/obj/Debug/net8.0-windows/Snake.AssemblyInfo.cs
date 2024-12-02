@@ -14,7 +14,19 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Snake")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+776f9b02bd0a69ff43b228b21634ba5264dcdae2")]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9823756651a025a3191bba946abde5ea4b43be6e")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4277b9fddc513d2319eb25be2ecafe004f3ad46c")]
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4277b9fddc513d2319eb25be2ecafe004f3ad46c")]
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4277b9fddc513d2319eb25be2ecafe004f3ad46c")]
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 [assembly: System.Reflection.AssemblyProductAttribute("Snake")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Snake")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
