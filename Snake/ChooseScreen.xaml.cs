@@ -23,10 +23,19 @@ namespace Snake
     {
         // Dictionaries to track selected buttons for each enum group
         private readonly Dictionary<Type, Button> _selectedGameModeButtons = new();
-
+        private GameInit gameInit = new GameInit();
         public ChooseScreen()
         {
             InitializeComponent();
+            ClassicButton.Background = Brushes.LightBlue;
+            _selectedGameModeButtons[typeof(GameMode)] = ClassicButton;
+            MediumSpeedButton.Background = Brushes.LightBlue;
+            _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;
+            MediumSizeButton.Background = Brushes.LightBlue;
+            _selectedGameModeButtons[typeof(GameSize)] = MediumSizeButton;
+            gameInit.GameMode = GameMode.Classic;
+            gameInit.GameSpeed = GameSpeed.Medium;
+            gameInit.GameSize = GameSize.Medium;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -42,6 +51,12 @@ namespace Snake
             if (groupName == nameof(GameMode))
             {
                 HandleButtonSelection<GameMode>(clickedButton, _selectedGameModeButtons, enumValue);
+            }else if (groupName == nameof(GameSpeed))
+            {
+                HandleButtonSelection<GameSpeed>(clickedButton, _selectedGameModeButtons, enumValue);
+            }else if(groupName == nameof(GameSize))
+            {
+                HandleButtonSelection<GameSize>(clickedButton, _selectedGameModeButtons, enumValue);
             }
         }
 
@@ -50,6 +65,12 @@ namespace Snake
             // Parse the enum value
             TEnum selectedEnumValue = (TEnum)System.Enum.Parse(typeof(TEnum), enumValue);
             Type enumType = selectedEnumValue.GetType();
+            if(enumType == typeof(GameMode))
+                gameInit.GameMode = (GameMode)(object)selectedEnumValue;
+            else if(enumType == typeof(GameSpeed))
+                gameInit.GameSpeed = (GameSpeed)(object)selectedEnumValue;
+            else if(enumType == typeof(GameSize))
+                gameInit.GameSize = (GameSize)(object)selectedEnumValue;
 
             // Deselect the currently selected button for this group (if any)
             if (selectedButtons.ContainsKey(enumType))
@@ -77,7 +98,9 @@ namespace Snake
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Game Started!");
+            MainWindow mainWindow = new MainWindow(gameInit);
+            mainWindow.Show();
+            this.Close();
         }
 
         private void ShuffleButton_Click(object sender, RoutedEventArgs e)

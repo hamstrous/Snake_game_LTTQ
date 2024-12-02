@@ -7,23 +7,51 @@
         <!-- Header -->
         <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="50" Click="BackButton_Click" />
 
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,67,0,0" Width="421" Height="72">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Button Width="60" Height="60" Grid.Column="0" Click="Button_Click" Tag="GameMode,Classic">Classic</Button>
-            <Button Width="60" Height="60" Grid.Column="1" Click="Button_Click" Tag="GameMode,Wall">Wall</Button>
-            <Button Width="60" Height="60" Grid.Column="2" Click="Button_Click" Tag="GameMode,Reverse">Reverse</Button>
-            <Button Width="60" Height="60" Grid.Column="3" Click="Button_Click" Tag="GameMode,Box">Box</Button>
-            <Button Width="60" Height="60" Grid.Column="4" Click="Button_Click" Tag="GameMode,Direction">Direction</Button>
-            <Button Width="60" Height="60" Grid.Column="5" Click="Button_Click" Tag="GameMode,Random">Random</Button>
-           
-        </Grid>
+        <StackPanel>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,67,0,0" Width="421" Height="72">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="ClassicButton"  Width="60" Height="60" Grid.Column="0" Click="Button_Click" Tag="GameMode,Classic">Classic</Button>
+                <Button Width="60" Height="60" Grid.Column="1" Click="Button_Click" Tag="GameMode,Wall">Wall</Button>
+                <Button Width="60" Height="60" Grid.Column="2" Click="Button_Click" Tag="GameMode,Reverse">Reverse</Button>
+                <Button Width="60" Height="60" Grid.Column="3" Click="Button_Click" Tag="GameMode,Box">Box</Button>
+                <Button Width="60" Height="60" Grid.Column="4" Click="Button_Click" Tag="GameMode,Direction">Direction</Button>
+                <Button Width="60" Height="60" Grid.Column="5" Click="Button_Click" Tag="GameMode,Random">Random</Button>
+            </Grid>
+
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,67,0,0" Width="421" Height="72">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="MediumSpeedButton"  Width="60" Height="60" Grid.Column="0" Click="Button_Click" Tag="GameSpeed,Medium">Medium</Button>
+                <Button Width="60" Height="60" Grid.Column="1" Click="Button_Click" Tag="GameSpeed,Slow">Slow</Button>
+                <Button Width="60" Height="60" Grid.Column="2" Click="Button_Click" Tag="GameSpeed,Fast">Fast</Button>
+            </Grid>
+
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,67,0,0" Width="421" Height="72">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="MediumSizeButton"  Width="60" Height="60" Grid.Column="0" Click="Button_Click" Tag="GameSize,Medium">Medium</Button>
+                <Button Width="60" Height="60" Grid.Column="1" Click="Button_Click" Tag="GameSize,Small">Small</Button>
+                <Button Width="60" Height="60" Grid.Column="2" Click="Button_Click" Tag="GameSize,Large">Large</Button>
+            </Grid>
+
+        </StackPanel>
+        
+        
+        
+        
 
         <!-- Bottom Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">

@@ -53,10 +53,11 @@ namespace Snake
             gameState = Mode;
         }
 
-        public MainWindow()
+        public MainWindow(GameInit init)
         {
             InitializeComponent();
-            GameInit = new GameInit(GameSize.Medium, GameSpeed.Medium, GameBackgroundColor.Dark, SnakeColor.Green, GameMode.Reverse);
+            GameInit = init;
+            //GameInit = new GameInit(GameSize.Medium, GameSpeed.Medium, GameBackgroundColor.Dark, SnakeColor.Green, GameMode.Reverse);
             switch(GameInit.GameSize)
             {
                 case GameSize.Small:

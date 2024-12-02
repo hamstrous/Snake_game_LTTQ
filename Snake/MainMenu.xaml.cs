@@ -26,8 +26,8 @@ namespace Snake
 
         private void StartGame_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow gameWindow = new MainWindow();
-            gameWindow.Show();
+            ChooseScreen chooseScreen = new ChooseScreen();
+            chooseScreen.Show();
             this.Close();
         }
     }
