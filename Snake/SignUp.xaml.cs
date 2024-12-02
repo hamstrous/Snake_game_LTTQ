@@ -28,27 +28,32 @@ namespace Snake
         {
             SignIn signin = new SignIn();
             signin.Show();
+            txtErrorMessage.Visibility = Visibility.Collapsed;
             this.Close();
         }
 
-        private void btnCreateAccount_Click(object sender, RoutedEventArgs e)
+        private async void btnCreateAccount_Click(object sender, RoutedEventArgs e)
         {
             string username = txtUser.Text;
             string password = txtPass.Text;
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin!");
+                txtErrorMessage.Text = "Please enter all the required information.";
+                txtErrorMessage.Visibility = Visibility.Visible;
                 return;
             }
 
-            if (Database.RegisterUser(username, password))
+            bool isValidUser = await Database.RegisterUserAsync(username, password);
+            if (isValidUser)
             {
-                MessageBox.Show("Đăng kí thành công!");
+                txtErrorMessage.Text = "Registration Successful!!";
+                txtErrorMessage.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("Tài khoản đã tồn tại!");
+                txtErrorMessage.Text = "Account already exists.";
+                txtErrorMessage.Visibility = Visibility.Visible;
             }
         }
     }
