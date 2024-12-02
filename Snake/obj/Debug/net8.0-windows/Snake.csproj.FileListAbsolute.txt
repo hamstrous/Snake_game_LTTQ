@@ -39,3 +39,8 @@ D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\refint\Snake.dll
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.pdb
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.genruntimeconfig.cache
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ref\Snake.dll
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Github\Snake_game_LTTQ\Snake\bin\Debug\net8.0-windows\Npgsql.dll
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen.baml
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen.g.cs

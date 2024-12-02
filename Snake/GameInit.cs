@@ -36,11 +36,12 @@ namespace Snake
 
     public enum GameMode
     {
-        Normal,
+        Classic,
         Box,
         Wall,
         Direction,
-        Reverse
+        Reverse,
+        Random
     }
     public class GameInit
     {
@@ -55,7 +56,7 @@ namespace Snake
             GameSpeed = GameSpeed.Medium;
             GameBackgroundColor = GameBackgroundColor.Light;
             SnakeColor = SnakeColor.Green;
-            GameMode = GameMode.Normal;
+            GameMode = GameMode.Classic;
         }
         public GameInit(GameSize gameSize, GameSpeed gameSpeed, GameBackgroundColor gameBackgroundColor, SnakeColor snakeColor, GameMode gameMode)
         {
