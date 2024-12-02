@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    internal class NormalModeState : GameState
+    internal class ClassicModeState : GameState
     {
-        public NormalModeState(int rows, int cols) : base(rows, cols)
+        public ClassicModeState(int rows, int cols) : base(rows, cols)
         {
             AddSnake();
             AddFood();

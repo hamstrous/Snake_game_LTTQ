@@ -43,12 +43,12 @@ namespace Snake
         {
             Mode = GameInit.GameMode switch
             {
-                GameMode.Normal => new NormalModeState(rows, cols),
+                GameMode.Classic => new ClassicModeState(rows, cols),
                 GameMode.Box => new BoxModeState(rows, cols),
                 GameMode.Wall => new WallModeState(rows, cols),
                 GameMode.Direction => new DirectionModeState(rows, cols),
                 GameMode.Reverse => new ReverseModeState(rows, cols),
-                _ => new NormalModeState(rows, cols)
+                _ => new ClassicModeState(rows, cols)
             };
             gameState = Mode;
         }

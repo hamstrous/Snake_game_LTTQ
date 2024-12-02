@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -20,17 +21,48 @@ namespace Snake
     /// </summary>
     public partial class ChooseScreen : Window
     {
-        public ObservableCollection<string> Row1Items { get; set; }
-        public ICommand SelectCommand { get; set; }
+        // Dictionaries to track selected buttons for each enum group
+        private readonly Dictionary<Type, Button> _selectedGameModeButtons = new();
+
         public ChooseScreen()
         {
             InitializeComponent();
-            Row1Items = new ObservableCollection<string> { "🍎", "🍌", "🍍", "🍇", "🥕", "🌽", "1", "2", "3", "4", "5" };
+        }
 
-            // Command for selecting items
-            SelectCommand = new RelayCommand(SelectItem);
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var clickedButton = sender as Button;
 
-            DataContext = this;
+            // Parse the group and value from the Tag property
+            string[] tagParts = clickedButton.Tag.ToString().Split(',');
+            string groupName = tagParts[0];
+            string enumValue = tagParts[1];
+
+            // Handle each group independently
+            if (groupName == nameof(GameMode))
+            {
+                HandleButtonSelection<GameMode>(clickedButton, _selectedGameModeButtons, enumValue);
+            }
+        }
+
+        private void HandleButtonSelection<TEnum>(Button clickedButton, Dictionary<Type, Button> selectedButtons, string enumValue)
+        {
+            // Parse the enum value
+            TEnum selectedEnumValue = (TEnum)System.Enum.Parse(typeof(TEnum), enumValue);
+            Type enumType = selectedEnumValue.GetType();
+
+            // Deselect the currently selected button for this group (if any)
+            if (selectedButtons.ContainsKey(enumType))
+            {
+                Button previousButton = selectedButtons[enumType];
+                previousButton.Background = Brushes.LightGray; // Reset color
+                selectedButtons.Remove(enumType); // Remove old selection
+            }
+
+            // Select the new button
+            clickedButton.Background = Brushes.LightBlue; // Set selected color
+            selectedButtons[enumType] = clickedButton;
+
         }
 
         private void SelectItem(object obj)
