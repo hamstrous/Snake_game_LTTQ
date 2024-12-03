@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿#pragma checksum "..\..\..\App.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "487C3F7568A049ABA75E601D03087F3680688CD2"
+=======
+﻿#pragma checksum "..\..\..\App.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "4226A3F54EE3BFB58756B793759210B9887C031D"
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 =======
 ﻿#pragma checksum "..\..\..\App.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "4226A3F54EE3BFB58756B793759210B9887C031D"
 >>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b

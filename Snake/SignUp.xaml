@@ -71,7 +71,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <PasswordBox x:Name="txtPass"
+=======
+            <TextBox x:Name="txtPass"
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 =======
             <TextBox x:Name="txtPass"
 >>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
@@ -93,7 +97,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </PasswordBox>
+=======
+            </TextBox>
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 =======
             </TextBox>
 >>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b

@@ -1,9 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Snake.csproj": {}
   },
   "projects": {
@@ -15,45 +12,6 @@
         "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Snake.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\obj\\",
-=======
-    "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
-        "projectName": "Snake",
-        "projectPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\obj\\",
->>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
-=======
-    "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
-        "projectName": "Snake",
-        "projectPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\obj\\",
->>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
-=======
-    "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
-        "projectName": "Snake",
-        "projectPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\Snake.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Downloads\\Compressed\\Snake\\obj\\",
->>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

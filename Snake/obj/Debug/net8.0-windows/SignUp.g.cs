@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿#pragma checksum "..\..\..\SignUp.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "7DC87D7B9DECF582B7FB2F3C30BE095609891FD4"
+=======
+﻿#pragma checksum "..\..\..\SignUp.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "BA9BF7695E890492316F6B0E6D622FB8DB67E4F3"
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 =======
 ﻿#pragma checksum "..\..\..\SignUp.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "BA9BF7695E890492316F6B0E6D622FB8DB67E4F3"
 >>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
@@ -133,7 +137,11 @@ namespace Snake {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.txtPass = ((System.Windows.Controls.PasswordBox)(target));
+=======
+            this.txtPass = ((System.Windows.Controls.TextBox)(target));
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 =======
             this.txtPass = ((System.Windows.Controls.TextBox)(target));
 >>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b

@@ -18,7 +18,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Grid ClipToBounds="True" Background="Transparent">
+=======
+    <Grid ClipToBounds="True" Background="Black">
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 =======
     <Grid ClipToBounds="True" Background="Black">
 >>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b

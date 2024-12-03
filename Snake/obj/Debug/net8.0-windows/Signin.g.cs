@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿#pragma checksum "..\..\..\Signin.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "053D5146D3D3EEE19C8A54D312AC9CB7260E9CF0"
+=======
+﻿#pragma checksum "..\..\..\Signin.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "8F21467685F014906EA36FD8E4DB6A5BD84877D5"
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 =======
 ﻿#pragma checksum "..\..\..\Signin.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "8F21467685F014906EA36FD8E4DB6A5BD84877D5"
 >>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b

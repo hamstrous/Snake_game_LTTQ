@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿#pragma checksum "..\..\..\ChooseScreen.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "1FF141A1F7986DFB6CF355A3588E056635FEA8BC"
+=======
+﻿#pragma checksum "..\..\..\ChooseScreen.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "352AF20AC9BE25AB3C19FA97B6F451E82D27265F"
+>>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
 =======
 ﻿#pragma checksum "..\..\..\ChooseScreen.xaml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "352AF20AC9BE25AB3C19FA97B6F451E82D27265F"
 >>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b

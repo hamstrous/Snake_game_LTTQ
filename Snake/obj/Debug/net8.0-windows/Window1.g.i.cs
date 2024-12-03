@@ -9,6 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using MaterialDesignThemes.Wpf;
+using MaterialDesignThemes.Wpf.Converters;
+using MaterialDesignThemes.Wpf.Transitions;
 using Snake;
 using System;
 using System.Diagnostics;
