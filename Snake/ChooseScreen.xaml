@@ -1,21 +1,29 @@
 ﻿<Window x:Class="Snake.ChooseScreen"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Snake Game" Height="600" Width="518"
-        Background="{StaticResource BackgroundColor}"
-        WindowStartupLocation="CenterScreen"
+        Title="Snake Game" Height="800" Width="500"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         >
-    <Grid Background="LightBlue" Margin="10,10,0,10">
-        
-        <!-- Header -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="resources/dic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="LightBlue" Margin="0,10,0,10">
+
         <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="50" Click="BackButton_Click" />
 
-        <StackPanel HorizontalAlignment="Left" Width="508">
+
+
+        <StackPanel>
             <Grid HorizontalAlignment="Center" Margin="0,67,0,0" Width="360" Height="72">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -28,7 +36,7 @@
                 <Button Width="60" Height="60" Grid.Column="5" Click="Button_Click" Tag="GameMode,Random">Random</Button>
             </Grid>
 
-            <Grid HorizontalAlignment="Center" Margin="0,67,0,0" Width="180" Height="72">
+            <Grid HorizontalAlignment="Center" Margin="0,67,0,0" Width="181" Height="72">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -39,7 +47,7 @@
                 <Button Width="60" Height="60" Grid.Column="2" Click="Button_Click" Tag="GameSpeed,Fast">Fast</Button>
             </Grid>
 
-            <Grid HorizontalAlignment="Center" Margin="0,67,0,0" Width="180" Height="72">
+            <Grid HorizontalAlignment="Center" Margin="0,67,0,0" Width="181" Height="72">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -50,6 +58,7 @@
                 <Button Width="60" Height="60" Grid.Column="2" Click="Button_Click" Tag="GameSize,Large">Large</Button>
             </Grid>
 
+
         </StackPanel>
 
 
@@ -57,7 +66,7 @@
 
 
         <!-- Bottom Buttons -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="106,0,0,10" Grid.ColumnSpan="2">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10" Height="39" Width="330">
             <Button Content="Play" Width="100" Margin="5" Click="PlayButton_Click" />
             <Button Content="Shuffle" Width="100" Margin="5" Click="ShuffleButton_Click" />
             <Button Content="Reset" Width="100" Margin="5" Click="ResetButton_Click" />
