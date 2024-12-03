@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Snake"
         
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="CanResize"  >
+        Title="Window1" Height="476" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  >
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -15,24 +15,8 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Grid ClipToBounds="True" Background="Transparent">
-=======
     <Grid ClipToBounds="True" Background="Black">
->>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
-=======
-    <Grid ClipToBounds="True" Background="Black">
->>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
-=======
-    <Grid ClipToBounds="True" Background="Black">
->>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
-=======
-    <Grid ClipToBounds="True" Background="Black">
->>>>>>> a78c4e396c90abfc213d097efa271e0d16c2135b
-        <Border  CornerRadius="40" Background="#F6FCDF" Margin="0,13,0,13" ClipToBounds="True">
+        <Border  CornerRadius="40" Background="#F6FCDF" Margin="0,13,0,10" ClipToBounds="True">
 
             <StackPanel Orientation="Horizontal">
 

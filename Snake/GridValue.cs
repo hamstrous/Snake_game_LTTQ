@@ -5,6 +5,10 @@
         Empty, 
         Snake,
         Food,
+        Box,
+        Goal,
+        Wall,
+        DirectionPad,
         Outside
     }
 }

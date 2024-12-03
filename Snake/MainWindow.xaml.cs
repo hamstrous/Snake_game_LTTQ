@@ -17,7 +17,11 @@ namespace Snake
         {
             { GridValue.Empty, Images.Empty },
             { GridValue.Snake, Images.Body },
-            { GridValue.Food, Images.Food }
+            { GridValue.Food, Images.Food },
+            { GridValue.Box, Images.Box },
+            { GridValue.Goal, Images.Goal },
+            { GridValue.Wall, Images.Wall },
+            { GridValue.DirectionPad, Images.DirectionPad }
         };
 
         private readonly Dictionary<Directions, int> dirToRotation = new()
@@ -32,12 +36,45 @@ namespace Snake
         private readonly Image[,] gridImages;   
         private GameState gameState;
         private bool gameRunning;
+        private GameInit GameInit { get; set; }
+        private GameState Mode { get; set; }
 
-        public MainWindow()
+        public void RefreshMode()
+        {
+            Mode = GameInit.GameMode switch
+            {
+                GameMode.Classic => new ClassicModeState(rows, cols),
+                GameMode.Box => new BoxModeState(rows, cols),
+                GameMode.Wall => new WallModeState(rows, cols),
+                GameMode.Direction => new DirectionModeState(rows, cols),
+                GameMode.Reverse => new ReverseModeState(rows, cols),
+                _ => new ClassicModeState(rows, cols)
+            };
+            gameState = Mode;
+        }
+
+        public MainWindow(GameInit init)
         {
             InitializeComponent();
+            GameInit = init;
+            //GameInit = new GameInit(GameSize.Medium, GameSpeed.Medium, GameBackgroundColor.Dark, SnakeColor.Green, GameMode.Reverse);
+            switch(GameInit.GameSize)
+            {
+                case GameSize.Small:
+                    rows = 13;
+                    cols = 11;
+                    break;
+                case GameSize.Medium:
+                    rows = 17;
+                    cols = 15;
+                    break;
+                case GameSize.Large:
+                    rows = 21;
+                    cols = 19;
+                    break;
+            }
+            RefreshMode();
             gridImages = SetupGrid();
-            gameState = new GameState(rows, cols);
         }
 
         private async Task RunGame()
@@ -47,7 +84,7 @@ namespace Snake
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            gameState = new GameState(rows, cols);
+            RefreshMode();
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -91,9 +128,16 @@ namespace Snake
 
         private async Task GameLoop()
         {
+            int delay = GameInit.GameSpeed switch
+            {
+                GameSpeed.Slow => 200,
+                GameSpeed.Medium => 100,
+                GameSpeed.Fast => 50,
+                _ => 100
+            };
             while (!gameState.GameOver)
             {
-                await Task.Delay(75);
+                await Task.Delay(delay);
                 gameState.Move();
                 Draw();
             }
@@ -138,9 +182,11 @@ namespace Snake
             {
                 for (int c = 0; c < cols; c++)
                 {
-                    GridValue gridVal = gameState.Grid[r, c];
+                    GridValue gridVal = gameState.Grid[r, c].First.Value.First;
+                    int rotation = dirToRotation[gameState.Grid[r, c].First.Value.Second];
+
                     gridImages[r, c].Source = gridValtoImage[gridVal];
-                    gridImages[r, c].RenderTransform = Transform.Identity;
+                    gridImages[r, c].RenderTransform = new RotateTransform(rotation);
                 }
             }
         }
@@ -150,9 +196,6 @@ namespace Snake
             Positions headPos = gameState.HeadPosition();
             Image image = gridImages[headPos.Row, headPos.Column];
             image.Source = Images.Head;
-
-            int rotation = dirToRotation[gameState.Dir];
-            image.RenderTransform = new RotateTransform(rotation);
         }
 
         private async Task DrawDeadSnake()
@@ -179,7 +222,7 @@ namespace Snake
         private async Task ShowGameOver()
         {
             await DrawDeadSnake();
-            await Task.Delay(1000);
+            await Task.Delay(500);
             Overlay.Visibility = Visibility.Visible;
             OverlayText.Text = "Ấn để bắt đầu!!";
         }

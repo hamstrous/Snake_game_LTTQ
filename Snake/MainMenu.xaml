@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
-        Title="MainMenu" Height="500" Width="800">
+        Title="MainMenu" Height="500" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Background>
         <ImageBrush ImageSource="Assets/MainMenuBackground.jpg" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
         <UniformGrid HorizontalAlignment="Center" VerticalAlignment="Center" Columns="1">
-            <Button  Width="100" Height="50" Content="Play" Margin="10,10" Click="StartGame_Click" />
+            <Button  Width="100" Height="50" Content="Play" Margin="10,10" Click="StartGame_Click"/>
             <Button  Width="100" Height="50" Content="Setting" Margin="10,10"/>
             <Button  Width="100" Height="50" Content="Leader Board" Margin="10,10"/>
             <Button  Width="100" Height="50" Content="Exit" Margin="10,10"/>
