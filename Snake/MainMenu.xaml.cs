@@ -22,6 +22,7 @@ namespace Snake
         public MainMenu()
         {
             InitializeComponent();
+            SoundEffect.PlayBGM();
         }
 
         private void StartGame_Click(object sender, RoutedEventArgs e)

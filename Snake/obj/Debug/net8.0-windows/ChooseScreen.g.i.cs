@@ -76,7 +76,7 @@ namespace Snake {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Snake;component/choosescreen.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Snake;V1.0.0.0;component/choosescreen.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ChooseScreen.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

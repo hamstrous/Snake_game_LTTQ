@@ -25,6 +25,9 @@
     <None Remove="Assets\Wall.png" />
     <None Remove="Resources\background.jpg" />
     <None Remove="Resources\snake.jpg" />
+    <None Remove="Sounds\bgm.mp3" />
+    <None Remove="Sounds\box-break.mp3" />
+    <None Remove="Sounds\button-click.mp3" />
     <None Remove="Sounds\food.mp3" />
     <None Remove="Sounds\food.wav" />
     <None Remove="Sounds\gameover.mp3" />
@@ -65,6 +68,9 @@
     <Resource Include="Resources\background.jpg" />
     <Resource Include="Resources\dic.xaml" />
     <Resource Include="Resources\snake.jpg" />
+    <Resource Include="Sounds\bgm.mp3" />
+    <Resource Include="Sounds\box-break.mp3" />
+    <Resource Include="Sounds\button-click.mp3" />
     <Resource Include="Sounds\food.wav" />
     <Resource Include="Sounds\gameover.wav" />
     <Resource Include="Sounds\move.wav" />
