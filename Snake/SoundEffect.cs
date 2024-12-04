@@ -12,6 +12,7 @@ namespace Snake
         public static SoundPlayer Move { get; private set; }
         public static SoundPlayer GameOver { get; private set; }
 
+        public static MediaPlayer BGM { get; private set; }
         static void Play(string fileName)
         {
             MediaPlayer myPlayer = new MediaPlayer();
@@ -24,6 +25,7 @@ namespace Snake
             Eat = new SoundPlayer();
             Move = new SoundPlayer();
             GameOver = new SoundPlayer();
+            BGM = new MediaPlayer();
 
             try
             {
@@ -58,6 +60,17 @@ namespace Snake
         {
             //Task.Run(() => GameOver.Play());
             Play("gameover.wav");
+        }
+
+        public static void PlayBGM()
+        {
+            BGM.Open(new System.Uri($@"..\..\..\Sounds\bgm.wav", UriKind.Relative));
+            BGM.MediaEnded += (sender, e) =>
+            {
+                BGM.Position = TimeSpan.Zero;
+                BGM.Play();
+            };
+            BGM.Play();
         }
     }
 }
