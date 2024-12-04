@@ -221,6 +221,7 @@ namespace Snake
 
         private async Task ShowGameOver()
         {
+            SoundEffect.PlayGameOverSound();
             await DrawDeadSnake();
             await Task.Delay(500);
             Overlay.Visibility = Visibility.Visible;
