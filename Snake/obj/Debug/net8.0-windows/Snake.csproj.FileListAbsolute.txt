@@ -134,3 +134,5 @@ C:\Users\Admin\Downloads\Snake\Snake\obj\Debug\net8.0-windows\refint\Snake.dll
 C:\Users\Admin\Downloads\Snake\Snake\obj\Debug\net8.0-windows\Snake.pdb
 C:\Users\Admin\Downloads\Snake\Snake\obj\Debug\net8.0-windows\Snake.genruntimeconfig.cache
 C:\Users\Admin\Downloads\Snake\Snake\obj\Debug\net8.0-windows\ref\Snake.dll
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.Properties.Resources.resources
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.csproj.GenerateResource.cache

@@ -183,10 +183,16 @@ namespace Snake
             return Grid[newHeadPos.Row, newHeadPos.Column].First.Value.First;
         }
 
+        public void PlayEatSound()
+        {
+            SoundEffect.PlayEatSound();
+        }
+
         public virtual void Move()
         {
             if (dirChanges.Count > 0)
             {
+                SoundEffect.PlayMoveSound();
                 Dir = dirChanges.First.Value;
                 dirChanges.RemoveFirst();
             }
@@ -206,6 +212,7 @@ namespace Snake
             }
             else if (hit == GridValue.Food)
             {
+                PlayEatSound();
                 DeleteObject(newHeadPos);
                 AddHead(newHeadPos);
                 Score++;
