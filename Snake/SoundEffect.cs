@@ -13,8 +13,11 @@ namespace Snake
         public static SoundPlayer GameOver { get; private set; }
 
         public static MediaPlayer BGM { get; private set; }
+        public static bool CanPlayBGM { get; set; }
+        public static bool CanPlaySFX { get; set; }
         static void Play(string fileName)
         {
+            if(!CanPlaySFX) return;
             MediaPlayer myPlayer = new MediaPlayer();
             myPlayer.Open(new System.Uri($@"..\..\..\Sounds\{fileName}", UriKind.Relative));
             myPlayer.Play();
@@ -22,6 +25,8 @@ namespace Snake
 
         static SoundEffect()
         {
+            CanPlayBGM = true;
+            CanPlaySFX = true;
             Eat = new SoundPlayer();
             Move = new SoundPlayer();
             GameOver = new SoundPlayer();
@@ -62,9 +67,16 @@ namespace Snake
             Play("gameover.wav");
         }
 
+        public static void PlayBoxSound()
+        {
+            //Task.Run(() => GameOver.Play());
+            Play("box-break.mp3");
+        }
+
         public static void PlayBGM()
         {
-            BGM.Open(new System.Uri($@"..\..\..\Sounds\bgm.wav", UriKind.Relative));
+            if(!CanPlayBGM) return;
+            BGM.Open(new System.Uri($@"..\..\..\Sounds\bgm.mp3", UriKind.Relative));
             BGM.MediaEnded += (sender, e) =>
             {
                 BGM.Position = TimeSpan.Zero;
