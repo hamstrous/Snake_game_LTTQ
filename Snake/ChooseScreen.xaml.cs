@@ -33,9 +33,12 @@ namespace Snake
             _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;
             MediumSizeButton.Background = Brushes.LightBlue;
             _selectedGameModeButtons[typeof(GameSize)] = MediumSizeButton;
+            RedFoodButton.Background = Brushes.LightBlue;
+            _selectedGameModeButtons[typeof(FoodColor)] = RedFoodButton;
             gameInit.GameMode = GameMode.Classic;
             gameInit.GameSpeed = GameSpeed.Medium;
             gameInit.GameSize = GameSize.Medium;
+            gameInit.FoodColor = FoodColor.Red;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -57,6 +60,9 @@ namespace Snake
             }else if(groupName == nameof(GameSize))
             {
                 HandleButtonSelection<GameSize>(clickedButton, _selectedGameModeButtons, enumValue);
+            }else if(groupName == nameof(FoodColor))
+            {
+                HandleButtonSelection<FoodColor>(clickedButton, _selectedGameModeButtons, enumValue);
             }
         }
 
@@ -71,6 +77,8 @@ namespace Snake
                 gameInit.GameSpeed = (GameSpeed)(object)selectedEnumValue;
             else if(enumType == typeof(GameSize))
                 gameInit.GameSize = (GameSize)(object)selectedEnumValue;
+            else if(enumType == typeof(FoodColor))
+                gameInit.FoodColor = (FoodColor)(object)selectedEnumValue;
 
             // Deselect the currently selected button for this group (if any)
             if (selectedButtons.ContainsKey(enumType))
