@@ -58,6 +58,21 @@
                 <Button Width="60" Height="60" Grid.Column="2" Click="Button_Click" Tag="GameSize,Large">Large</Button>
             </Grid>
 
+            <Grid HorizontalAlignment="Center" Margin="0,67,0,0" Width="300" Height="72">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="RedFoodButton"  Width="60" Height="60" Grid.Column="0" Click="Button_Click" Tag="FoodColor,Red">Red</Button>
+                <Button Width="60" Height="60" Grid.Column="1" Click="Button_Click" Tag="FoodColor,Yellow">Yellow</Button>
+                <Button Width="60" Height="60" Grid.Column="2" Click="Button_Click" Tag="FoodColor,Orange">Orange</Button>
+                <Button Width="60" Height="60" Grid.Column="3" Click="Button_Click" Tag="FoodColor,Blue">Blue</Button>
+                <Button Width="60" Height="60" Grid.Column="4" Click="Button_Click" Tag="FoodColor,Purple">Purple</Button>
+            </Grid>
+
 
         </StackPanel>
 
