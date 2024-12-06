@@ -10,6 +10,9 @@
     <Compile Update="ChooseScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Leaderboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="ChooseScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Leaderboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainMenu.xaml">
