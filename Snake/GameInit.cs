@@ -20,7 +20,7 @@ namespace Snake
         Fast
     }
 
-    public enum GameBackgroundColor
+    public enum BackgroundColor
     {
         Light,
         Dark
@@ -32,6 +32,16 @@ namespace Snake
         Red,
         Blue,
         Yellow
+    }
+
+    public enum FoodColor
+    {
+        Green,
+        Red,
+        Blue,
+        Yellow,
+        Orange,
+        Purple
     }
 
     public enum GameMode
@@ -47,18 +57,19 @@ namespace Snake
     {
         public GameSize GameSize;
         public GameSpeed GameSpeed;
-        public GameBackgroundColor GameBackgroundColor;
+        public BackgroundColor GameBackgroundColor;
         public SnakeColor SnakeColor;
         public GameMode GameMode;
+        public FoodColor FoodColor;
         public GameInit()
         {
             GameSize = GameSize.Medium;
             GameSpeed = GameSpeed.Medium;
-            GameBackgroundColor = GameBackgroundColor.Light;
+            GameBackgroundColor = BackgroundColor.Light;
             SnakeColor = SnakeColor.Green;
             GameMode = GameMode.Classic;
         }
-        public GameInit(GameSize gameSize, GameSpeed gameSpeed, GameBackgroundColor gameBackgroundColor, SnakeColor snakeColor, GameMode gameMode)
+        public GameInit(GameSize gameSize, GameSpeed gameSpeed, BackgroundColor gameBackgroundColor, SnakeColor snakeColor, GameMode gameMode)
         {
             GameSize = gameSize;
             GameSpeed = gameSpeed;

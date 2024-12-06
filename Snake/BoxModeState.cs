@@ -83,6 +83,7 @@ namespace Snake
             }
             else if (hit == GridValue.Food)
             {
+                SoundEffect.PlayEatSound();
                 DeleteObject(newHeadPos);
                 AddHead(newHeadPos);
                 Score++;
@@ -104,11 +105,13 @@ namespace Snake
                 }
                 else if (boxHit == GridValue.Snake || boxHit == GridValue.Box)
                 {
+                    SoundEffect.PlayGameOverSound();
                     GameOver = true;
                     SaveHighScore();
                 }
                 else if (boxHit == GridValue.Goal)
                 {
+                    SoundEffect.PlayBoxSound();
                     DeleteObject(newHeadPos);
                     DeleteObject(newBoxPos);
                     RemoveTail();

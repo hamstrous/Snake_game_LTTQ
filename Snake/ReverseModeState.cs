@@ -69,6 +69,7 @@ namespace Snake
             }
             if (dirChanges.Count > 0)
             {
+                SoundEffect.PlayMoveSound();
                 Dir = dirChanges.First.Value;
                 dirChanges.RemoveFirst();
             }
@@ -78,6 +79,7 @@ namespace Snake
 
             if (hit == GridValue.Outside || hit == GridValue.Snake)
             {
+                SoundEffect.PlayGameOverSound();
                 GameOver = true;
                 SaveHighScore();
             }
@@ -88,6 +90,7 @@ namespace Snake
             }
             else if (hit == GridValue.Food)
             {
+                SoundEffect.PlayEatSound();
                 Directions nDir = TailDirection();
                 DeleteObject(newHeadPos);
                 Dir = nDir;

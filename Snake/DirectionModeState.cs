@@ -25,6 +25,7 @@ namespace Snake
             blockDirChange = false;
             if (dirChanges.Count > 0)
             {
+                SoundEffect.PlayMoveSound();
                 Dir = dirChanges.First.Value;
                 AddDirectionPad(HeadPosition(),Dir);
                 dirChanges.RemoveFirst();
@@ -35,6 +36,7 @@ namespace Snake
 
             if (hit == GridValue.Outside || hit == GridValue.Snake)
             {
+                SoundEffect.PlayGameOverSound();
                 GameOver = true;
                 SaveHighScore();
             }
@@ -48,11 +50,13 @@ namespace Snake
                 Directions ForcedDir = Grid[newHeadPos.Row, newHeadPos.Column].First.Value.Second;
                 if (Dir.Opposite() == ForcedDir)
                 {
+                    SoundEffect.PlayGameOverSound();
                     GameOver = true;
                     SaveHighScore();
                 }
                 else
                 {
+                    SoundEffect.PlayMoveSound();
                     DeleteObject(newHeadPos);
                     RemoveTail();
                     AddHead(newHeadPos);
@@ -63,6 +67,7 @@ namespace Snake
             }
             else if (hit == GridValue.Food)
             {
+                SoundEffect.PlayEatSound();
                 DeleteObject(newHeadPos);
                 AddHead(newHeadPos);
                 AddFood();

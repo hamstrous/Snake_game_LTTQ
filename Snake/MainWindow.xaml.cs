@@ -13,16 +13,7 @@ namespace Snake
 {
     public partial class MainWindow : Window
     {
-        private readonly Dictionary<GridValue, ImageSource> gridValtoImage = new()
-        {
-            { GridValue.Empty, Images.Empty },
-            { GridValue.Snake, Images.Body },
-            { GridValue.Food, Images.Food },
-            { GridValue.Box, Images.Box },
-            { GridValue.Goal, Images.Goal },
-            { GridValue.Wall, Images.Wall },
-            { GridValue.DirectionPad, Images.DirectionPad }
-        };
+        private Dictionary<GridValue, ImageSource> gridValtoImage;
 
         private readonly Dictionary<Directions, int> dirToRotation = new()
         {
@@ -39,7 +30,7 @@ namespace Snake
         private GameInit GameInit { get; set; }
         private GameState Mode { get; set; }
 
-        public void RefreshMode()
+        public void InitMode()
         {
             Mode = GameInit.GameMode switch
             {
@@ -51,6 +42,19 @@ namespace Snake
                 _ => new ClassicModeState(rows, cols)
             };
             gameState = Mode;
+        }
+
+        public void InitFoodColor()
+        {
+            Images.color = GameInit.FoodColor switch
+            {
+                FoodColor.Red => Colors.Red,
+                FoodColor.Green => Colors.Green,
+                FoodColor.Blue => Colors.Blue,
+                FoodColor.Yellow => Colors.Yellow,
+                FoodColor.Orange => Colors.Orange,
+                _ => Colors.Red
+            };
         }
 
         public MainWindow(GameInit init)
@@ -73,7 +77,19 @@ namespace Snake
                     cols = 19;
                     break;
             }
-            RefreshMode();
+            InitMode();
+            InitFoodColor();
+            Images.AssignImages();
+            gridValtoImage = new()
+            {
+                { GridValue.Empty, Images.Empty },
+                { GridValue.Snake, Images.Body },
+                { GridValue.Food, Images.Food },
+                { GridValue.Box, Images.Box },
+                { GridValue.Goal, Images.Goal },
+                { GridValue.Wall, Images.Wall },
+                { GridValue.DirectionPad, Images.DirectionPad }
+            };
             gridImages = SetupGrid();
         }
 
@@ -84,7 +100,7 @@ namespace Snake
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             await ShowGameOver();
-            RefreshMode();
+            InitMode();
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -221,6 +237,7 @@ namespace Snake
 
         private async Task ShowGameOver()
         {
+            SoundEffect.PlayGameOverSound();
             await DrawDeadSnake();
             await Task.Delay(500);
             Overlay.Visibility = Visibility.Visible;
