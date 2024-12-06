@@ -24,6 +24,14 @@
     <None Remove="Assets\MainMenuBackground.jpg" />
     <None Remove="Assets\Wall.png" />
     <None Remove="Resources\background.jpg" />
+    <None Remove="Resources\board.png" />
+    <None Remove="Resources\brown.jpg" />
+    <None Remove="Resources\brownlight.jpg" />
+    <None Remove="Resources\darkgreen.jpg" />
+    <None Remove="Resources\greengrass.jpg" />
+    <None Remove="Resources\left-arrow.png" />
+    <None Remove="Resources\lightbrown.jpg" />
+    <None Remove="Resources\right-arrow.png" />
     <None Remove="Resources\snake.jpg" />
   </ItemGroup>
 
@@ -55,7 +63,15 @@
     <Resource Include="Assets\icon.ico" />
     <Resource Include="Assets\Wall.png" />
     <Resource Include="Resources\background.jpg" />
+    <Resource Include="Resources\board.png" />
+    <Resource Include="Resources\brown.jpg" />
+    <Resource Include="Resources\brownlight.jpg" />
+    <Resource Include="Resources\darkgreen.jpg" />
     <Resource Include="Resources\dic.xaml" />
+    <Resource Include="Resources\greengrass.jpg" />
+    <Resource Include="Resources\left-arrow.png" />
+    <Resource Include="Resources\lightbrown.jpg" />
+    <Resource Include="Resources\right-arrow.png" />
     <Resource Include="Resources\snake.jpg" />
   </ItemGroup>
 
