@@ -5,16 +5,159 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
-        Title="MainMenu" Height="500" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="MainMenu" Height="800" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
+        >
     <Window.Background>
         <ImageBrush ImageSource="Assets/MainMenuBackground.jpg" Stretch="UniformToFill"/>
     </Window.Background>
+    
     <Grid>
-        <UniformGrid HorizontalAlignment="Center" VerticalAlignment="Center" Columns="1">
-            <Button  Width="100" Height="50" Content="Play" Margin="10,10" Click="StartGame_Click"/>
-            <Button  Width="100" Height="50" Content="Setting" Margin="10,10"/>
-            <Button  Width="100" Height="50" Content="Leader Board" Margin="10,10"/>
-            <Button  Width="100" Height="50" Content="Exit" Margin="10,10"/>
-        </UniformGrid>
+        <local:Setting x:Name="Setting" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="1"/>
+        <Image Source="/Resources/board.png" Stretch="Fill"
+           HorizontalAlignment="Center" Height="116" Margin="0,91,0,0" VerticalAlignment="Top" Width="248"
+           IsHitTestVisible="False"/>
+        <Button Content="PLAY" 
+            Margin="0,98,0,0"
+            VerticalAlignment="Top"
+            Height="102"
+            Width="224"
+            FontSize="50"
+            FontFamily="Gloucester MT Extra Condensed"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="2"
+            HorizontalAlignment="Center"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Click="StartGame_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Image Source="/Resources/board.png" Stretch="Fill"
+                HorizontalAlignment="Center" Height="116" Margin="0,234,0,0" VerticalAlignment="Top" Width="248"
+                IsHitTestVisible="False"/>
+        <Button Content="LEADERBOARD" 
+                Margin="0,241,0,0"
+                VerticalAlignment="Top"
+                Height="102"
+                Width="224"
+                FontSize="43"
+                FontFamily="Gloucester MT Extra Condensed"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="2"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Click="Leaderboard_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+
+        <Image Source="/Resources/board.png" Stretch="Fill"
+               HorizontalAlignment="Center" Height="116" Margin="0,383,0,0" VerticalAlignment="Top" Width="248"
+               IsHitTestVisible="False"/>
+        <Button Content="SETTING" 
+                Margin="0,390,0,0"
+                VerticalAlignment="Top"
+                Height="102"
+                Width="224"
+                FontSize="50"
+                FontFamily="Gloucester MT Extra Condensed"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="2"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Click="Setting_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        
+
+        <Image Source="/Resources/board.png" Stretch="Fill"
+            HorizontalAlignment="Center" Height="116" Margin="0,529,0,0" VerticalAlignment="Top" Width="248"
+            IsHitTestVisible="False"/>
+
+        <Button Content="EXIT" 
+            Margin="0,536,0,0"
+            VerticalAlignment="Top"
+            Height="102"
+            Width="224"
+            FontSize="50"
+            FontFamily="Gloucester MT Extra Condensed"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="2"
+            HorizontalAlignment="Center"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Click="Exit_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        
+        
+
+
+
     </Grid>
 </Window>

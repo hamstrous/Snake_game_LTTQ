@@ -33,6 +33,10 @@
     <None Remove="Resources\lightbrown.jpg" />
     <None Remove="Resources\right-arrow.png" />
     <None Remove="Resources\snake.jpg" />
+    <None Remove="Resources\sound-off.png" />
+    <None Remove="Resources\sound-on.png" />
+    <None Remove="Resources\toggle-off.png" />
+    <None Remove="Resources\toggle-on.png" />
     <None Remove="Sounds\bgm.mp3" />
     <None Remove="Sounds\box-break.mp3" />
     <None Remove="Sounds\button-click.mp3" />
@@ -84,6 +88,10 @@
     <Resource Include="Resources\lightbrown.jpg" />
     <Resource Include="Resources\right-arrow.png" />
     <Resource Include="Resources\snake.jpg" />
+    <Resource Include="Resources\sound-off.png" />
+    <Resource Include="Resources\sound-on.png" />
+    <Resource Include="Resources\toggle-off.png" />
+    <Resource Include="Resources\toggle-on.png" />
     <Resource Include="Sounds\bgm.mp3" />
     <Resource Include="Sounds\box-break.mp3" />
     <Resource Include="Sounds\button-click.mp3" />
@@ -106,6 +114,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Setting.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
   </ItemGroup>
 
 </Project>
