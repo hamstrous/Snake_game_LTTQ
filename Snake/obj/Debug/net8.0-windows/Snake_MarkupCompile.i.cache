@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\
 Snake
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\Github\Snake_game_LTTQ\Snake\App.xaml
-6-158588299
+C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\App.xaml
+72126861490
 
-26-544074626
-206448292834
-ChooseScreen.xaml;Leaderboard.xaml;MainMenu.xaml;MainWindow.xaml;SignIn.xaml;SignUp.xaml;
+27692266270
+206614537002
+ChooseScreen.xaml;Leaderboard.xaml;MainMenu.xaml;MainWindow.xaml;Setting.xaml;Signin.xaml;SignUp.xaml;
 
 False
 
