@@ -25,7 +25,7 @@
                 Margin="110,20,110,20">
             <Grid >
                 <Grid.Background>
-                    <ImageBrush ImageSource="/Resources/board.png"
+                    <ImageBrush ImageSource="/Leaderboard/board.png"
                                 Stretch="Fill" />
                 </Grid.Background>
                 <TextBlock x:Name="name1" HorizontalAlignment="Left" Margin="255,75,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>

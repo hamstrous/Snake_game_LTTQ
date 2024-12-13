@@ -27,7 +27,7 @@ namespace Snake
         public ChooseScreen()
         {
             InitializeComponent();
-            ClassicButton.Background = Brushes.LightBlue;
+            /*ClassicButton.Background = Brushes.LightBlue;
             _selectedGameModeButtons[typeof(GameMode)] = ClassicButton;
             MediumSpeedButton.Background = Brushes.LightBlue;
             _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;
@@ -38,7 +38,7 @@ namespace Snake
             gameInit.GameMode = GameMode.Classic;
             gameInit.GameSpeed = GameSpeed.Medium;
             gameInit.GameSize = GameSize.Medium;
-            gameInit.FoodColor = FoodColor.Red;
+            gameInit.FoodColor = FoodColor.Red;*/
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
