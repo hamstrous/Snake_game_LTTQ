@@ -22,6 +22,7 @@ namespace Snake
     /// </summary>
     public partial class SignIn : Window
     {
+        public static string currentUserName { get; set; }
         public SignIn()
         {
             InitializeComponent();
@@ -42,6 +43,7 @@ namespace Snake
             bool isValidUser = await Database.ValidateUserAsync(username, password);
             if (isValidUser)
             {
+                currentUserName = txtusername.Text;
                 txtErrorMessage.Text = "Login successful!!";
                 txtErrorMessage.Visibility = Visibility.Visible;
             }

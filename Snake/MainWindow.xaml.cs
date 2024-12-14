@@ -93,14 +93,43 @@ namespace Snake
             gridImages = SetupGrid();
         }
 
+        private async Task SaveScoreCurrent()
+        {
+            SignIn.currentUserName = "testuser01";
+            
+            Guid? userId = await SaveScore.GetUserIdAsync(SignIn.currentUserName);
+
+            if (userId == null)
+            {
+                MessageBox.Show("Không tìm thấy người dùng.");
+                return;
+            }
+
+            
+            int score = gameState.Score;
+            int mode = (int)GameInit.GameMode;
+
+            
+            await SaveScore.SavePlayerScore(userId.Value, score, mode);  
+        }
+
+
+
+
         private async Task RunGame()
         {
             Draw();
             await ShowCountDown();
             Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
+            SaveScoreCurrent();
             await ShowGameOver();
             InitMode();
+            
+            //await Task.Delay(1000);
+            //MainMenu mainMenu = new MainMenu();
+            //mainMenu.Show();
+            //this.Close();
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -239,9 +268,6 @@ namespace Snake
         {
             SoundEffect.PlayGameOverSound();
             await DrawDeadSnake();
-            await Task.Delay(500);
-            Overlay.Visibility = Visibility.Visible;
-            OverlayText.Text = "Ấn để bắt đầu!!";
         }
     }
 }
