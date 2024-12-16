@@ -15,7 +15,7 @@ namespace Snake
             LoadLeaderboard(mode); 
         }
 
-        private async void LoadLeaderboard(int mode)
+        private async Task LoadLeaderboard(int mode)
         {
             try
             {
