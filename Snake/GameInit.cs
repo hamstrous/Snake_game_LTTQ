@@ -44,6 +44,13 @@ namespace Snake
         Purple
     }
 
+    public enum FoodAmount
+    {
+        One,
+        Three,
+        Five
+    }
+
     public enum GameMode
     {
         Classic,

@@ -27,7 +27,12 @@ namespace Snake
         public ChooseScreen()
         {
             InitializeComponent();
-            /*ClassicButton.Background = Brushes.LightBlue;
+            string[] link = ClassicModeButton.Tag.ToString().Split("_Dark");
+            string groupName = link[0];
+            string enumValue = link[1];
+            Image buttonImage = (Image)ClassicModeButton.Content;
+            buttonImage.Source = new BitmapImage(new Uri((buttonImage.Source as BitmapImage).UriSource.ToString(), UriKind.Relative));
+            /*
             _selectedGameModeButtons[typeof(GameMode)] = ClassicButton;
             MediumSpeedButton.Background = Brushes.LightBlue;
             _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;

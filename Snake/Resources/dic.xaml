@@ -115,11 +115,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ClassicImage" Source="/Choose/Classic.png" Stretch="Fill"/>
+                        <Image x:Name="ClassicImage" Source="/Choose/Classic_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ClassicImage" Property="Source" Value="/Choose/Classic_Dark.png"/>
+                            <Setter TargetName="ClassicImage" Property="Source" Value="/Choose/Classic.png"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
@@ -140,11 +140,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/Reverse.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/Reverse_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/Reverse_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/Reverse.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -164,11 +164,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/Direction.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/Direction_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/Direction_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/Direction.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -188,11 +188,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/Wall.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/Wall_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/Wall_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/Wall.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -212,11 +212,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/Box.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/Box_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/Box_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/Box.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -236,11 +236,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/small.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/small_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/small_dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/small.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -260,11 +260,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/medium.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/medium_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/medium_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/medium.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -284,11 +284,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/large.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/large_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/large_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/large.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -308,11 +308,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/slow.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/slow_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/slow_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/slow.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -332,11 +332,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/ava.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/ava_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/ava_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/ava.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -356,11 +356,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/fast.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/fast_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/fast_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/fast.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -380,11 +380,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/one.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/one_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/one_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/one.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -404,11 +404,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/three.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/three_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/three_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/three.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -428,11 +428,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Image x:Name="ReverseImage" Source="/Choose/five.png" Stretch="Fill"/>
+                        <Image x:Name="ReverseImage" Source="/Choose/five_Dark.png" Stretch="Fill"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/five_Dark.png"/>
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/five.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

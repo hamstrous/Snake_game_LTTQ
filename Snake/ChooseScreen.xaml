@@ -21,7 +21,7 @@
         <Button Style="{StaticResource BackButtonStyle}" Click="BackButton_Click" Margin="25,16,0,0" Height="53" Width="114"/>
         <Image HorizontalAlignment="Left" Height="80" Margin="309,125,0,0"
                VerticalAlignment="Top" Width="77"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource ClassicMode }" Click="Button_Click" Height="64" Margin="315,133,0,0" Width="68"/>
+        <Button Name="ClassicModeButton"  Style="{StaticResource ClassicMode }" Click="Button_Click" Height="64" Margin="315,133,0,0" Width="68"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="393,125,0,0"
         VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
