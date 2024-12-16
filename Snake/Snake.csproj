@@ -85,6 +85,8 @@
     <None Remove="Sounds\bgm.mp3" />
     <None Remove="Sounds\box-break.mp3" />
     <None Remove="Sounds\button-click.mp3" />
+    <None Remove="Sounds\ButtonSound.mp4" />
+    <None Remove="Sounds\click-sound.mp3" />
     <None Remove="Sounds\food.mp3" />
     <None Remove="Sounds\food.wav" />
     <None Remove="Sounds\gameover.mp3" />
@@ -93,6 +95,7 @@
     <None Remove="Sounds\move.wav" />
     <None Remove="Sounds\music.mp3" />
     <None Remove="Sounds\music.wav" />
+    <None Remove="Sounds\OnOff-Sound.mp4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -179,10 +182,13 @@
     <Resource Include="Sounds\bgm.mp3" />
     <Resource Include="Sounds\box-break.mp3" />
     <Resource Include="Sounds\button-click.mp3" />
+    <Resource Include="Sounds\ButtonSound.mp4" />
+    <Resource Include="Sounds\click-sound.mp3" />
     <Resource Include="Sounds\food.wav" />
     <Resource Include="Sounds\gameover.wav" />
     <Resource Include="Sounds\move.wav" />
     <Resource Include="Sounds\music.wav" />
+    <Resource Include="Sounds\OnOff-Sound.mp4" />
   </ItemGroup>
 
   <ItemGroup>
