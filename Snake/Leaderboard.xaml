@@ -24,7 +24,7 @@
         Margin="110,20,110,20">
             <Grid>
                 <Grid.Background>
-                    <ImageBrush ImageSource="/Resources/board.png"
+                    <ImageBrush ImageSource="/Leaderboard/board.png"
                         Stretch="Fill" />
                 </Grid.Background>
                 <!-- Định nghĩa các cột: STT, Name, Score -->

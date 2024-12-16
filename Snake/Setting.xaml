@@ -3,24 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Width="600" Height="450"
              >
-    <Grid>
+    <Grid Margin="0,0,10,71">
         <Grid.Background>
-            <ImageBrush ImageSource="/Resources/board.png" />
+            <ImageBrush ImageSource="/Setting/board.png" />
         </Grid.Background>
-        <Button Content="Close" Width="100" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" 
-                Margin="0,324,0,0" Click="CloseButton_Click"/>
+        <Image Source="/Setting/x.png" HorizontalAlignment="Left" Height="58" Margin="467,52,0,0" VerticalAlignment="Top"
+               Width="57" RenderTransformOrigin="0.518,0.591"  IsHitTestVisible="False"/>
+        <Button Width="56" Height="58" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Margin="467,52,0,0" Click="CloseButton_Click" Background="Transparent" BorderBrush="Transparent">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
         <Image Name="BGM_image"
-               Source="/Resources/sound-on.png" Stretch="Fill"
-               HorizontalAlignment="Left" Height="154" Margin="63,110,0,0" VerticalAlignment="Top" Width="141"
+               Source="/Setting/sound-on.png" Stretch="Fill"
+               HorizontalAlignment="Left" Height="154" Margin="62,127,0,0" VerticalAlignment="Top" Width="141"
                IsHitTestVisible="False"/>
         <Button  x:Name="BGM_btn"
-            Margin="63,110,0,0"
+            Margin="62,127,0,0"
             VerticalAlignment="Top"
             Height="154"
             Width="141"
-            FontSize="50"
-            FontFamily="Gloucester MT Extra Condensed"
             Background="Transparent"
             BorderBrush="Transparent"
             BorderThickness="2"
@@ -47,23 +63,20 @@
 
 
         <Image Name="SFX_image"
-       Source="/Resources/toggle-on.png" Stretch="Fill"
-       HorizontalAlignment="Center" Height="153" Margin="0,109,0,0" VerticalAlignment="Top" Width="142"
+       Source="/Setting/SFX-on.png" Stretch="Fill"
+       HorizontalAlignment="Left" Height="154" Margin="220,127,0,0" VerticalAlignment="Top" Width="142"
        IsHitTestVisible="False"/>
-        <Button  x:Name="BGM_btn_Copy"
-            Margin="0,110,0,0"
+        <Button  x:Name="SFX_btn"
             VerticalAlignment="Top"
             Height="154"
             Width="142"
-            FontSize="50"
-            FontFamily="Gloucester MT Extra Condensed"
             Background="Transparent"
             BorderBrush="Transparent"
             BorderThickness="2"
-            HorizontalAlignment="Center"
+            HorizontalAlignment="Left"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            Click="SFX_Click">
+            Click="SFX_Click" RenderTransformOrigin="0.528,0.5" Margin="220,127,0,0">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="{TemplateBinding Background}"
@@ -80,5 +93,37 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Image x:Name="Window_image"
+            Source="/Setting/Sizeup.png" Stretch="Fill"
+            HorizontalAlignment="Left" Height="154" Margin="382,127,0,0" VerticalAlignment="Top" Width="142"
+            IsHitTestVisible="False"/>
+        <Button  x:Name="Window_btn"
+            VerticalAlignment="Top"
+            Height="154"
+            Width="142"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="2"
+            HorizontalAlignment="Left"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Click="Window_Click" RenderTransformOrigin="0.528,0.5" Margin="382,127,0,0">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
     </Grid>
 </UserControl>
