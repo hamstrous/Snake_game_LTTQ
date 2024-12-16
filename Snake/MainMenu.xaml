@@ -13,7 +13,7 @@
     
     <Grid>
         <local:Setting x:Name="Setting" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="1"/>
-        <Image Source="/Resources/board.png" Stretch="Fill"
+        <Image Source="/MainMenu/board.png" Stretch="Fill"
            HorizontalAlignment="Center" Height="116" Margin="0,91,0,0" VerticalAlignment="Top" Width="248"
            IsHitTestVisible="False"/>
         <Button Content="PLAY" 
@@ -47,7 +47,7 @@
             </Button.Template>
         </Button>
 
-        <Image Source="/Resources/board.png" Stretch="Fill"
+        <Image Source="/MainMenu/board.png" Stretch="Fill"
                 HorizontalAlignment="Center" Height="116" Margin="0,234,0,0" VerticalAlignment="Top" Width="248"
                 IsHitTestVisible="False"/>
         <Button Content="LEADERBOARD" 
@@ -83,7 +83,7 @@
 
 
 
-        <Image Source="/Resources/board.png" Stretch="Fill"
+        <Image Source="/MainMenu/board.png" Stretch="Fill"
                HorizontalAlignment="Center" Height="116" Margin="0,383,0,0" VerticalAlignment="Top" Width="248"
                IsHitTestVisible="False"/>
         <Button Content="SETTING" 
@@ -118,9 +118,9 @@
         </Button>
 
 
-        
 
-        <Image Source="/Resources/board.png" Stretch="Fill"
+
+        <Image Source="/MainMenu/board.png" Stretch="Fill"
             HorizontalAlignment="Center" Height="116" Margin="0,529,0,0" VerticalAlignment="Top" Width="248"
             IsHitTestVisible="False"/>
 

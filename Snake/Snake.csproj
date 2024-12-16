@@ -6,6 +6,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <UseFastUpToDateCheck>true</UseFastUpToDateCheck>	
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,39 @@
     <None Remove="Assets\icon.ico" />
     <None Remove="Assets\MainMenuBackground.jpg" />
     <None Remove="Assets\Wall.png" />
+    <None Remove="Choose\ava.png" />
+    <None Remove="Choose\ava_dark.png" />
+    <None Remove="Choose\back01.png" />
+    <None Remove="Choose\back02.png" />
+    <None Remove="Choose\Box.png" />
+    <None Remove="Choose\Box_Dark.png" />
+    <None Remove="Choose\choose-button.png" />
+    <None Remove="Choose\Classic.png" />
+    <None Remove="Choose\Classic_Dark.png" />
+    <None Remove="Choose\Direction.png" />
+    <None Remove="Choose\Direction_Dark.png" />
+    <None Remove="Choose\fast.png" />
+    <None Remove="Choose\fast_dark.png" />
+    <None Remove="Choose\five.png" />
+    <None Remove="Choose\five_dark.png" />
+    <None Remove="Choose\grass.jpg" />
+    <None Remove="Choose\large.png" />
+    <None Remove="Choose\large_dark.png" />
+    <None Remove="Choose\medium.png" />
+    <None Remove="Choose\medium_dark.png" />
+    <None Remove="Choose\one.png" />
+    <None Remove="Choose\one_dark.png" />
+    <None Remove="Choose\Reverse.png" />
+    <None Remove="Choose\Reverse_Dark.png" />
+    <None Remove="Choose\slow.png" />
+    <None Remove="Choose\slow_dark.png" />
+    <None Remove="Choose\small.png" />
+    <None Remove="Choose\small_dark.png" />
+    <None Remove="Choose\three.png" />
+    <None Remove="Choose\three_dark.png" />
+    <None Remove="Choose\Wall.png" />
+    <None Remove="Choose\Wall_Dark.png" />
+    <None Remove="LeaderBoard\board.png" />
     <None Remove="Resources\background.jpg" />
     <None Remove="Resources\board.png" />
     <None Remove="Resources\brown.jpg" />
@@ -37,6 +71,16 @@
     <None Remove="Resources\sound-on.png" />
     <None Remove="Resources\toggle-off.png" />
     <None Remove="Resources\toggle-on.png" />
+    <None Remove="Setting\board.png" />
+    <None Remove="Setting\SFX-off.png" />
+    <None Remove="Setting\SFX-on.png" />
+    <None Remove="Setting\Sizedown.png" />
+    <None Remove="Setting\Sizeup.png" />
+    <None Remove="Setting\sound-off.png" />
+    <None Remove="Setting\sound-on.png" />
+    <None Remove="Setting\toggle-off.png" />
+    <None Remove="Setting\toggle-on.png" />
+    <None Remove="Setting\x.png" />
     <None Remove="Sounds\bgm.mp3" />
     <None Remove="Sounds\box-break.mp3" />
     <None Remove="Sounds\button-click.mp3" />
@@ -64,6 +108,39 @@
 
   <ItemGroup>
     <Resource Include="Assets\MainMenuBackground.jpg" />
+    <Resource Include="Choose\ava.png" />
+    <Resource Include="Choose\ava_dark.png" />
+    <Resource Include="Choose\back01.png" />
+    <Resource Include="Choose\back02.png" />
+    <Resource Include="Choose\Box.png" />
+    <Resource Include="Choose\Box_Dark.png" />
+    <Resource Include="Choose\choose-button.png" />
+    <Resource Include="Choose\Classic.png" />
+    <Resource Include="Choose\Classic_Dark.png" />
+    <Resource Include="Choose\Direction.png" />
+    <Resource Include="Choose\Direction_Dark.png" />
+    <Resource Include="Choose\fast.png" />
+    <Resource Include="Choose\fast_dark.png" />
+    <Resource Include="Choose\five.png" />
+    <Resource Include="Choose\five_dark.png" />
+    <Resource Include="Choose\grass.jpg" />
+    <Resource Include="Choose\large.png" />
+    <Resource Include="Choose\large_dark.png" />
+    <Resource Include="Choose\medium.png" />
+    <Resource Include="Choose\medium_dark.png" />
+    <Resource Include="Choose\one.png" />
+    <Resource Include="Choose\one_dark.png" />
+    <Resource Include="Choose\Reverse.png" />
+    <Resource Include="Choose\Reverse_Dark.png" />
+    <Resource Include="Choose\slow.png" />
+    <Resource Include="Choose\slow_dark.png" />
+    <Resource Include="Choose\small.png" />
+    <Resource Include="Choose\small_dark.png" />
+    <Resource Include="Choose\three.png" />
+    <Resource Include="Choose\three_dark.png" />
+    <Resource Include="Choose\Wall.png" />
+    <Resource Include="Choose\Wall_Dark.png" />
+    <Resource Include="LeaderBoard\board.png" />
     <Resource Include="Resources\anhgo.png" />
     <Resource Include="Assets\Body.png" />
     <Resource Include="Assets\Box.png" />
@@ -78,7 +155,6 @@
     <Resource Include="Assets\icon.ico" />
     <Resource Include="Assets\Wall.png" />
     <Resource Include="Resources\background.jpg" />
-    <Resource Include="Resources\board.png" />
     <Resource Include="Resources\brown.jpg" />
     <Resource Include="Resources\brownlight.jpg" />
     <Resource Include="Resources\darkgreen.jpg" />
@@ -88,10 +164,16 @@
     <Resource Include="Resources\lightbrown.jpg" />
     <Resource Include="Resources\right-arrow.png" />
     <Resource Include="Resources\snake.jpg" />
-    <Resource Include="Resources\sound-off.png" />
-    <Resource Include="Resources\sound-on.png" />
-    <Resource Include="Resources\toggle-off.png" />
-    <Resource Include="Resources\toggle-on.png" />
+    <Resource Include="Setting\board.png" />
+    <Resource Include="Setting\SFX-off.png" />
+    <Resource Include="Setting\SFX-on.png" />
+    <Resource Include="Setting\Sizedown.png" />
+    <Resource Include="Setting\Sizeup.png" />
+    <Resource Include="Setting\sound-off.png" />
+    <Resource Include="Setting\sound-on.png" />
+    <Resource Include="Setting\toggle-off.png" />
+    <Resource Include="Setting\toggle-on.png" />
+    <Resource Include="Setting\x.png" />
     <Resource Include="Sounds\bgm.mp3" />
     <Resource Include="Sounds\box-break.mp3" />
     <Resource Include="Sounds\button-click.mp3" />
