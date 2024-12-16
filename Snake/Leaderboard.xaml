@@ -1,4 +1,3 @@
-
 ﻿<Window x:Class="Snake.Leaderboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -25,7 +24,7 @@
         Margin="110,20,110,20">
             <Grid>
                 <Grid.Background>
-                    <ImageBrush ImageSource="/Leaderboard/board.png"
+                    <ImageBrush ImageSource="/Resources/board.png"
                         Stretch="Fill" />
                 </Grid.Background>
                 <!-- Định nghĩa các cột: STT, Name, Score -->
