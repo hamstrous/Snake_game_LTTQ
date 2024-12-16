@@ -15,11 +15,13 @@ using System.Windows.Shapes;
 
 namespace Snake
 {
+    /// <summary>
+    /// Interaction logic for Setting.xaml
+    /// </summary>
     public partial class Setting : UserControl
     {
         private bool isPressed = false;
-        private bool isPressed2 = false;
-        private bool isPressed3 = false;
+        private bool isPressed2= false;
 
 
         public Setting()
@@ -30,19 +32,17 @@ namespace Snake
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Collapsed;
-            SoundEffect.PlayOnOffSound();
         }
 
         private void BGM_Click(object sender, RoutedEventArgs e)
         {
-            SoundEffect.PlayOnOffSound();
             if (isPressed)
             {
-                BGM_image.Source = new BitmapImage(new Uri("/Setting/sound-on.png", UriKind.Relative));
+                BGM_image.Source = new BitmapImage(new Uri("/Resources/sound-on.png", UriKind.Relative));
             }
             else
             {
-                BGM_image.Source = new BitmapImage(new Uri("/Setting/sound-off.png", UriKind.Relative));
+                BGM_image.Source = new BitmapImage(new Uri("/Resources/sound-off.png", UriKind.Relative));
                 
             }
             isPressed = !isPressed;
@@ -52,31 +52,20 @@ namespace Snake
 
         private void SFX_Click(object sender, RoutedEventArgs e)
         {
-            SoundEffect.PlayOnOffSound();
             if (isPressed2)
             {
-                SFX_image.Source = new BitmapImage(new Uri("/Setting/SFX-on.png", UriKind.Relative));
+                SFX_image.Source = new BitmapImage(new Uri("/Resources/toggle-on.png", UriKind.Relative));
             }
             else
             {
-                SFX_image.Source = new BitmapImage(new Uri("/Setting/SFX-off.png", UriKind.Relative));
+                SFX_image.Source = new BitmapImage(new Uri("/Resources/toggle-off.png", UriKind.Relative));
 
             }
             isPressed2 = !isPressed2;
         }
         private void Window_Click(object sender, RoutedEventArgs e)
         {
-            SoundEffect.PlayOnOffSound();
-            if (isPressed3)
-            {
-                Window_image.Source = new BitmapImage(new Uri("/Setting/Sizeup.png", UriKind.Relative));
-            }
-            else
-            {
-                Window_image.Source = new BitmapImage(new Uri("/Setting/Sizedown.png", UriKind.Relative));
 
-            }
-            isPressed3 = !isPressed3;
         }
     }
 }
