@@ -73,16 +73,6 @@ namespace Snake
             Play("box-break.mp3");
         }
 
-        public static void PlayButtonSound()
-        {
-            Play("ButtonSound.mp4");
-        }
-
-        public static void PlayOnOffSound()
-        {
-            Play("click-sound.mp3");
-        }
-
         public static void PlayBGM()
         {
             if(!CanPlayBGM) return;
