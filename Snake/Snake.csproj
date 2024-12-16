@@ -57,6 +57,7 @@
     <None Remove="Choose\Wall.png" />
     <None Remove="Choose\Wall_Dark.png" />
     <None Remove="LeaderBoard\board.png" />
+    <None Remove="MainMenu\board.png" />
     <None Remove="Resources\background.jpg" />
     <None Remove="Resources\board.png" />
     <None Remove="Resources\brown.jpg" />
@@ -141,6 +142,7 @@
     <Resource Include="Choose\Wall.png" />
     <Resource Include="Choose\Wall_Dark.png" />
     <Resource Include="LeaderBoard\board.png" />
+    <Resource Include="MainMenu\board.png" />
     <Resource Include="Resources\anhgo.png" />
     <Resource Include="Assets\Body.png" />
     <Resource Include="Assets\Box.png" />
