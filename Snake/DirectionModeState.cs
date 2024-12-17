@@ -8,10 +8,10 @@ namespace Snake
 {
     public class DirectionModeState : GameState
     {
-        public DirectionModeState(int rows, int cols) : base(rows, cols)
+        public DirectionModeState(int rows, int cols, int foods) : base(rows, cols, foods)
         {
             AddSnake();
-            AddFood();
+            for(int i=1;i<=FoodCount;i++) AddFood();
         }
 
         public void AddDirectionPad(Positions pos, Directions dir)

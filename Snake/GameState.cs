@@ -18,7 +18,7 @@ namespace Snake
 
         public Directions Dir { get; protected set; }
         public int Score { get; protected set; }
-        
+        public int FoodCount { get; set; }
         public int HighScore { get; protected set; }
         public bool GameOver { get; protected set; }
 
@@ -28,8 +28,9 @@ namespace Snake
         protected LinkedList<Positions> snakePositions = new LinkedList<Positions>();
         protected readonly Random random = new Random();
 
-        public GameState(int rows , int cols)
+        public GameState(int rows , int cols, int foods)
         {
+            FoodCount = foods;
             Grid = new LinkedList<Pair<GridValue,Directions>>[rows, cols];
             Dir = Directions.Right;
             Rows = rows;

@@ -21,23 +21,23 @@
         <Button Style="{StaticResource BackButtonStyle}" Click="BackButton_Click" Margin="25,16,0,0" Height="53" Width="114"/>
         <Image HorizontalAlignment="Left" Height="80" Margin="309,125,0,0"
                VerticalAlignment="Top" Width="77"  Source="/Choose/choose-button.png" />
-        <Button Name="ClassicModeButton"  Style="{StaticResource ClassicMode }" Click="Button_Click" Height="64" Margin="315,133,0,0" Width="68"/>
+        <Button Name="ClassicModeButton" Tag="GameMode,Classic" Style="{StaticResource ClassicMode1 }" Click="Button_Click" Height="64" Margin="315,133,0,0" Width="68"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="393,125,0,0"
         VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource ReverseMode}" Click="Button_Click" Height="68" Margin="405,129,0,0" Width="56" />
+        <Button Tag="GameMode,Reverse" Style="{StaticResource ReverseMode1}" Click="Button_Click" Height="68" Margin="405,129,0,0" Width="56" />
 
         <Image HorizontalAlignment="Left" Height="80" Margin="478,127,0,0"
         VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource WallMode}" Click="Button_Click" Height="66" Margin="489,131,0,0" Width="54" />
+        <Button Tag="GameMode,Wall" Style="{StaticResource WallMode1}" Click="Button_Click" Height="66" Margin="489,131,0,0" Width="54" />
 
         <Image HorizontalAlignment="Left" Height="80" Margin="559,125,0,0"
         VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource BoxMode}" Click="Button_Click" Height="59" Margin="572,133,0,0" Width="53" />
+        <Button Tag="GameMode,Box" Style="{StaticResource BoxMode1}" Click="Button_Click" Height="59" Margin="572,133,0,0" Width="53" />
 
         <Image HorizontalAlignment="Left" Height="80" Margin="644,125,0,0"
         VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource DirectionMode}" Click="Button_Click" Height="59" Margin="656,133,0,0" Width="56" />
+        <Button Tag="GameMode,Direction" Style="{StaticResource DirectionMode1}" Click="Button_Click" Height="59" Margin="656,133,0,0" Width="56" />
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10" Height="39" Width="330">
             <Button Content="Play" Width="100" Margin="5" Click="PlayButton_Click" />
@@ -46,39 +46,39 @@
         </StackPanel>
         <Image HorizontalAlignment="Left" Height="80" Margin="393,240,0,0"
             VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource MediumSize}" Click="Button_Click" Height="45" Margin="410,257,0,0" Width="46" />
+        <Button Name="MediumSizeButton" Tag="GameSize,Medium" Style="{StaticResource MediumSize1}" Click="Button_Click" Height="45" Margin="410,257,0,0" Width="46" />
 
         <Image HorizontalAlignment="Left" Height="80" Margin="478,240,0,0"
             VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource SmallSize}" Click="Button_Click" Height="34" Margin="500,262,0,0" Width="36" />
+        <Button Tag="GameSize,Small" Style="{StaticResource SmallSize1}" Click="Button_Click" Height="34" Margin="500,262,0,0" Width="36" />
 
         <Image HorizontalAlignment="Left" Height="80" Margin="559,240,0,0"
             VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource LargeSize}" Click="Button_Click" Height="59" Margin="572,248,0,0" Width="53" />
+        <Button Tag="GameSize,Large" Style="{StaticResource LargeSize1}" Click="Button_Click" Height="59" Margin="572,248,0,0" Width="53" />
 
         <Image HorizontalAlignment="Left" Height="80" Margin="478,348,0,0"
             VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource Slow}" Click="Button_Click" Height="56" Margin="494,354,0,0" Width="49" />
+        <Button Tag="GameSpeed,Slow" Style="{StaticResource SlowSpeed1}" Click="Button_Click" Height="56" Margin="494,354,0,0" Width="49" />
         
         <Image HorizontalAlignment="Left" Height="80" Margin="392,348,0,0"
             VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource Ava}" Click="Button_Click" Height="56" Margin="408,354,0,0" Width="50" />
+        <Button Tag="GameSpeed,Medium" Name="MediumSpeedButton" Style="{StaticResource MediumSpeed1}" Click="Button_Click" Height="56" Margin="408,354,0,0" Width="50" />
         
         <Image HorizontalAlignment="Left" Height="80" Margin="564,348,0,0"
             VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource Fast}" Click="Button_Click" Height="56" Margin="580,354,0,0" Width="50" />
+        <Button Tag="GameSpeed,Fast" Style="{StaticResource FastSpeed1}" Click="Button_Click" Height="56" Margin="580,354,0,0" Width="50" />
         
         <Image HorizontalAlignment="Left" Height="80" Margin="478,459,0,0"
             VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource Three}" Click="Button_Click" Height="56" Margin="494,465,0,0" Width="49" />
+        <Button Tag="FoodAmount,Three" Style="{StaticResource Three1}" Click="Button_Click" Height="56" Margin="494,465,0,0" Width="49" />
         
         <Image HorizontalAlignment="Left" Height="80" Margin="392,459,0,0"
             VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource One}" Click="Button_Click" Height="56" Margin="408,465,0,0" Width="50" />
+        <Button Name="OneFoodButton" Tag="FoodAmount,One" Style="{StaticResource One1}" Click="Button_Click" Height="56" Margin="408,465,0,0" Width="50" />
         
         <Image HorizontalAlignment="Left" Height="80" Margin="564,459,0,0"
             VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Style="{StaticResource Five}" Click="Button_Click" Height="56" Margin="580,465,0,0" Width="50" />
+        <Button Tag="FoodAmount,Five" Style="{StaticResource Five1}" Click="Button_Click" Height="56" Margin="580,465,0,0" Width="50" />
         
 
     </Grid>

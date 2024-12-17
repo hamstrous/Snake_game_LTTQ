@@ -75,7 +75,7 @@ namespace Snake
 
         public static void PlayButtonSound()
         {
-            Play("ButtonSound.mp4");
+            Play("ButtonSound.mp3");
         }
 
         public static void PlayOnOffSound()
@@ -93,6 +93,16 @@ namespace Snake
                 BGM.Play();
             };
             BGM.Play();
+        }
+
+        public static void PauseBGM()
+        {
+            BGM?.Pause();
+        }
+
+        public static void ResumeBGM()
+        {
+            BGM?.Play();
         }
     }
 }

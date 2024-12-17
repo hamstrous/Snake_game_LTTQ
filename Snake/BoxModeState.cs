@@ -8,10 +8,10 @@ namespace Snake
 {
     public class BoxModeState : GameState
     {
-        public BoxModeState(int rows, int cols) : base(rows, cols)
+        public BoxModeState(int rows, int cols, int foods) : base(rows, cols, foods)
         {
             AddSnake();
-            AddBox(true);
+            for(int i=1;i<=FoodCount;i++) AddBox(true);
         }
 
         protected void MoveBox(Positions pos)

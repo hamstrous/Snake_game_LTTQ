@@ -32,14 +32,28 @@ namespace Snake
 
         public void InitMode()
         {
+            int foods = 1;
+            switch (GameInit.FoodAmount)
+            {
+                case FoodAmount.One:
+                    foods = 1;
+                    break;
+                case FoodAmount.Three:
+                    foods = 3;
+                    break;
+                case FoodAmount.Five:
+                    foods = 5;
+                    break;
+            }
+
             Mode = GameInit.GameMode switch
             {
-                GameMode.Classic => new ClassicModeState(rows, cols),
-                GameMode.Box => new BoxModeState(rows, cols),
-                GameMode.Wall => new WallModeState(rows, cols),
-                GameMode.Direction => new DirectionModeState(rows, cols),
-                GameMode.Reverse => new ReverseModeState(rows, cols),
-                _ => new ClassicModeState(rows, cols)
+                GameMode.Classic => new ClassicModeState(rows, cols, foods),
+                GameMode.Box => new BoxModeState(rows, cols, foods),
+                GameMode.Wall => new WallModeState(rows, cols, foods),
+                GameMode.Direction => new DirectionModeState(rows, cols, foods),
+                GameMode.Reverse => new ReverseModeState(rows, cols, foods),
+                _ => new ClassicModeState(rows, cols, foods)
             };
             gameState = Mode;
         }
@@ -77,6 +91,7 @@ namespace Snake
                     cols = 19;
                     break;
             }
+
             InitMode();
             InitFoodColor();
             Images.AssignImages();
