@@ -75,7 +75,7 @@ namespace Snake
             Empty = LoadImage("Empty.png");
             Body = LoadImage("Body.png");
             Head = LoadImage("Head.png");
-            Food = LoadImage("Food.png", true);
+            Food = LoadImage("Food.png");
             DeadBody = LoadImage("DeadBody.png");
             DeadHead = LoadImage("DeadHead.png");
             Box = LoadImage("Box.png");

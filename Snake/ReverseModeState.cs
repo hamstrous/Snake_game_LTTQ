@@ -9,10 +9,10 @@ namespace Snake
     public class ReverseModeState : GameState
     {
         int eaten = 0;
-        public ReverseModeState(int rows, int cols) : base(rows, cols)
+        public ReverseModeState(int rows, int cols, int foods) : base(rows, cols, foods)
         {
             AddSnake();
-            AddFood();
+            for(int i=1;i<=FoodCount;i++) AddFood();
         }
 
         public void SwapSnake()

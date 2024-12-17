@@ -28,11 +28,11 @@
             </Button.Template>
         </Button>
 
-        <Image Name="BGM_image"
+        <Image Name="SFX_image"
                Source="/Setting/sound-on.png" Stretch="Fill"
                HorizontalAlignment="Left" Height="154" Margin="62,127,0,0" VerticalAlignment="Top" Width="141"
                IsHitTestVisible="False"/>
-        <Button  x:Name="BGM_btn"
+        <Button  x:Name="SFX_btn"
             Margin="62,127,0,0"
             VerticalAlignment="Top"
             Height="154"
@@ -43,7 +43,7 @@
             HorizontalAlignment="Left"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            Click="BGM_Click">
+            Click="SFX_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
@@ -62,11 +62,11 @@
         </Button>
 
 
-        <Image Name="SFX_image"
+        <Image Name="BGM_image"
        Source="/Setting/SFX-on.png" Stretch="Fill"
        HorizontalAlignment="Left" Height="154" Margin="220,127,0,0" VerticalAlignment="Top" Width="142"
        IsHitTestVisible="False"/>
-        <Button  x:Name="SFX_btn"
+        <Button  x:Name="BGM_btn"
             VerticalAlignment="Top"
             Height="154"
             Width="142"
@@ -76,7 +76,7 @@
             HorizontalAlignment="Left"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            Click="SFX_Click" RenderTransformOrigin="0.528,0.5" Margin="220,127,0,0">
+            Click="BGM_Click" RenderTransformOrigin="0.528,0.5" Margin="220,127,0,0">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="{TemplateBinding Background}"

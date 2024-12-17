@@ -27,18 +27,46 @@ namespace Snake
         public ChooseScreen()
         {
             InitializeComponent();
-            /*ClassicButton.Background = Brushes.LightBlue;
-            _selectedGameModeButtons[typeof(GameMode)] = ClassicButton;
-            MediumSpeedButton.Background = Brushes.LightBlue;
-            _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;
-            MediumSizeButton.Background = Brushes.LightBlue;
+            ClassicModeButton.Style = (Style)FindResource("ClassicMode2");
+            _selectedGameModeButtons[typeof(GameMode)] = ClassicModeButton;
+            MediumSizeButton.Style = (Style)FindResource("MediumSize2");
             _selectedGameModeButtons[typeof(GameSize)] = MediumSizeButton;
-            RedFoodButton.Background = Brushes.LightBlue;
-            _selectedGameModeButtons[typeof(FoodColor)] = RedFoodButton;
-            gameInit.GameMode = GameMode.Classic;
-            gameInit.GameSpeed = GameSpeed.Medium;
-            gameInit.GameSize = GameSize.Medium;
-            gameInit.FoodColor = FoodColor.Red;*/
+            MediumSpeedButton.Style = (Style)FindResource("MediumSpeed2");
+            _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;
+            OneFoodButton.Style = (Style)FindResource("One2");
+            _selectedGameModeButtons[typeof(FoodAmount)] = OneFoodButton;
+        }
+        /*string[] link = ClassicModeButton.Tag.ToString().Split("_Dark");
+        string groupName = link[0];
+        string enumValue = link[1];*/
+        /*
+        
+        MediumSizeButton.Background = Brushes.LightBlue;
+        
+        _selectedGameModeButtons[typeof(FoodColor)] = RedFoodButton;
+        gameInit.GameMode = GameMode.Classic;
+        gameInit.GameSpeed = GameSpeed.Medium;
+        gameInit.GameSize = GameSize.Medium;
+        gameInit.FoodColor = FoodColor.Red;*/
+
+        private void SwitchStyle(Button button)
+        {
+            ResourceDictionary resourceDictionary = this.Resources.MergedDictionaries[0];
+
+            // Find the key for the current style
+            string styleName = resourceDictionary.Keys
+                .OfType<string>()
+                .FirstOrDefault(key => resourceDictionary[key] == button.Style);
+
+            if (styleName[styleName.Length - 1] == '1')
+            {
+                
+                button.Style = (Style)FindResource(styleName.Substring(0, styleName.Length - 1) + "2");
+            }
+            else
+            {
+                button.Style = (Style)FindResource(styleName.Substring(0, styleName.Length - 1) + "1");
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -63,6 +91,9 @@ namespace Snake
             }else if(groupName == nameof(FoodColor))
             {
                 HandleButtonSelection<FoodColor>(clickedButton, _selectedGameModeButtons, enumValue);
+            }else if(groupName == nameof(FoodAmount))
+            {
+                HandleButtonSelection<FoodAmount>(clickedButton, _selectedGameModeButtons, enumValue);
             }
         }
 
@@ -79,17 +110,19 @@ namespace Snake
                 gameInit.GameSize = (GameSize)(object)selectedEnumValue;
             else if(enumType == typeof(FoodColor))
                 gameInit.FoodColor = (FoodColor)(object)selectedEnumValue;
+            else if(enumType == typeof(FoodAmount))
+                gameInit.FoodAmount = (FoodAmount)(object)selectedEnumValue;
 
             // Deselect the currently selected button for this group (if any)
             if (selectedButtons.ContainsKey(enumType))
             {
                 Button previousButton = selectedButtons[enumType];
-                previousButton.Background = Brushes.LightGray; // Reset color
+                SwitchStyle(previousButton);
                 selectedButtons.Remove(enumType); // Remove old selection
             }
 
             // Select the new button
-            clickedButton.Background = Brushes.LightBlue; // Set selected color
+            SwitchStyle(clickedButton); // Set selected color
             selectedButtons[enumType] = clickedButton;
 
         }

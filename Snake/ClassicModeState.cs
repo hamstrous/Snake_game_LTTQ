@@ -8,10 +8,10 @@ namespace Snake
 {
     internal class ClassicModeState : GameState
     {
-        public ClassicModeState(int rows, int cols) : base(rows, cols)
+        public ClassicModeState(int rows, int cols, int foods) : base(rows, cols, foods)
         {
             AddSnake();
-            AddFood();
+            for(int i=1;i<=FoodCount;i++) AddFood();
         }
     }
 }

@@ -44,6 +44,13 @@ namespace Snake
         Purple
     }
 
+    public enum FoodAmount
+    {
+        One,
+        Three,
+        Five
+    }
+
     public enum GameMode
     {
         Classic,
@@ -61,6 +68,7 @@ namespace Snake
         public SnakeColor SnakeColor;
         public GameMode GameMode;
         public FoodColor FoodColor;
+        public FoodAmount FoodAmount;
         public GameInit()
         {
             GameSize = GameSize.Medium;
@@ -69,13 +77,14 @@ namespace Snake
             SnakeColor = SnakeColor.Green;
             GameMode = GameMode.Classic;
         }
-        public GameInit(GameSize gameSize, GameSpeed gameSpeed, BackgroundColor gameBackgroundColor, SnakeColor snakeColor, GameMode gameMode)
+        public GameInit(GameSize gameSize, GameSpeed gameSpeed, BackgroundColor gameBackgroundColor, SnakeColor snakeColor, GameMode gameMode, FoodAmount foodAmount)
         {
             GameSize = gameSize;
             GameSpeed = gameSpeed;
             GameBackgroundColor = gameBackgroundColor;
             SnakeColor = snakeColor;
             GameMode = gameMode;
+            FoodAmount = foodAmount;
         }
     }
 }

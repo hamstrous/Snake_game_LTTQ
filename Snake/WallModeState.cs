@@ -8,10 +8,10 @@ namespace Snake
 {
     public class WallModeState : GameState
     {
-        public WallModeState(int rows, int cols) : base(rows, cols)
+        public WallModeState(int rows, int cols, int foods) : base(rows, cols, foods)
         {   
             AddSnake();
-            AddFood();
+            for(int i=1;i<=FoodCount;i++) AddFood();
         }
 
         int[] dx = { -1, 1, 0, 0, -1, 1, 1, -1 };

@@ -38,11 +38,13 @@ namespace Snake
             SoundEffect.PlayOnOffSound();
             if (isPressed)
             {
-                BGM_image.Source = new BitmapImage(new Uri("/Setting/sound-on.png", UriKind.Relative));
+                SoundEffect.ResumeBGM();
+                BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-on.png", UriKind.Relative));
             }
             else
             {
-                BGM_image.Source = new BitmapImage(new Uri("/Setting/sound-off.png", UriKind.Relative));
+                SoundEffect.PauseBGM();
+                BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-off.png", UriKind.Relative));
                 
             }
             isPressed = !isPressed;
@@ -55,11 +57,13 @@ namespace Snake
             SoundEffect.PlayOnOffSound();
             if (isPressed2)
             {
-                SFX_image.Source = new BitmapImage(new Uri("/Setting/SFX-on.png", UriKind.Relative));
+                SoundEffect.CanPlaySFX = true;
+                SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-on.png", UriKind.Relative));
             }
             else
             {
-                SFX_image.Source = new BitmapImage(new Uri("/Setting/SFX-off.png", UriKind.Relative));
+                SoundEffect.CanPlaySFX = false;
+                SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-off.png", UriKind.Relative));
 
             }
             isPressed2 = !isPressed2;
