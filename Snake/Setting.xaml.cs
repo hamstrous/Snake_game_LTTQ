@@ -21,6 +21,7 @@ namespace Snake
         private bool isPressed2 = false;
         private bool isPressed3 = false;
 
+        
 
         public Setting()
         {
@@ -71,6 +72,7 @@ namespace Snake
         private void Window_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
+            
             if (isPressed3)
             {
                 Window_image.Source = new BitmapImage(new Uri("/Setting/Sizeup.png", UriKind.Relative));
@@ -81,6 +83,23 @@ namespace Snake
 
             }
             isPressed3 = !isPressed3;
+            var parentWindow = Window.GetWindow(this);
+            if (parentWindow != null)
+            {
+                if (parentWindow.WindowStyle == WindowStyle.None)
+                {
+                    parentWindow.WindowState = WindowState.Normal;
+                    parentWindow.WindowStyle = WindowStyle.SingleBorderWindow;
+                    parentWindow.ResizeMode = ResizeMode.CanResize;
+                }
+                else
+                {
+                    parentWindow.WindowState = WindowState.Maximized;
+                    parentWindow.WindowStyle = WindowStyle.None;
+                    parentWindow.ResizeMode = ResizeMode.NoResize;
+                }
+            }
+
         }
     }
 }

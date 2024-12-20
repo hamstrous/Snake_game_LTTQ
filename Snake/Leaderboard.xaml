@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
-        Title="Leaderboard" Height="650" Width="800"
+        Title="Leaderboard" Height="800" Width="1000"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         >

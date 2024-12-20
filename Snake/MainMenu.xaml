@@ -13,6 +13,7 @@
     
     <Grid>
         <local:Setting x:Name="Setting" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="1"/>
+        <local:UserControl1 x:Name="ChooseMode"  Visibility="Collapsed" Panel.ZIndex="1"/>
         <Image Source="/MainMenu/board.png" Stretch="Fill"
            HorizontalAlignment="Center" Height="116" Margin="0,91,0,0" VerticalAlignment="Top" Width="248"
            IsHitTestVisible="False"/>

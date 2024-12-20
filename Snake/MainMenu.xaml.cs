@@ -4,18 +4,24 @@ namespace Snake
 {
     public partial class MainMenu : Window
     {
+
+        private Setting settingControl;
         public MainMenu()
         {
             InitializeComponent();
             SoundEffect.PlayBGM();
+
+
         }
 
         private void StartGame_Click(object sender, RoutedEventArgs e)
         {
+            /*
+                        ChooseScreen chooseScreen = new ChooseScreen();
+                        chooseScreen.Show();
 
-            ChooseScreen chooseScreen = new ChooseScreen();
-            chooseScreen.Show();
-            this.Close();
+                        this.Close();*/
+            ChooseMode.Visibility = Visibility.Visible;
         }
 
         private void Leaderboard_Click(object sender, RoutedEventArgs e)
