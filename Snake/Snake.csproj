@@ -11,6 +11,9 @@
 
   <ItemGroup>
     <None Remove="anhgo.png" />
+    <None Remove="Assets\Bg1.png" />
+    <None Remove="Assets\Bg1png.png" />
+    <None Remove="Assets\Bg2.png" />
     <None Remove="Assets\Body.png" />
     <None Remove="Assets\Box.png" />
     <None Remove="Assets\DeadBody.png" />
@@ -141,6 +144,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Bg1.png" />
+    <Resource Include="Assets\Bg2.png" />
     <Resource Include="Assets\MainMenuBackground.jpg" />
     <Resource Include="Choose\apple.png" />
     <Resource Include="Choose\apple_Dark.png" />

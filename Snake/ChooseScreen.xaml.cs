@@ -88,9 +88,9 @@ namespace Snake
             }else if(groupName == nameof(GameSize))
             {
                 HandleButtonSelection<GameSize>(clickedButton, _selectedGameModeButtons, enumValue);
-            }else if(groupName == nameof(FoodColor))
+            }else if(groupName == nameof(FoodType))
             {
-                HandleButtonSelection<FoodColor>(clickedButton, _selectedGameModeButtons, enumValue);
+                HandleButtonSelection<FoodType>(clickedButton, _selectedGameModeButtons, enumValue);
             }else if(groupName == nameof(FoodAmount))
             {
                 HandleButtonSelection<FoodAmount>(clickedButton, _selectedGameModeButtons, enumValue);
@@ -108,8 +108,6 @@ namespace Snake
                 gameInit.GameSpeed = (GameSpeed)(object)selectedEnumValue;
             else if(enumType == typeof(GameSize))
                 gameInit.GameSize = (GameSize)(object)selectedEnumValue;
-            else if(enumType == typeof(FoodColor))
-                gameInit.FoodColor = (FoodColor)(object)selectedEnumValue;
             else if(enumType == typeof(FoodAmount))
                 gameInit.FoodAmount = (FoodAmount)(object)selectedEnumValue;
 
