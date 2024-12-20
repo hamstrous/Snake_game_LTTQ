@@ -34,40 +34,32 @@
                 Text="HIGHSCORE 0"
                 FontSize="22"
                 Margin="10"/>
-            
-            <Border x:Name="GridBorder"
-            Grid.Row="1"
-            BorderBrush="{StaticResource GridBackgroundColor}"
-            BorderThickness="1.5"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            RenderOptions.EdgeMode="Aliased"
-            Margin="20,0,20,20">
-                <UniformGrid x:Name="GameGrid"
-                     Width="400"
-                     Height="400"
-                     Background="{StaticResource GridBackgroundColor}"
-                     SnapsToDevicePixels="True"
-                     RenderOptions.BitmapScalingMode="HighQuality">
-                </UniformGrid>
-            </Border>
 
-            <Border x:Name="Overlay"
-                    Grid.Row="1"
-                    Background="{StaticResource OverlayColor}"
-                    Width="{Binding Path=ActualWidth, ElementName=GridBorder}"
-                    Height="{Binding Path=ActualHeight, ElementName=GridBorder}"
-                    Margin="{Binding Path=Margin, ElementName=GridBorder}"
-                    RenderOptions.EdgeMode="Aliased">
-                <TextBlock x:Name="OverlayText"
-                           Text=""
-                           FontSize="26"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           TextWrapping="Wrap"/>
-            </Border>
-            
-            
+            <UniformGrid x:Name="BackGroundGrid"
+                Width="400"
+                Height="400"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                RenderOptions.EdgeMode="Aliased"
+                Margin="20,0,20,20"
+                Grid.Row="1"
+                Background="{StaticResource GridBackgroundColor}"
+                SnapsToDevicePixels="True"
+                RenderOptions.BitmapScalingMode="HighQuality">
+            </UniformGrid>
+
+            <UniformGrid x:Name="GameGrid"
+                Width="400"
+                Height="400"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                RenderOptions.EdgeMode="Aliased"
+                Margin="20,0,20,20"
+                Grid.Row="1"
+                SnapsToDevicePixels="True"
+                RenderOptions.BitmapScalingMode="HighQuality">
+            </UniformGrid>
+
         </Grid>
     </Viewbox>
 </Window>

@@ -34,7 +34,24 @@ namespace Snake
             _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;
             OneFoodButton.Style = (Style)FindResource("One2");
             _selectedGameModeButtons[typeof(FoodAmount)] = OneFoodButton;
+            AppleButton.Style = (Style)FindResource("Apple2");
+            _selectedGameModeButtons[typeof(FoodType)] = AppleButton;
+            BlueButton.Style = (Style)FindResource("Blue2");
+            _selectedGameModeButtons[typeof(SnakeColor)] = BlueButton;
         }
+        /*string[] link = ClassicModeButton.Tag.ToString().Split("_Dark");
+        string groupName = link[0];
+        string enumValue = link[1];*/
+        /*
+
+        MediumSizeButton.Background = Brushes.LightBlue;
+
+        _selectedGameModeButtons[typeof(FoodColor)] = RedFoodButton;
+        gameInit.GameMode = GameMode.Classic;
+        gameInit.GameSpeed = GameSpeed.Medium;
+        gameInit.GameSize = GameSize.Medium;
+        gameInit.FoodColor = FoodColor.Red;*/
+
         private void SwitchStyle(Button button)
         {
             ResourceDictionary resourceDictionary = this.Resources.MergedDictionaries[0];
@@ -77,13 +94,17 @@ namespace Snake
             {
                 HandleButtonSelection<GameSize>(clickedButton, _selectedGameModeButtons, enumValue);
             }
-            else if (groupName == nameof(FoodColor))
+            else if (groupName == nameof(FoodType))
             {
-                HandleButtonSelection<FoodColor>(clickedButton, _selectedGameModeButtons, enumValue);
+                HandleButtonSelection<FoodType>(clickedButton, _selectedGameModeButtons, enumValue);
             }
             else if (groupName == nameof(FoodAmount))
             {
                 HandleButtonSelection<FoodAmount>(clickedButton, _selectedGameModeButtons, enumValue);
+            }
+            else if (groupName == nameof(SnakeColor))
+            {
+                HandleButtonSelection<SnakeColor>(clickedButton, _selectedGameModeButtons, enumValue);
             }
         }
 
@@ -98,10 +119,12 @@ namespace Snake
                 gameInit.GameSpeed = (GameSpeed)(object)selectedEnumValue;
             else if (enumType == typeof(GameSize))
                 gameInit.GameSize = (GameSize)(object)selectedEnumValue;
-            else if (enumType == typeof(FoodColor))
-                gameInit.FoodColor = (FoodColor)(object)selectedEnumValue;
+            else if (enumType == typeof(FoodType))
+                gameInit.FoodType = (FoodType)(object)selectedEnumValue;
             else if (enumType == typeof(FoodAmount))
                 gameInit.FoodAmount = (FoodAmount)(object)selectedEnumValue;
+            else if (enumType == typeof(SnakeColor))
+                gameInit.SnakeColor = (SnakeColor)(object)selectedEnumValue;
 
             // Deselect the currently selected button for this group (if any)
             if (selectedButtons.ContainsKey(enumType))

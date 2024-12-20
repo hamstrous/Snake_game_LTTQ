@@ -18,6 +18,13 @@ namespace Snake
         public static ImageSource Goal;
         public static ImageSource Wall;
         public static ImageSource DirectionPad;
+        public static ImageSource Radish;
+        public static ImageSource Apple;
+        public static ImageSource Banana;
+        public static ImageSource Grape;
+        public static ImageSource Peach;
+        public static ImageSource Bg1 = LoadImage("Bg1.png");
+        public static ImageSource Bg2 = LoadImage("Bg2.png");
         public static Color color;
 
         private static ImageSource LoadImage(string fileName, bool recolor = false)

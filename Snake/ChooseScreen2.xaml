@@ -85,49 +85,49 @@ VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
         <!--Color-->
         <Image HorizontalAlignment="Left" Height="80" Margin="255,590,0,0"
 VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Blue1}" Click="Button_Click" Height="56" Margin="267,602,0,0" Width="58"/>
+        <Button Name="BlueButton" Tag="SnakeColor,Blue" Style="{StaticResource Blue1}" Click="Button_Click" Height="56" Margin="267,602,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="347,590,0,0"
 VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Orange1}" Click="Button_Click" Height="56" Margin="357,602,0,0" Width="58"/>
+        <Button Tag="SnakeColor,Brown" Style="{StaticResource Orange1}" Click="Button_Click" Height="56" Margin="357,602,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="437,590,0,0"
 VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Red1}" Click="Button_Click" Height="56" Margin="447,602,0,0" Width="58"/>
+        <Button Tag="SnakeColor,Red" Style="{StaticResource Red1}" Click="Button_Click" Height="56" Margin="447,602,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="525,590,0,0"
 VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Cyan1}" Click="Button_Click" Height="56" Margin="535,602,0,0" Width="58"/>
+        <Button Tag="SnakeColor,Cyan" Style="{StaticResource Cyan1}" Click="Button_Click" Height="56" Margin="535,602,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="617,590,0,0"
 VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Pink1}" Click="Button_Click" Height="56" Margin="627,602,0,0" Width="58"/>
+        <Button Tag="SnakeColor,Pink" Style="{StaticResource Pink1}" Click="Button_Click" Height="56" Margin="627,602,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="709,590,0,0"
 VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Purple1}" Click="Button_Click" Height="56" Margin="719,602,0,0" Width="58"/>
+        <Button Tag="SnakeColor,Purple" Style="{StaticResource Purple1}" Click="Button_Click" Height="56" Margin="719,602,0,0" Width="58"/>
 
 
         <!--Food-->
         <Image HorizontalAlignment="Left" Height="80" Margin="291,486,0,0"
     VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Apple1}" Click="Button_Click" Height="58" Margin="303,496,0,0" Width="58"/>
+        <Button Name="AppleButton" Tag="FoodType,Apple" Style="{StaticResource Apple1}" Click="Button_Click" Height="58" Margin="303,496,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="383,486,0,0"
     VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Banana1}" Click="Button_Click" Height="58" Margin="393,496,0,0" Width="58"/>
+        <Button Tag="FoodType,Banana" Style="{StaticResource Banana1}" Click="Button_Click" Height="58" Margin="393,496,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="473,486,0,0"
     VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Peach1}" Click="Button_Click" Height="58" Margin="483,496,0,0" Width="58"/>
+        <Button Tag="FoodType,Peach" Style="{StaticResource Peach1}" Click="Button_Click" Height="58" Margin="483,496,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="561,486,0,0"
     VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Raddish1}" Click="Button_Click" Height="58" Margin="571,496,0,0" Width="58"/>
+        <Button Tag="FoodType,Radish" Style="{StaticResource Raddish1}" Click="Button_Click" Height="58" Margin="571,496,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="653,486,0,0"
     VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="GameMode,Classic" Style="{StaticResource Grape1}" Click="Button_Click" Height="58" Margin="663,496,0,0" Width="58"/>
+        <Button Tag="FoodType,Grape" Style="{StaticResource Grape1}" Click="Button_Click" Height="58" Margin="663,496,0,0" Width="58"/>
 
         <!--Button to play-->
         <Button Style="{StaticResource Play}"  Click="PlayButton_Click" Height="66" Margin="283,697,0,0" Width="138"/>

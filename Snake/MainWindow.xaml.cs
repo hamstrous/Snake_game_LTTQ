@@ -59,16 +59,24 @@ namespace Snake
         }
 
         public void InitFoodColor()
-        {
-            Images.color = GameInit.FoodColor switch
+        {switch (GameInit.FoodType)
             {
-                FoodColor.Red => Colors.Red,
-                FoodColor.Green => Colors.Green,
-                FoodColor.Blue => Colors.Blue,
-                FoodColor.Yellow => Colors.Yellow,
-                FoodColor.Orange => Colors.Orange,
-                _ => Colors.Red
-            };
+                case FoodType.Apple:
+                    Images.Food = Images.Apple;
+                    break;
+                case FoodType.Grape:
+                    Images.Food = Images.Grape;
+                    break;
+                case FoodType.Banana:
+                    Images.Food = Images.Banana;
+                    break;
+                case FoodType.Peach:
+                    Images.Food = Images.Peach;
+                    break;
+                case FoodType.Radish:
+                    Images.Food = Images.Radish;
+                    break;
+            }
         }
 
         public MainWindow(GameInit init)
@@ -93,7 +101,7 @@ namespace Snake
             }
 
             InitMode();
-            InitFoodColor();
+            //InitFoodColor();
             Images.AssignImages();
             gridValtoImage = new()
             {
@@ -135,7 +143,6 @@ namespace Snake
         {
             Draw();
             await ShowCountDown();
-            Overlay.Visibility = Visibility.Hidden;
             await GameLoop();
             SaveScoreCurrent();
             await ShowGameOver();
@@ -149,10 +156,6 @@ namespace Snake
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            if (Overlay.Visibility == Visibility.Visible)
-            {
-                e.Handled = true;
-            }
 
             if (!gameRunning)
             {
@@ -208,8 +211,11 @@ namespace Snake
         {
             Image[,] images = new Image[rows, cols];
             GameGrid.Rows = rows;
+            BackGroundGrid.Rows = rows;
             GameGrid.Columns = cols;
+            BackGroundGrid.Columns = cols;
             GameGrid.Width = GameGrid.Height * (cols / (double)rows);
+            BackGroundGrid.Width = BackGroundGrid.Height * (cols / (double)rows);
 
             for (int r = 0; r < rows; r++)
             {
@@ -222,6 +228,14 @@ namespace Snake
                     };
                     images[r, c] = image;
                     GameGrid.Children.Add(image);
+
+                    Image bgImage = new Image
+                    {
+                        RenderTransformOrigin = new Point(0.5, 0.5)
+                    };
+                    if((r+c) % 2 == 0) bgImage.Source = Images.Bg1;
+                    else bgImage.Source = Images.Bg2;
+                    BackGroundGrid.Children.Add(bgImage);
                 }
             }
             
@@ -274,7 +288,6 @@ namespace Snake
         {
             for (int i = 3; i >= 1; i--)
             {
-                OverlayText.Text = i.ToString();
                 await Task.Delay(500);
             }
         }
