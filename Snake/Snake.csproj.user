@@ -19,10 +19,16 @@
     <Compile Update="Setting.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SettingGame.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SignUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SignIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChooseScreen2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -42,10 +48,16 @@
     <Page Update="Setting.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="SettingGame.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="SignUp.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignIn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChooseScreen2.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Resource Update="Resources\dic.xaml">
