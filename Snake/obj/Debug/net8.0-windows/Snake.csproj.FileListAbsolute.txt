@@ -104,8 +104,6 @@ D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\refint\Snake.dll
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.pdb
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.genruntimeconfig.cache
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ref\Snake.dll
-C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen2.g.cs
-C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen2.baml
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\SettingGame.g.cs
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\SettingGame.baml
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen2.g.cs

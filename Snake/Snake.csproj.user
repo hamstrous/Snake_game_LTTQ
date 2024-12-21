@@ -7,9 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ChooseScreen.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Leaderboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,14 +25,11 @@
     <Compile Update="SignIn.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ChooseScreen2.xaml.cs">
+    <Compile Update="ChooseScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ChooseScreen.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Leaderboard.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -57,7 +51,7 @@
     <Page Update="SignIn.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ChooseScreen2.xaml">
+    <Page Update="ChooseScreen.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Resource Update="Resources\dic.xaml">

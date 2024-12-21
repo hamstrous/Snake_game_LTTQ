@@ -17,14 +17,13 @@ using System.Windows.Shapes;
 namespace Snake
 {
     /// <summary>
-    /// Interaction logic for ChooseScreen.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class ChooseScreen : Window
+    public partial class UserControl1 : UserControl
     {
-        // Dictionaries to track selected buttons for each enum group
         private readonly Dictionary<Type, Button> _selectedGameModeButtons = new();
         private GameInit gameInit = new GameInit();
-        public ChooseScreen()
+        public UserControl1()
         {
             InitializeComponent();
             ClassicModeButton.Style = (Style)FindResource("ClassicMode2");
@@ -35,14 +34,18 @@ namespace Snake
             _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;
             OneFoodButton.Style = (Style)FindResource("One2");
             _selectedGameModeButtons[typeof(FoodAmount)] = OneFoodButton;
+            AppleButton.Style = (Style)FindResource("Apple2");
+            _selectedGameModeButtons[typeof(FoodType)] = AppleButton;
+            BlueButton.Style = (Style)FindResource("Blue2");
+            _selectedGameModeButtons[typeof(SnakeColor)] = BlueButton;
         }
         /*string[] link = ClassicModeButton.Tag.ToString().Split("_Dark");
         string groupName = link[0];
         string enumValue = link[1];*/
         /*
-        
+
         MediumSizeButton.Background = Brushes.LightBlue;
-        
+
         _selectedGameModeButtons[typeof(FoodColor)] = RedFoodButton;
         gameInit.GameMode = GameMode.Classic;
         gameInit.GameSpeed = GameSpeed.Medium;
@@ -60,7 +63,7 @@ namespace Snake
 
             if (styleName[styleName.Length - 1] == '1')
             {
-                
+
                 button.Style = (Style)FindResource(styleName.Substring(0, styleName.Length - 1) + "2");
             }
             else
@@ -82,18 +85,26 @@ namespace Snake
             if (groupName == nameof(GameMode))
             {
                 HandleButtonSelection<GameMode>(clickedButton, _selectedGameModeButtons, enumValue);
-            }else if (groupName == nameof(GameSpeed))
+            }
+            else if (groupName == nameof(GameSpeed))
             {
                 HandleButtonSelection<GameSpeed>(clickedButton, _selectedGameModeButtons, enumValue);
-            }else if(groupName == nameof(GameSize))
+            }
+            else if (groupName == nameof(GameSize))
             {
                 HandleButtonSelection<GameSize>(clickedButton, _selectedGameModeButtons, enumValue);
-            }else if(groupName == nameof(FoodType))
+            }
+            else if (groupName == nameof(FoodType))
             {
                 HandleButtonSelection<FoodType>(clickedButton, _selectedGameModeButtons, enumValue);
-            }else if(groupName == nameof(FoodAmount))
+            }
+            else if (groupName == nameof(FoodAmount))
             {
                 HandleButtonSelection<FoodAmount>(clickedButton, _selectedGameModeButtons, enumValue);
+            }
+            else if (groupName == nameof(SnakeColor))
+            {
+                HandleButtonSelection<SnakeColor>(clickedButton, _selectedGameModeButtons, enumValue);
             }
         }
 
@@ -102,14 +113,18 @@ namespace Snake
             // Parse the enum value
             TEnum selectedEnumValue = (TEnum)System.Enum.Parse(typeof(TEnum), enumValue);
             Type enumType = selectedEnumValue.GetType();
-            if(enumType == typeof(GameMode))
+            if (enumType == typeof(GameMode))
                 gameInit.GameMode = (GameMode)(object)selectedEnumValue;
-            else if(enumType == typeof(GameSpeed))
+            else if (enumType == typeof(GameSpeed))
                 gameInit.GameSpeed = (GameSpeed)(object)selectedEnumValue;
-            else if(enumType == typeof(GameSize))
+            else if (enumType == typeof(GameSize))
                 gameInit.GameSize = (GameSize)(object)selectedEnumValue;
-            else if(enumType == typeof(FoodAmount))
+            else if (enumType == typeof(FoodType))
+                gameInit.FoodType = (FoodType)(object)selectedEnumValue;
+            else if (enumType == typeof(FoodAmount))
                 gameInit.FoodAmount = (FoodAmount)(object)selectedEnumValue;
+            else if (enumType == typeof(SnakeColor))
+                gameInit.SnakeColor = (SnakeColor)(object)selectedEnumValue;
 
             // Deselect the currently selected button for this group (if any)
             if (selectedButtons.ContainsKey(enumType))
@@ -132,15 +147,15 @@ namespace Snake
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Back Button Clicked!");
-           
+            this.Visibility = Visibility.Collapsed;
+            SoundEffect.PlayOnOffSound();
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow(gameInit);
             mainWindow.Show();
-            this.Close();
+            
         }
 
         private void ShuffleButton_Click(object sender, RoutedEventArgs e)
@@ -152,7 +167,23 @@ namespace Snake
         {
             MessageBox.Show("Settings Reset!");
         }
+
     }
 
-    
+    public class RelayCommand : ICommand
+    {
+        private readonly Action<object> execute;
+        private readonly Func<object, bool> canExecute;
+
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        {
+            this.execute = execute;
+            this.canExecute = canExecute;
+        }
+
+        public bool CanExecute(object parameter) => canExecute == null || canExecute(parameter);
+        public void Execute(object parameter) => execute(parameter);
+        public event EventHandler CanExecuteChanged;
+    }
+
 }

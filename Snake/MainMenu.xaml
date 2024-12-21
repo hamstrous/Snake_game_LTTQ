@@ -23,6 +23,7 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="0.8*"/>
                     </Grid.RowDefinitions>
+                    
                     <Image Source="/MainMenu/board.png" Stretch="Fill" Grid.Row="1"
                 Height="116" Width="248" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <Button Content="PLAY" Grid.Row="1"
