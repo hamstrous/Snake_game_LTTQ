@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <None Remove="anhgo.png" />
+    <None Remove="Assets\Apple.png" />
+    <None Remove="Assets\Banana.png" />
     <None Remove="Assets\Bg1.png" />
     <None Remove="Assets\Bg1png.png" />
     <None Remove="Assets\Bg2.png" />
@@ -23,9 +25,12 @@
     <None Remove="Assets\Empty.png" />
     <None Remove="Assets\Food.png" />
     <None Remove="Assets\Goal.png" />
+    <None Remove="Assets\Grape.png" />
     <None Remove="Assets\Head.png" />
     <None Remove="Assets\icon.ico" />
     <None Remove="Assets\MainMenuBackground.jpg" />
+    <None Remove="Assets\Peach.png" />
+    <None Remove="Assets\Radish.png" />
     <None Remove="Assets\Wall.png" />
     <None Remove="Choose\apple.png" />
     <None Remove="Choose\apple_Dark.png" />
@@ -144,9 +149,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Apple.png" />
+    <Resource Include="Assets\Banana.png" />
     <Resource Include="Assets\Bg1.png" />
     <Resource Include="Assets\Bg2.png" />
+    <Resource Include="Assets\Grape.png" />
     <Resource Include="Assets\MainMenuBackground.jpg" />
+    <Resource Include="Assets\Peach.png" />
+    <Resource Include="Assets\Radish.png" />
     <Resource Include="Choose\apple.png" />
     <Resource Include="Choose\apple_Dark.png" />
     <Resource Include="Choose\ava.png" />

@@ -38,6 +38,12 @@ namespace Snake
             _selectedGameModeButtons[typeof(FoodType)] = AppleButton;
             BlueButton.Style = (Style)FindResource("Blue2");
             _selectedGameModeButtons[typeof(SnakeColor)] = BlueButton;
+
+            gameInit.GameMode = GameMode.Classic;
+            gameInit.GameSpeed = GameSpeed.Medium;
+            gameInit.GameSize = GameSize.Medium;
+            gameInit.FoodType = FoodType.Apple;
+            gameInit.FoodAmount = FoodAmount.One;
         }
         /*string[] link = ClassicModeButton.Tag.ToString().Split("_Dark");
         string groupName = link[0];
@@ -47,10 +53,7 @@ namespace Snake
         MediumSizeButton.Background = Brushes.LightBlue;
 
         _selectedGameModeButtons[typeof(FoodColor)] = RedFoodButton;
-        gameInit.GameMode = GameMode.Classic;
-        gameInit.GameSpeed = GameSpeed.Medium;
-        gameInit.GameSize = GameSize.Medium;
-        gameInit.FoodColor = FoodColor.Red;*/
+*/
 
         private void SwitchStyle(Button button)
         {

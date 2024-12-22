@@ -23,7 +23,7 @@ namespace Snake
     public enum SnakeColor
     {
         Blue,
-        Brown,
+        Orange,
         Red,
         Purple,
         Pink,
