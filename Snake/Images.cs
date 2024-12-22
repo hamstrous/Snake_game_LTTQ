@@ -25,7 +25,9 @@ namespace Snake
         public static ImageSource Peach;
         public static ImageSource Bg1 = LoadImage("Bg1.png");
         public static ImageSource Bg2 = LoadImage("Bg2.png");
-        public static Color ogColor = Color.FromRgb(81, 130, 236), newColor;
+        public static Color ogColor = Color.FromRgb(81, 130, 236), 
+            ogDarkColor = Color.FromRgb(40, 64, 115),
+            newColor;
 
         private static Color Darken(Color c)
         {
@@ -65,14 +67,23 @@ namespace Snake
 
                         if (alpha > 0) // Process only non-transparent pixels
                         {
-                            
-                            // Calculate intensity of the original pixel
-                            // double intensity = (0.3 * pixelData[index + 2] + 0.59 * pixelData[index + 1] + 0.11 * pixelData[index]) / 255.0;
+                            if (Color.FromRgb(pixelData[index + 2], pixelData[index + 1], pixelData[index]) == ogColor)
+                            {
+                                pixelData[index] = newColor.B;     // Blue
+                                pixelData[index + 1] = newColor.G; // Green
+                                pixelData[index + 2] = newColor.R; // Red
+                            }
+                            else if (Color.FromRgb(pixelData[index + 2], pixelData[index + 1], pixelData[index]) == ogDarkColor)
+                            {
+                                Color col = Darken(newColor);
+                                pixelData[index] = col.B;     // Blue
+                                pixelData[index + 1] = col.G; // Green
+                                pixelData[index + 2] = col.R; // Red
+                            }
 
-                            // Apply the new color while preserving intensity
-                            pixelData[index] = newColor.B;     // Blue
+                            /*pixelData[index] = newColor.B;     // Blue
                             pixelData[index + 1] = newColor.G; // Green
-                            pixelData[index + 2] = newColor.R; // Red
+                            pixelData[index + 2] = newColor.R; // Red*/
                         }
                     }
                 }
@@ -87,14 +98,10 @@ namespace Snake
         public static void AssignImages(GameInit gameInit)
         {
             Empty = LoadImage("Empty.png");
-            Body = LoadImage("Body.png");
-            Head = LoadImage("Head.png");
-
-            
             Box = LoadImage("Box.png");
             Goal = LoadImage("Goal.png");
             Wall = LoadImage("Wall.png");
-            DirectionPad = LoadImage("DirectionPad.png");
+            
             string foodLink = gameInit.FoodType switch
             {
                 FoodType.Radish => "Radish.png",
@@ -106,8 +113,33 @@ namespace Snake
             };
             Food = LoadImage(foodLink);
 
-            DeadBody = LoadImage("DeadBody.png");
-            DeadHead = LoadImage("DeadHead.png");
+            switch (gameInit.SnakeColor)
+            {
+                   case SnakeColor.Blue:
+                    newColor = Color.FromRgb(81, 130, 236);
+                    break;
+                case SnakeColor.Red:
+                    newColor = Color.FromRgb(255, 0, 0);
+                    break;
+                case SnakeColor.Purple:
+                    newColor = Color.FromRgb(128, 0, 128);
+                    break;
+                case SnakeColor.Pink:
+                    newColor = Color.FromRgb(255, 192, 203);
+                    break;
+                case SnakeColor.Orange:
+                    newColor = Color.FromRgb(244, 155, 60);
+                    break;
+                case SnakeColor.Cyan:
+                    newColor = Color.FromRgb(0, 255, 255);
+                    break;
+            }
+
+            Body = LoadImage("Body.png", true);
+            Head = LoadImage("Head.png", true);
+            DeadBody = LoadImage("DeadBody.png", true);
+            DeadHead = LoadImage("DeadHead.png", true);
+            DirectionPad = LoadImage("DirectionPad.png", true);
         }
     }
 }

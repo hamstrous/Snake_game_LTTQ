@@ -227,6 +227,7 @@ namespace Snake
 
         public void SaveHighScore()
         {
+            Grid[HeadPosition().Row, HeadPosition().Column].First.Value = (GridValue.Snake, Dir);
             File.WriteAllText("highscore.txt", HighScore.ToString());
         }
 

@@ -89,7 +89,7 @@ VerticalAlignment="Top" Width="78"  Source="/Choose/choose-button.png" />
 
         <Image HorizontalAlignment="Left" Height="80" Margin="347,590,0,0"
 VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />
-        <Button Tag="SnakeColor,Brown" Style="{StaticResource Orange1}" Click="Button_Click" Height="56" Margin="357,602,0,0" Width="58"/>
+        <Button Tag="SnakeColor,Orange" Style="{StaticResource Orange1}" Click="Button_Click" Height="56" Margin="357,602,0,0" Width="58"/>
 
         <Image HorizontalAlignment="Left" Height="80" Margin="437,590,0,0"
 VerticalAlignment="Top" Width="76"  Source="/Choose/choose-button.png" />

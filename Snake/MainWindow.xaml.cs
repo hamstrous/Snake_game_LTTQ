@@ -281,6 +281,8 @@ namespace Snake
                 Positions pos = positions[i];
                 ImageSource source = (i == 0) ? Images.DeadHead : Images.DeadBody;
                 gridImages[pos.Row, pos.Column].Source = source;
+                int rotation = dirToRotation[gameState.Grid[pos.Row, pos.Column].First.Value.Second];
+                gridImages[pos.Row, pos.Column].RenderTransform = new RotateTransform(rotation);
                 await Task.Delay(50);
             }
         }
