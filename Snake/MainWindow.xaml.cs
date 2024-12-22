@@ -102,7 +102,7 @@ namespace Snake
 
             InitMode();
             //InitFoodColor();
-            Images.AssignImages();
+            Images.AssignImages(GameInit);
             gridValtoImage = new()
             {
                 { GridValue.Empty, Images.Empty },
