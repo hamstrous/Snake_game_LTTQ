@@ -1,10 +1,10 @@
 ﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -13,7 +13,7 @@ namespace Snake
 {
     public partial class MainWindow : Window
     {
-        private Dictionary<GridValue, ImageSource> gridValtoImage;
+        private Dictionary<GridValue, System.Windows.Media.ImageSource> gridValtoImage;
 
         private readonly Dictionary<Directions, int> dirToRotation = new()
         {
@@ -24,11 +24,17 @@ namespace Snake
         };
 
         private readonly int rows = 17, cols = 15;
-        private readonly Image[,] gridImages;   
+        private readonly Image[,] gridImages;
         private GameState gameState;
         private bool gameRunning;
         private GameInit GameInit { get; set; }
         private GameState Mode { get; set; }
+
+        public Image HeadImage { get; set; }
+        public Image TailImage { get; set; }
+
+        public double cellSize => Math.Min(GameGrid.Width / GameGrid.Columns,
+                         GameGrid.Height / GameGrid.Rows);
 
         public void InitMode()
         {
@@ -56,10 +62,12 @@ namespace Snake
                 _ => new ClassicModeState(rows, cols, foods)
             };
             gameState = Mode;
+            InitSnakeSmoothMovement();
         }
 
         public void InitFoodColor()
-        {switch (GameInit.FoodType)
+        {
+            switch (GameInit.FoodType)
             {
                 case FoodType.Apple:
                     Images.Food = Images.Apple;
@@ -84,7 +92,7 @@ namespace Snake
             InitializeComponent();
             GameInit = init;
             //GameInit = new GameInit(GameSize.Medium, GameSpeed.Medium, GameBackgroundColor.Dark, SnakeColor.Green, GameMode.Reverse);
-            switch(GameInit.GameSize)
+            switch (GameInit.GameSize)
             {
                 case GameSize.Small:
                     rows = 13;
@@ -99,9 +107,6 @@ namespace Snake
                     cols = 19;
                     break;
             }
-
-            InitMode();
-            //InitFoodColor();
             Images.AssignImages(GameInit);
             gridValtoImage = new()
             {
@@ -114,12 +119,15 @@ namespace Snake
                 { GridValue.DirectionPad, Images.DirectionPad }
             };
             gridImages = SetupGrid();
+            HeadImage = new Image();
+            TailImage = new Image();
+
         }
 
         private async Task SaveScoreCurrent()
         {
             SignIn.currentUserName = "testuser01";
-            
+
             Guid? userId = await SaveScore.GetUserIdAsync(SignIn.currentUserName);
 
             if (userId == null)
@@ -128,12 +136,12 @@ namespace Snake
                 return;
             }
 
-            
+
             int score = gameState.Score;
             int mode = (int)GameInit.GameMode;
 
-            
-            await SaveScore.SavePlayerScore(userId.Value, score, mode);  
+
+            await SaveScore.SavePlayerScore(userId.Value, score, mode);
         }
 
 
@@ -141,17 +149,13 @@ namespace Snake
 
         private async Task RunGame()
         {
+            InitMode();
             Draw();
             await ShowCountDown();
             await GameLoop();
             SaveScoreCurrent();
             await ShowGameOver();
-            InitMode();
-            
-            //await Task.Delay(1000);
-            //MainMenu mainMenu = new MainMenu();
-            //mainMenu.Show();
-            //this.Close();
+
         }
 
         private async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -161,19 +165,19 @@ namespace Snake
             {
                 gameRunning = true;
                 await RunGame();
-                gameRunning = false; 
+                gameRunning = false;
             }
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-           if (gameState.GameOver)
+            if (gameState.GameOver)
             {
                 return;
             }
 
-            switch (e.Key) 
-            { 
+            switch (e.Key)
+            {
                 case Key.Left:
                     gameState.ChangeDirection(Directions.Left);
                     break;
@@ -200,14 +204,100 @@ namespace Snake
             };
             while (!gameState.GameOver)
             {
-                await Task.Delay(delay);
+                Mode.Ate = true;
                 gameState.Move();
+                if (!gameState.GameOver)
+                    await SnakeSmoothMovement(delay);
+                else
+                {
+                    Canva.Children.Clear();
+                    HeadImage = new Image();
+                    TailImage = new Image();
+                    break;
+                }
                 Draw();
             }
         }
 
+        public Point GetCellPosition(int row, int col)
+        {
+            double cellWidth = GameGrid.Width / GameGrid.Columns;
+            double cellHeight = GameGrid.Height / GameGrid.Rows;
 
-        private Image[,] SetupGrid() 
+
+
+            // Calculate position within the UniformGrid
+            double x = col * cellWidth;
+            double y = row * cellHeight;
+
+            // Transform to screen coordinates
+            //Point gridPosition = GameGrid.TranslatePoint(new , null);
+            //MessageBox.Show(gridPosition.ToString());
+
+            return new Point(x, y);
+        }
+
+        public void InitSnakeSmoothMovement()
+        {
+            HeadImage = new Image
+            {
+                Source = Images.Head,
+                RenderTransformOrigin = new Point(0.5, 0.5)
+            };
+            HeadImage.RenderTransform = new RotateTransform(dirToRotation[Mode.Grid[Mode.HeadPosition().Row, Mode.HeadPosition().Column].First.Value.Second]);
+
+            TailImage = new Image
+            {
+                Source = Images.Body,
+                RenderTransformOrigin = new Point(0.5, 0.5)
+            };
+            HeadImage.Width = cellSize;
+            HeadImage.Height = cellSize;
+            TailImage.Width = cellSize;
+            TailImage.Height = cellSize;
+            Point HeadPos = GetCellPosition(Mode.HeadPosition().Row, Mode.HeadPosition().Column);
+            Point TailPos = GetCellPosition(Mode.TailPosition().Row, Mode.TailPosition().Column);
+
+            Canva.Children.Add(HeadImage);
+            Canva.Children.Add(TailImage);
+
+            Canvas.SetLeft(HeadImage, HeadPos.X); // X position
+            Canvas.SetTop(HeadImage, HeadPos.Y);  // Y position
+            Canvas.SetLeft(TailImage, TailPos.X); // X position
+            Canvas.SetTop(TailImage, TailPos.Y);  // Y position
+        }
+
+        private async Task SnakeSmoothMovement(int delay)
+        {
+            int steps = delay / 10;
+            double increment = cellSize / steps;
+            for (int i = 0; i < steps; i++)
+            {
+                await Task.Delay(10);
+                Dispatcher.Invoke(() =>
+                {
+                    Directions dir = Mode.Grid[Mode.HeadPosition().Row, Mode.HeadPosition().Column].First.Value.Second;
+                    if (dir == Directions.Left) Canvas.SetLeft(HeadImage, Canvas.GetLeft(HeadImage) - increment);
+                    else if (dir == Directions.Right) Canvas.SetLeft(HeadImage, Canvas.GetLeft(HeadImage) + increment);
+                    else if (dir == Directions.Up) Canvas.SetTop(HeadImage, Canvas.GetTop(HeadImage) - increment);
+                    else if (dir == Directions.Down) Canvas.SetTop(HeadImage, Canvas.GetTop(HeadImage) + increment);
+                    HeadImage.RenderTransform = new RotateTransform(dirToRotation[dir]);
+                    if (!Mode.Ate)
+                    {
+                        dir = Mode.Grid[Mode.TailPosition().Row, Mode.TailPosition().Column].First.Value.Second;
+                        if (dir == Directions.Left) Canvas.SetLeft(TailImage, Canvas.GetLeft(TailImage) - increment);
+                        else if (dir == Directions.Right) Canvas.SetLeft(TailImage, Canvas.GetLeft(TailImage) + increment);
+                        else if (dir == Directions.Up) Canvas.SetTop(TailImage, Canvas.GetTop(TailImage) - increment);
+                        else if (dir == Directions.Down) Canvas.SetTop(TailImage, Canvas.GetTop(TailImage) + increment);
+                        TailImage.RenderTransform = new RotateTransform(dirToRotation[dir]);
+                    }
+
+                });
+
+            }
+        }
+
+        private Image[,] SetupGrid()
         {
             Image[,] images = new Image[rows, cols];
             GameGrid.Rows = rows;
@@ -233,21 +323,21 @@ namespace Snake
                     {
                         RenderTransformOrigin = new Point(0.5, 0.5)
                     };
-                    if((r+c) % 2 == 0) bgImage.Source = Images.Bg1;
+                    if ((r + c) % 2 == 0) bgImage.Source = Images.Bg1;
                     else bgImage.Source = Images.Bg2;
                     BackGroundGrid.Children.Add(bgImage);
                 }
             }
-            
             return images;
         }
 
         private void Draw()
         {
             DrawGrid();
-            DrawSnakeHead();
-            ScoreText.Text = $"SCORE { gameState.Score }";
-            HighScoreText.Text = $"HIGHSCORE { gameState.HighScore }";
+            //DrawSnakeHead();
+            DrawSnakeTail();
+            ScoreText.Text = $"SCORE {gameState.Score}";
+            HighScoreText.Text = $"HIGHSCORE {gameState.HighScore}";
         }
 
         private void DrawGrid()
@@ -270,6 +360,15 @@ namespace Snake
             Positions headPos = gameState.HeadPosition();
             Image image = gridImages[headPos.Row, headPos.Column];
             image.Source = Images.Head;
+
+        }
+
+        private void DrawSnakeTail()
+        {
+            Positions tailPos = gameState.TailPosition();
+            Image image = gridImages[tailPos.Row, tailPos.Column];
+            image.Source = Images.Empty;
+
         }
 
         private async Task DrawDeadSnake()
@@ -298,6 +397,8 @@ namespace Snake
         {
             SoundEffect.PlayGameOverSound();
             await DrawDeadSnake();
+            HeadImage = null;
+            TailImage = null;
         }
     }
 }
