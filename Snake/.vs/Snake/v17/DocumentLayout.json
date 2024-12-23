@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\choosescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GameState.cs",
               "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\GameState.cs",
               "RelativeDocumentMoniker": "GameState.cs",
@@ -87,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -95,12 +95,11 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AQIAACMBAAAAAAAAAAAiwJMBAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T19:17:16.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T19:17:16.676Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -120,8 +119,7 @@
               "RelativeToolTip": "ChooseScreen.xaml.cs",
               "ViewState": "AQIAACUBAAAAAAAAAAAAwE4BAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T19:14:29.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T19:14:29.929Z"
             },
             {
               "$type": "Document",
@@ -168,8 +166,7 @@
               "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\SettingGameOver.xaml",
               "RelativeToolTip": "SettingGameOver.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T14:03:57.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T14:03:57.9Z"
             },
             {
               "$type": "Document",

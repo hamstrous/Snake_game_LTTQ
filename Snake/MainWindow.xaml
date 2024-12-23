@@ -60,7 +60,7 @@
                 RenderOptions.BitmapScalingMode="HighQuality">
             </UniformGrid>
 
-            <Canvas Name="Canva" Margin="20,0,20,20" Grid.Row="1"/>
+            <Canvas RenderOptions.BitmapScalingMode="HighQuality" Name="Canva" Margin="20,0,20,20" Grid.Row="1" SnapsToDevicePixels="True"/>
         </Grid>
     </Viewbox>
 </Window>
