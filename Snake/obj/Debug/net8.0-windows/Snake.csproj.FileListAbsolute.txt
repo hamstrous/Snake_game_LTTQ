@@ -21,7 +21,6 @@ D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.csproj.AssemblyRe
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen.baml
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Setting.baml
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen.g.cs
-D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen2.g.cs
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Leaderboard.g.cs
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\MainMenu.g.cs
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\MainWindow.g.cs
@@ -34,7 +33,6 @@ D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\GeneratedInternalTypeHe
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake_MarkupCompile.cache
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake_MarkupCompile.lref
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\App.baml
-D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ChooseScreen2.baml
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Leaderboard.baml
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\MainMenu.baml
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\MainWindow.baml
@@ -55,3 +53,5 @@ D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\refint\Snake.dll
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.pdb
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\Snake.genruntimeconfig.cache
 D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\ref\Snake.dll
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\PlayScreen.g.cs
+D:\Github\Snake_game_LTTQ\Snake\obj\Debug\net8.0-windows\PlayScreen.baml

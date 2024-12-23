@@ -24,7 +24,6 @@
             <Button Style="{StaticResource BackButtonStyle}" Margin="15,10,0,0" Click="BackButton_Click" Height="53" Width="114"/>
         </StackPanel>
         <Viewbox>
-
             <Grid Height="539">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.2*"/>
