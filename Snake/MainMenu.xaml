@@ -10,16 +10,23 @@
     <Window.Background>
         <ImageBrush ImageSource="Assets/MainMenuBackground.jpg" Stretch="UniformToFill"/>
     </Window.Background>
-    
+
     <Grid>
-        <local:Setting x:Name="Setting" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="1"/>
-        <local:UserControl1 x:Name="ChooseMode"  Visibility="Collapsed" Panel.ZIndex="1"/>
-        <Image Source="/MainMenu/board.png" Stretch="Fill"
-           HorizontalAlignment="Center" Height="116" Margin="0,91,0,0" VerticalAlignment="Top" Width="248"
-           IsHitTestVisible="False"/>
-        <Button Content="PLAY" 
-            Margin="0,98,0,0"
-            VerticalAlignment="Top"
+        <Viewbox>
+            <Grid>
+                <Grid Height="800" Width="1000">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="0.8*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="/MainMenu/board.png" Stretch="Fill" Grid.Row="1"
+                Height="116" Width="248" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button Content="PLAY" Grid.Row="1"
             Height="102"
             Width="224"
             FontSize="50"
@@ -28,68 +35,55 @@
             BorderBrush="Transparent"
             BorderThickness="2"
             HorizontalAlignment="Center"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Click="StartGame_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="15">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+            Click="StartGame_Click"
+            VerticalAlignment="Center">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="15">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
 
-        <Image Source="/MainMenu/board.png" Stretch="Fill"
-                HorizontalAlignment="Center" Height="116" Margin="0,234,0,0" VerticalAlignment="Top" Width="248"
-                IsHitTestVisible="False"/>
-        <Button Content="LEADERBOARD" 
-                Margin="0,241,0,0"
-                VerticalAlignment="Top"
-                Height="102"
-                Width="224"
-                FontSize="43"
-                FontFamily="Gloucester MT Extra Condensed"
-                Background="Transparent"
-                BorderBrush="Transparent"
-                BorderThickness="2"
-                HorizontalAlignment="Center"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                Click="Leaderboard_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="15">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+                    <Image Source="/MainMenu/board.png" Stretch="Fill" Grid.Row="2" Height="116" Width="248" IsHitTestVisible="False" HorizontalAlignment="Center" />
+                    <Button Content="LEADERBOARD" Grid.Row="2"
+            Height="102"
+            Width="224"
+            FontSize="43"
+            FontFamily="Gloucester MT Extra Condensed"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="2"
+            HorizontalAlignment="Center"
+            Click="Leaderboard_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="15">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
 
-
-
-        <Image Source="/MainMenu/board.png" Stretch="Fill"
-               HorizontalAlignment="Center" Height="116" Margin="0,383,0,0" VerticalAlignment="Top" Width="248"
-               IsHitTestVisible="False"/>
-        <Button Content="SETTING" 
-                Margin="0,390,0,0"
-                VerticalAlignment="Top"
+                    <Image Source="/MainMenu/board.png" Stretch="Fill" Grid.Row="3" Height="116" Width="248" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                    <Button Content="SETTING" Grid.Row="3"
                 Height="102"
                 Width="224"
                 FontSize="50"
@@ -98,67 +92,58 @@
                 BorderBrush="Transparent"
                 BorderThickness="2"
                 HorizontalAlignment="Center"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
+                VerticalAlignment="Center"
                 Click="Setting_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}"
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="15">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
 
-
-
-
-        <Image Source="/MainMenu/board.png" Stretch="Fill"
-            HorizontalAlignment="Center" Height="116" Margin="0,529,0,0" VerticalAlignment="Top" Width="248"
-            IsHitTestVisible="False"/>
-
-        <Button Content="EXIT" 
-            Margin="0,536,0,0"
-            VerticalAlignment="Top"
-            Height="102"
-            Width="224"
-            FontSize="50"
-            FontFamily="Gloucester MT Extra Condensed"
-            Background="Transparent"
-            BorderBrush="Transparent"
-            BorderThickness="2"
-            HorizontalAlignment="Center"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Click="Exit_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}"
+                    <Image Source="/MainMenu/board.png" Stretch="Fill" Grid.Row="4" Height="116" Width="248" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Button Content="EXIT" Grid.Row="4"
+                Height="102"
+                Width="224"
+                FontSize="50"
+                FontFamily="Gloucester MT Extra Condensed"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="Exit_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="15">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-        
-        
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
 
-
-
+            </Grid>
+        </Viewbox>
+        <local:Setting x:Name="Setting" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="1"/>
+        <local:UserControl1 x:Name="ChooseMode"  Visibility="Collapsed" Panel.ZIndex="1"/>
     </Grid>
 </Window>
