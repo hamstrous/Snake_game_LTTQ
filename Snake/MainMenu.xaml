@@ -143,8 +143,9 @@
 
             </Grid>
         </Viewbox>
-        <local:PlayScreen x:Name="PlayScreen" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="1"/>
-        <local:Setting x:Name="Setting" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Panel.ZIndex="1"/>
+        
+        <local:SettingExit2 x:Name="Exit" Visibility="Collapsed" Panel.ZIndex="1"/>
+        <local:Setting x:Name="Setting" Visibility="Collapsed" Panel.ZIndex="1"/>
         <local:UserControl1 x:Name="ChooseMode"  Visibility="Collapsed" Panel.ZIndex="1"/>
     </Grid>
 </Window>

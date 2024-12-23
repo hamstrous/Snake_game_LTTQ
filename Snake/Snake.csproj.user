@@ -16,10 +16,13 @@
     <Compile Update="PlayScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Setting.xaml.cs">
+    <Compile Update="SettingExit.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SettingGame.xaml.cs">
+    <Compile Update="SettingGameOver.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SettingGamePause.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SignUp.xaml.cs">
@@ -45,10 +48,13 @@
     <Page Update="PlayScreen.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Setting.xaml">
+    <Page Update="SettingExit.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SettingGame.xaml">
+    <Page Update="SettingGameOver.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SettingGamePause.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignUp.xaml">
