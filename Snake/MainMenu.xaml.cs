@@ -41,7 +41,7 @@ namespace Snake
         {
 
             SoundEffect.PlayButtonSound();
-            MessageBox.Show("Click");
+            Exit.Visibility = Visibility.Visible;
         }
     }
 }

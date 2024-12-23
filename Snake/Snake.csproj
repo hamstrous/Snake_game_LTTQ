@@ -115,6 +115,7 @@
     <None Remove="Setting\SFX-on.png" />
     <None Remove="Setting\Sizedown.png" />
     <None Remove="Setting\Sizeup.png" />
+    <None Remove="Setting\snake_end.png" />
     <None Remove="Setting\sound-off.png" />
     <None Remove="Setting\sound-on.png" />
     <None Remove="Setting\toggle-off.png" />
@@ -249,6 +250,7 @@
     <Resource Include="Setting\SFX-on.png" />
     <Resource Include="Setting\Sizedown.png" />
     <Resource Include="Setting\Sizeup.png" />
+    <Resource Include="Setting\snake_end.png" />
     <Resource Include="Setting\sound-off.png" />
     <Resource Include="Setting\sound-on.png" />
     <Resource Include="Setting\toggle-off.png" />
@@ -279,12 +281,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Page Update="Setting.xaml">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Page>
   </ItemGroup>
 
 </Project>
