@@ -44,19 +44,19 @@
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="GameMode,Reverse" Style="{StaticResource ReverseMode1}" Click="Button_Click" Height="48" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="ReverseModeButton" Tag="GameMode,Reverse" Style="{StaticResource ReverseMode1}" Click="Button_Click" Height="48" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="GameMode,Wall" Style="{StaticResource WallMode1}" Click="Button_Click" Height="48" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="WallModeButton" Tag="GameMode,Wall" Style="{StaticResource WallMode1}" Click="Button_Click" Height="48" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="GameMode,Box" Style="{StaticResource BoxMode1}" Click="Button_Click" Height="48" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="BoxModeButton" Tag="GameMode,Box" Style="{StaticResource BoxMode1}" Click="Button_Click" Height="48" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="GameMode,Direction" Style="{StaticResource DirectionMode1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="DirectionModeButton" Tag="GameMode,Direction" Style="{StaticResource DirectionMode1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                 </StackPanel>
 
@@ -68,11 +68,11 @@
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="GameSize,Small" Style="{StaticResource SmallSize1}" Click="Button_Click" Height="25" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="SmallSizeButton" Tag="GameSize,Small" Style="{StaticResource SmallSize1}" Click="Button_Click" Height="25" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="GameSize,Large" Style="{StaticResource LargeSize1}" Click="Button_Click" Height="48" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="LargeSizeButton" Tag="GameSize,Large" Style="{StaticResource LargeSize1}" Click="Button_Click" Height="48" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                 </StackPanel>
 
@@ -84,29 +84,11 @@
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="GameSpeed,Slow" Style="{StaticResource SlowSpeed1}" Click="Button_Click" Height="48" Width="51" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform AngleY="1.496"/>
-                                    <RotateTransform/>
-                                    <TranslateTransform Y="0.535"/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                        </Button>
+                        <Button Name="SlowSpeedButton" Tag="GameSpeed,Slow" Style="{StaticResource SlowSpeed1}" Click="Button_Click" Height="48" Width="51" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="GameSpeed,Fast" Style="{StaticResource FastSpeed1}" Click="Button_Click" Height="48" Width="55" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform Angle="-0.018"/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                        </Button>
+                        <Button Name="FastSpeedButton" Tag="GameSpeed,Fast" Style="{StaticResource FastSpeed1}" Click="Button_Click" Height="48" Width="55" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" />
                     </Grid>
                 </StackPanel>
 
@@ -118,11 +100,11 @@
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="FoodAmount,Three" Style="{StaticResource Three1}" Click="Button_Click" Height="48" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="ThreeFoodButton" Tag="FoodAmount,Three" Style="{StaticResource Three1}" Click="Button_Click" Height="48" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="FoodAmount,Five" Style="{StaticResource Five1}" Click="Button_Click" Height="48" Width="56" VerticalAlignment="Center" Margin="12,0,0,0" />
+                        <Button Name="FiveFoodButton" Tag="FoodAmount,Five" Style="{StaticResource Five1}" Click="Button_Click" Height="48" Width="56" VerticalAlignment="Center" Margin="12,0,0,0" />
                     </Grid>
                 </StackPanel>
 
@@ -134,23 +116,23 @@
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="SnakeColor,Orange" Style="{StaticResource Orange1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="OrangeButton" Tag="SnakeColor,Orange" Style="{StaticResource Orange1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="SnakeColor,Red" Style="{StaticResource Red1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="RedButton" Tag="SnakeColor,Red" Style="{StaticResource Red1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="SnakeColor,Cyan" Style="{StaticResource Cyan1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="CyanButton" Tag="SnakeColor,Cyan" Style="{StaticResource Cyan1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="SnakeColor,Pink" Style="{StaticResource Pink1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="PinkButton" Tag="SnakeColor,Pink" Style="{StaticResource Pink1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="SnakeColor,Purple" Style="{StaticResource Purple1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="PurpleButton" Tag="SnakeColor,Purple" Style="{StaticResource Purple1}" Click="Button_Click" Height="54" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                 </StackPanel>
 
@@ -162,19 +144,19 @@
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="FoodType,Banana" Style="{StaticResource Banana1}" Click="Button_Click" Height="48" Width="46" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="BananaButton" Tag="FoodType,Banana" Style="{StaticResource Banana1}" Click="Button_Click" Height="48" Width="46" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="FoodType,Peach" Style="{StaticResource Peach1}" Click="Button_Click" Height="48" Width="47" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="PeachButton" Tag="FoodType,Peach" Style="{StaticResource Peach1}" Click="Button_Click" Height="48" Width="47" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="FoodType,Radish" Style="{StaticResource Raddish1}" Click="Button_Click" Height="48" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="RadishButton" Tag="FoodType,Radish" Style="{StaticResource Raddish1}" Click="Button_Click" Height="48" Width="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Tag="FoodType,Grape" Style="{StaticResource Grape1}" Click="Button_Click" Height="48" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="GrapeButton" Tag="FoodType,Grape" Style="{StaticResource Grape1}" Click="Button_Click" Height="48" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Grid>
                 </StackPanel>
 

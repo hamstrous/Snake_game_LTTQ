@@ -21,23 +21,23 @@ namespace Snake
     /// </summary>
     public partial class UserControl1 : UserControl
     {
-        private readonly Dictionary<Type, Button> _selectedGameModeButtons = new();
+        private readonly Dictionary<Type, Button> _selectedButtons = new();
         private GameInit gameInit = new GameInit();
         public UserControl1()
         {
             InitializeComponent();
             ClassicModeButton.Style = (Style)FindResource("ClassicMode2");
-            _selectedGameModeButtons[typeof(GameMode)] = ClassicModeButton;
+            _selectedButtons[typeof(GameMode)] = ClassicModeButton;
             MediumSizeButton.Style = (Style)FindResource("MediumSize2");
-            _selectedGameModeButtons[typeof(GameSize)] = MediumSizeButton;
+            _selectedButtons[typeof(GameSize)] = MediumSizeButton;
             MediumSpeedButton.Style = (Style)FindResource("MediumSpeed2");
-            _selectedGameModeButtons[typeof(GameSpeed)] = MediumSpeedButton;
+            _selectedButtons[typeof(GameSpeed)] = MediumSpeedButton;
             OneFoodButton.Style = (Style)FindResource("One2");
-            _selectedGameModeButtons[typeof(FoodAmount)] = OneFoodButton;
+            _selectedButtons[typeof(FoodAmount)] = OneFoodButton;
             AppleButton.Style = (Style)FindResource("Apple2");
-            _selectedGameModeButtons[typeof(FoodType)] = AppleButton;
+            _selectedButtons[typeof(FoodType)] = AppleButton;
             BlueButton.Style = (Style)FindResource("Blue2");
-            _selectedGameModeButtons[typeof(SnakeColor)] = BlueButton;
+            _selectedButtons[typeof(SnakeColor)] = BlueButton;
 
             gameInit.GameMode = GameMode.Classic;
             gameInit.GameSpeed = GameSpeed.Medium;
@@ -87,27 +87,27 @@ namespace Snake
             // Handle each group independently
             if (groupName == nameof(GameMode))
             {
-                HandleButtonSelection<GameMode>(clickedButton, _selectedGameModeButtons, enumValue);
+                HandleButtonSelection<GameMode>(clickedButton, _selectedButtons, enumValue);
             }
             else if (groupName == nameof(GameSpeed))
             {
-                HandleButtonSelection<GameSpeed>(clickedButton, _selectedGameModeButtons, enumValue);
+                HandleButtonSelection<GameSpeed>(clickedButton, _selectedButtons, enumValue);
             }
             else if (groupName == nameof(GameSize))
             {
-                HandleButtonSelection<GameSize>(clickedButton, _selectedGameModeButtons, enumValue);
+                HandleButtonSelection<GameSize>(clickedButton, _selectedButtons, enumValue);
             }
             else if (groupName == nameof(FoodType))
             {
-                HandleButtonSelection<FoodType>(clickedButton, _selectedGameModeButtons, enumValue);
+                HandleButtonSelection<FoodType>(clickedButton, _selectedButtons, enumValue);
             }
             else if (groupName == nameof(FoodAmount))
             {
-                HandleButtonSelection<FoodAmount>(clickedButton, _selectedGameModeButtons, enumValue);
+                HandleButtonSelection<FoodAmount>(clickedButton, _selectedButtons, enumValue);
             }
             else if (groupName == nameof(SnakeColor))
             {
-                HandleButtonSelection<SnakeColor>(clickedButton, _selectedGameModeButtons, enumValue);
+                HandleButtonSelection<SnakeColor>(clickedButton, _selectedButtons, enumValue);
             }
         }
 
@@ -163,16 +163,159 @@ namespace Snake
 
         private void ShuffleButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Items Shuffled!");
+            Random rnd = new Random();
+
+            // Shuffle Game Mode
+            int gameModeIndex = rnd.Next(0, 5);
+            switch (gameModeIndex)
+            {
+                case 0:
+                    HandleButtonSelection<GameMode>(ClassicModeButton, _selectedButtons, "Classic");
+                    break;
+                case 1:
+                    HandleButtonSelection<GameMode>(ReverseModeButton, _selectedButtons, "Reverse");
+                    break;
+                case 2:
+                    HandleButtonSelection<GameMode>(WallModeButton, _selectedButtons, "Wall");
+                    break;
+                case 3:
+                    HandleButtonSelection<GameMode>(BoxModeButton, _selectedButtons, "Box");
+                    break;
+                case 4:
+                    HandleButtonSelection<GameMode>(DirectionModeButton, _selectedButtons, "Direction");
+                    break;
+            }
+
+            // Shuffle Game Size
+            int gameSizeIndex = rnd.Next(0, 3);
+            switch (gameSizeIndex)
+            {
+                case 0:
+                    HandleButtonSelection<GameSize>(SmallSizeButton, _selectedButtons, "Small");
+                    break;
+                case 1:
+                    HandleButtonSelection<GameSize>(MediumSizeButton, _selectedButtons, "Medium");
+                    break;
+                case 2:
+                    HandleButtonSelection<GameSize>(LargeSizeButton, _selectedButtons, "Large");
+                    break;
+            }
+
+            // Shuffle Game Speed
+            int gameSpeedIndex = rnd.Next(0, 3);
+            switch (gameSpeedIndex)
+            {
+                case 0:
+                    HandleButtonSelection<GameSpeed>(SlowSpeedButton, _selectedButtons, "Slow");
+                    break;
+                case 1:
+                    HandleButtonSelection<GameSpeed>(MediumSpeedButton, _selectedButtons, "Medium");
+                    break;
+                case 2:
+                    HandleButtonSelection<GameSpeed>(FastSpeedButton, _selectedButtons, "Fast");
+                    break;
+            }
+
+            // Shuffle Food Amount
+            int foodAmountIndex = rnd.Next(0, 3);
+            switch (foodAmountIndex)
+            {
+                case 0:
+                    HandleButtonSelection<FoodAmount>(OneFoodButton, _selectedButtons, "One");
+                    break;
+                case 1:
+                    HandleButtonSelection<FoodAmount>(ThreeFoodButton, _selectedButtons, "Three");
+                    break;
+                case 2:
+                    HandleButtonSelection<FoodAmount>(FiveFoodButton, _selectedButtons, "Five");
+                    break;
+            }
+
+            // Shuffle Snake Color (Example)
+            int snakeColorIndex = rnd.Next(0, 6);
+            switch (snakeColorIndex)
+            {
+                case 0:
+                    HandleButtonSelection<SnakeColor>(RedButton, _selectedButtons, "Red");
+                    break;
+                case 1:
+                    HandleButtonSelection<SnakeColor>(CyanButton, _selectedButtons, "Cyan");
+                    break;
+                case 2:
+                    HandleButtonSelection<SnakeColor>(BlueButton, _selectedButtons, "Blue");
+                    break;
+                case 3:
+                    HandleButtonSelection<SnakeColor>(PinkButton, _selectedButtons, "Pink");
+                    break;
+                case 4:
+                    HandleButtonSelection<SnakeColor>(PurpleButton, _selectedButtons, "Purple");
+                    break;
+                case 5:
+                    HandleButtonSelection<SnakeColor>(OrangeButton, _selectedButtons, "Orange");
+                    break;
+            }
+
+            int foodTypeIndex = rnd.Next(0, 5);
+            switch (foodTypeIndex)
+            {
+                case 0:
+                    HandleButtonSelection<FoodType>(AppleButton, _selectedButtons, "Apple");
+                    break;
+                case 1:
+                    HandleButtonSelection<FoodType>(RadishButton, _selectedButtons, "Radish");
+                    break;
+                case 2:
+                    HandleButtonSelection<FoodType>(PeachButton, _selectedButtons, "Peach");
+                    break;
+                case 3:
+                    HandleButtonSelection<FoodType>(BananaButton, _selectedButtons, "Banana");
+                    break;
+                case 4:
+                    HandleButtonSelection<FoodType>(GrapeButton, _selectedButtons, "Grape");
+                    break;
+            }
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Settings Reset!");
+            SwitchStyle(_selectedButtons[typeof(GameMode)]);
+            _selectedButtons.Remove(typeof(GameMode));
+            ClassicModeButton.Style = (Style)FindResource("ClassicMode2");
+            _selectedButtons[typeof(GameMode)] = ClassicModeButton;
+
+            SwitchStyle(_selectedButtons[typeof(GameSize)]);
+            _selectedButtons.Remove(typeof(GameSize));
+            MediumSizeButton.Style = (Style)FindResource("MediumSize2");
+            _selectedButtons[typeof(GameSize)] = MediumSizeButton;
+
+            SwitchStyle(_selectedButtons[typeof(GameSpeed)]);
+            _selectedButtons.Remove(typeof(GameSpeed));
+            MediumSpeedButton.Style = (Style)FindResource("MediumSpeed2");
+            _selectedButtons[typeof(GameSpeed)] = MediumSpeedButton;
+
+            SwitchStyle(_selectedButtons[typeof(FoodAmount)]);
+            _selectedButtons.Remove(typeof(FoodAmount));
+            OneFoodButton.Style = (Style)FindResource("One2");
+            _selectedButtons[typeof(FoodAmount)] = OneFoodButton;
+
+            SwitchStyle(_selectedButtons[typeof(FoodType)]);
+            _selectedButtons.Remove(typeof(FoodType));
+            AppleButton.Style = (Style)FindResource("Apple2");
+            _selectedButtons[typeof(FoodType)] = AppleButton;
+
+            SwitchStyle(_selectedButtons[typeof(SnakeColor)]);
+            _selectedButtons.Remove(typeof(SnakeColor));
+            BlueButton.Style = (Style)FindResource("Blue2");
+            _selectedButtons[typeof(SnakeColor)] = BlueButton;
+
+            gameInit.GameMode = GameMode.Classic;
+            gameInit.GameSpeed = GameSpeed.Medium;
+            gameInit.GameSize = GameSize.Medium;
+            gameInit.FoodType = FoodType.Apple;
+            gameInit.FoodAmount = FoodAmount.One;
         }
 
     }
-
     public class RelayCommand : ICommand
     {
         private readonly Action<object> execute;
