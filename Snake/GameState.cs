@@ -21,7 +21,7 @@ namespace Snake
         public int FoodCount { get; set; }
         public int HighScore { get; protected set; }
         public bool GameOver { get; protected set; }
-
+        public bool Ate { get; set; }
         public GameMode Mode { get; protected set; }
 
         protected readonly LinkedList<Directions> dirChanges = new LinkedList<Directions>();
@@ -52,12 +52,8 @@ namespace Snake
             
             for (int c = 1; c <= 3; c++)
             {
-                if(c!=3)
-                    Grid[r, c].AddFirst((GridValue.Snake, Directions.Up));
-                else
-                    Grid[r, c].AddFirst((GridValue.Snake, Directions.Right));
-
-                snakePositions.AddFirst(new  Positions(r, c));
+                Grid[r, c].AddFirst((GridValue.Snake, Directions.Right));
+                snakePositions.AddFirst(new Positions(r, c));
             }
             
         }
@@ -130,6 +126,7 @@ namespace Snake
 
         protected void RemoveTail()
         {
+            Ate = false;
             Positions tail = snakePositions.Last.Value;
             DeleteObject(tail);
             snakePositions.RemoveLast();

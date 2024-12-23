@@ -27,7 +27,7 @@
                Text="SCORE 0"
                FontSize="22"
                Margin="10"/>
-            
+
             <TextBlock x:Name="HighScoreText"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
@@ -60,6 +60,7 @@
                 RenderOptions.BitmapScalingMode="HighQuality">
             </UniformGrid>
 
+            <Canvas Name="Canva" Margin="20,0,20,20" Grid.Row="1"/>
         </Grid>
     </Viewbox>
 </Window>
