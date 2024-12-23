@@ -13,6 +13,9 @@
     <Compile Update="MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PlayScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Setting.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PlayScreen.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Setting.xaml">
