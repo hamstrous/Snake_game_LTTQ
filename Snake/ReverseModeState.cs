@@ -8,7 +8,7 @@ namespace Snake
 {
     public class ReverseModeState : GameState
     {
-        int eaten = 0;
+        bool eaten = false;
         public ReverseModeState(int rows, int cols, int foods) : base(rows, cols, foods)
         {
             AddSnake();
@@ -27,7 +27,14 @@ namespace Snake
                     currentNode = currentNode.Next;
                 }
                 snakePositions = reversedList;
-                Grid[HeadPosition().Row, HeadPosition().Column].First.Value.Second = Dir;
+                
+                currentNode = snakePositions.First;
+                while (currentNode != null)
+                {
+                    Positions pos = currentNode.Value;
+                    Grid[pos.Row, pos.Column].First.Value.Second = Grid[pos.Row, pos.Column].First.Value.Second.Opposite();
+                    currentNode = currentNode.Next;
+                }
             }
         }
 
@@ -62,9 +69,11 @@ namespace Snake
 
         public override void Move()
         {
-            if(eaten > 0)
+            Moving = true;
+            if(eaten)
             {
-                eaten--;
+                eaten = false;
+                Moving = false;
                 return;
             }
             if (dirChanges.Count > 0)
@@ -96,8 +105,8 @@ namespace Snake
                 Dir = nDir;
                 AddHead(newHeadPos);
                 SwapSnake();
-                
-                eaten = 3;
+
+                eaten = true;
                 Score++;
                 if (Score > HighScore)
                 {

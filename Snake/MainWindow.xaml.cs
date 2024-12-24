@@ -206,9 +206,14 @@ namespace Snake
             {
                 Mode.Ate = true;
                 gameState.Move();
-                if (!gameState.GameOver)
+                if (!gameState.GameOver && Mode.Moving)
                     await SnakeSmoothMovement(delay);
-                else
+                else if (!Mode.Moving)
+                {
+                    NewSnakePosition();
+                    await Task.Delay(1000);
+                }
+                else if (gameState.GameOver)
                 {
                     Canva.Children.Clear();
                     HeadImage = new Image();
@@ -261,6 +266,18 @@ namespace Snake
             Canva.Children.Add(HeadImage);
             Canva.Children.Add(TailImage);
 
+            Canvas.SetLeft(HeadImage, HeadPos.X); // X position
+            Canvas.SetTop(HeadImage, HeadPos.Y);  // Y position
+            Canvas.SetLeft(TailImage, TailPos.X); // X position
+            Canvas.SetTop(TailImage, TailPos.Y);  // Y position
+        }
+
+        public void NewSnakePosition()
+        {
+            Point HeadPos = GetCellPosition(Mode.HeadPosition().Row, Mode.HeadPosition().Column);
+            Point TailPos = GetCellPosition(Mode.TailPosition().Row, Mode.TailPosition().Column);
+            HeadImage.RenderTransform = new RotateTransform(dirToRotation[Mode.Grid[Mode.HeadPosition().Row, Mode.HeadPosition().Column].First.Value.Second]);
+            TailImage.RenderTransform = new RotateTransform(dirToRotation[Mode.Grid[Mode.TailPosition().Row, Mode.TailPosition().Column].First.Value.Second]);
             Canvas.SetLeft(HeadImage, HeadPos.X); // X position
             Canvas.SetTop(HeadImage, HeadPos.Y);  // Y position
             Canvas.SetLeft(TailImage, TailPos.X); // X position
