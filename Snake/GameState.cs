@@ -10,6 +10,7 @@ namespace Snake
 {
     public class GameState
     {
+        public bool Moving = true;
         public int Rows { get; protected set; }
         public int Cols { get; protected set; }
 
@@ -188,6 +189,7 @@ namespace Snake
 
         public virtual void Move()
         {
+            Moving = true;
             if (dirChanges.Count > 0)
             {
                 SoundEffect.PlayMoveSound();
