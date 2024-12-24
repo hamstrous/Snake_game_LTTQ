@@ -35,7 +35,7 @@ namespace Snake
             return dark;
         }
 
-        private static ImageSource LoadImage(string fileName, bool recolor = false)
+        public static ImageSource LoadImage(string fileName, bool recolor = false)
         {
             // Load the original image
             BitmapImage originalImage = new BitmapImage();

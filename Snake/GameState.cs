@@ -187,6 +187,11 @@ namespace Snake
             SoundEffect.PlayEatSound();
         }
 
+        public virtual Positions NeedToMoveBox()
+        {
+            return null;
+        }
+
         public virtual void Move()
         {
             Moving = true;

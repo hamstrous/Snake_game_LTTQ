@@ -8,7 +8,6 @@ namespace Snake
 {
     public class ReverseModeState : GameState
     {
-        bool eaten = false;
         public ReverseModeState(int rows, int cols, int foods) : base(rows, cols, foods)
         {
             AddSnake();
@@ -32,7 +31,17 @@ namespace Snake
                 while (currentNode != null)
                 {
                     Positions pos = currentNode.Value;
-                    Grid[pos.Row, pos.Column].First.Value.Second = Grid[pos.Row, pos.Column].First.Value.Second.Opposite();
+                    LinkedListNode<Positions> nextNode = currentNode.Next;
+                    if (nextNode != null)
+                    {
+                        Positions nextPos = currentNode.Next.Value;
+                        Grid[pos.Row, pos.Column].First.Value.Second = Grid[nextPos.Row, nextPos.Column].First.Value.Second.Opposite();
+                    }
+                    else
+                    {
+                        Grid[pos.Row, pos.Column].First.Value.Second = Grid[pos.Row, pos.Column].First.Value.Second.Opposite();
+
+                    }
                     currentNode = currentNode.Next;
                 }
             }
@@ -70,12 +79,6 @@ namespace Snake
         public override void Move()
         {
             Moving = true;
-            if(eaten)
-            {
-                eaten = false;
-                Moving = false;
-                return;
-            }
             if (dirChanges.Count > 0)
             {
                 SoundEffect.PlayMoveSound();
@@ -102,11 +105,10 @@ namespace Snake
                 SoundEffect.PlayEatSound();
                 Directions nDir = TailDirection();
                 DeleteObject(newHeadPos);
-                Dir = nDir;
                 AddHead(newHeadPos);
                 SwapSnake();
-
-                eaten = true;
+                Dir = nDir;
+                Moving = false;
                 Score++;
                 if (Score > HighScore)
                 {
