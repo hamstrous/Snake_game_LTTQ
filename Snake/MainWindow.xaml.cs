@@ -207,11 +207,18 @@ namespace Snake
                 Mode.Ate = true;
                 gameState.Move();
                 if (!gameState.GameOver && Mode.Moving)
+                {
+                    Positions boxPos = Mode.NeedToMoveBox();
+                    if (boxPos != null) ImageSmoothMovement("Box.png", delay, boxPos);
                     await SnakeSmoothMovement(delay);
+                }
                 else if (!Mode.Moving)
                 {
-                    NewSnakePosition();
-                    await Task.Delay(1000);
+                    Canva.Children.Clear();
+                    HeadImage = new Image();
+                    TailImage = new Image();
+                    InitSnakeSmoothMovement();
+                    await Task.Delay(500);
                 }
                 else if (gameState.GameOver)
                 {
@@ -272,18 +279,6 @@ namespace Snake
             Canvas.SetTop(TailImage, TailPos.Y);  // Y position
         }
 
-        public void NewSnakePosition()
-        {
-            Point HeadPos = GetCellPosition(Mode.HeadPosition().Row, Mode.HeadPosition().Column);
-            Point TailPos = GetCellPosition(Mode.TailPosition().Row, Mode.TailPosition().Column);
-            HeadImage.RenderTransform = new RotateTransform(dirToRotation[Mode.Grid[Mode.HeadPosition().Row, Mode.HeadPosition().Column].First.Value.Second]);
-            TailImage.RenderTransform = new RotateTransform(dirToRotation[Mode.Grid[Mode.TailPosition().Row, Mode.TailPosition().Column].First.Value.Second]);
-            Canvas.SetLeft(HeadImage, HeadPos.X); // X position
-            Canvas.SetTop(HeadImage, HeadPos.Y);  // Y position
-            Canvas.SetLeft(TailImage, TailPos.X); // X position
-            Canvas.SetTop(TailImage, TailPos.Y);  // Y position
-        }
-
         private async Task SnakeSmoothMovement(int delay)
         {
             int steps = delay / 10;
@@ -312,6 +307,44 @@ namespace Snake
                 });
 
             }
+        }
+
+        private async Task ImageSmoothMovement(string url, int delay, Positions pos)
+        {
+            Image image = new Image
+            {
+                Source = Images.LoadImage(url),
+                RenderTransformOrigin = new Point(0.5, 0.5)
+            };
+
+            image.Width = cellSize;
+            image.Height = cellSize;
+            Point point = GetCellPosition((int)pos.Row, (int)pos.Column);
+
+            Canva.Children.Add(image);
+            Canvas.SetLeft(image, point.X); // X position
+            Canvas.SetTop(image, point.Y);  // Y position
+
+            int steps = delay / 10;
+            double increment = cellSize / steps;
+            for (int i = 0; i < steps; i++)
+            {
+                await Task.Delay(10);
+                Dispatcher.Invoke(() =>
+                {
+                    Directions dir = Mode.Grid[pos.Row, pos.Column].First.Value.Second;
+                    if (dir == Directions.Left) Canvas.SetLeft(image, Canvas.GetLeft(image) - increment);
+                    else if (dir == Directions.Right) Canvas.SetLeft(image, Canvas.GetLeft(image) + increment);
+                    else if (dir == Directions.Up) Canvas.SetTop(image, Canvas.GetTop(image) - increment);
+                    else if (dir == Directions.Down) Canvas.SetTop(image, Canvas.GetTop(image) + increment);
+                    image.RenderTransform = new RotateTransform(dirToRotation[dir]);
+
+                });
+
+            }
+            Canva.Children.Remove(image);
+            image = new Image();
+            
         }
 
         private Image[,] SetupGrid()
