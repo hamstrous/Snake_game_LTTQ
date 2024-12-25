@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:Snake"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1000" 
-             >
+             KeyboardNavigation.DirectionalNavigation="None"
+             KeyboardNavigation.TabNavigation="None"
+             Focusable="False">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -18,7 +20,7 @@
     <UserControl.Background>
         <ImageBrush ImageSource="/Choose/grass.jpg"/>
     </UserControl.Background>
-    <Grid>
+    <Grid x:Name="MainGrid">
         <!-- Back Button -->
         <StackPanel>
             <Button Name="BackButton" Style="{StaticResource BackButtonStyle}" Margin="15,10,0,0" Click="BackButton_Click" Height="53" Width="114"/>
@@ -40,7 +42,7 @@
                 <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
-                        <Button Name="ClassicModeButton" Tag="GameMode,Classic" Style="{StaticResource ClassicMode1}" Click="Button_Click" Height="68" Width="65" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Button Name="ClassicModeButton" Tag="GameMode,Classic" Style="{StaticResource ClassicMode1}" Click="Button_Click" Height="68" Width="65" HorizontalAlignment="Center" VerticalAlignment="Center" Focusable="False" />
                     </Grid>
                     <Grid>
                         <Image Height="68" Width="76" Source="/Choose/choose-button.png" />
@@ -185,6 +187,6 @@
             </Grid>
             
         </Viewbox>
-        <local:PlayScreen x:Name="Play" Visibility="Collapsed"/>
+         <!-- <local:PlayScreen x:Name="Play" Visibility="Collapsed"/> -->
     </Grid>
 </UserControl>

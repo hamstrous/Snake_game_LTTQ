@@ -6,14 +6,20 @@
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
         Title="MainMenu" Height="800" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
-        >
+        FocusVisualStyle="{x:Null}"
+        KeyboardNavigation.TabNavigation="None"
+        KeyboardNavigation.ControlTabNavigation="None"
+        KeyboardNavigation.DirectionalNavigation="None"
+        Focusable="False">
     <Window.Background>
         <ImageBrush ImageSource="Assets/MainMenuBackground.jpg" Stretch="UniformToFill"/>
     </Window.Background>
 
     <Grid>
         <Viewbox>
-            <Grid>
+            <Grid KeyboardNavigation.TabNavigation="None"
+                  KeyboardNavigation.ControlTabNavigation="None"
+                  KeyboardNavigation.DirectionalNavigation="None">
                 <Grid Height="800" Width="1000">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.8*"/>
@@ -143,9 +149,13 @@
 
             </Grid>
         </Viewbox>
-        
+
         <local:SettingExit2 x:Name="Exit" Visibility="Collapsed" Panel.ZIndex="1"/>
         <local:Setting x:Name="Setting" Visibility="Collapsed" Panel.ZIndex="1"/>
-        <local:UserControl1 x:Name="ChooseMode"  Visibility="Collapsed" Panel.ZIndex="1"/>
+        <local:UserControl1 x:Name="ChooseMode"  Visibility="Collapsed" Panel.ZIndex="1"
+                            KeyboardNavigation.TabNavigation="None"
+                  KeyboardNavigation.ControlTabNavigation="None"
+                  KeyboardNavigation.DirectionalNavigation="None"
+                            Focusable="False" />
     </Grid>
 </Window>

@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\boxmodestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:boxmodestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\images.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:images.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\reversemodestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:reversemodestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,71 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameState.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\GameState.cs",
-              "RelativeDocumentMoniker": "GameState.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\GameState.cs",
-              "RelativeToolTip": "GameState.cs",
-              "ViewState": "AQIAALEAAAAAAAAAAAAcwLoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T06:09:31.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BoxModeState.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\BoxModeState.cs",
-              "RelativeDocumentMoniker": "BoxModeState.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\BoxModeState.cs",
-              "RelativeToolTip": "BoxModeState.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAwwA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T06:34:27.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Images.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\Images.cs",
-              "RelativeDocumentMoniker": "Images.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\Images.cs",
-              "RelativeToolTip": "Images.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAwBsAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T06:20:19.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReverseModeState.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\ReverseModeState.cs",
-              "RelativeDocumentMoniker": "ReverseModeState.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\ReverseModeState.cs",
-              "RelativeToolTip": "ReverseModeState.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAuwGkAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T04:11:04.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAMIAAAAAAAAAAAApwNIAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T04:11:00.747Z",
-              "EditorCaption": ""
             }
           ]
         }

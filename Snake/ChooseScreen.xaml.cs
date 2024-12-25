@@ -44,16 +44,37 @@ namespace Snake
             gameInit.GameSize = GameSize.Medium;
             gameInit.FoodType = FoodType.Apple;
             gameInit.FoodAmount = FoodAmount.One;
+
+            var allElements = GetAllElements(this);
+            // Process the elements as needed
+            foreach (var element in allElements)
+            {
+                // Example: Set Focusable to false for all elements
+                if (element is UIElement uiElement)
+                {
+                    uiElement.Focusable = false;
+                }
+            }
         }
-        /*string[] link = ClassicModeButton.Tag.ToString().Split("_Dark");
-        string groupName = link[0];
-        string enumValue = link[1];*/
-        /*
+        private List<DependencyObject> GetAllElements(DependencyObject parent)
+        {
+            var elements = new List<DependencyObject>();
+            GetAllElementsRecursive(parent, elements);
+            return elements;
+        }
 
-        MediumSizeButton.Background = Brushes.LightBlue;
+        // Recursive method to traverse the visual tree
+        private void GetAllElementsRecursive(DependencyObject parent, List<DependencyObject> elements)
+        {
+            if (parent == null) return;
 
-        _selectedGameModeButtons[typeof(FoodColor)] = RedFoodButton;
-*/
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                elements.Add(child);
+                GetAllElementsRecursive(child, elements);
+            }
+        }
 
         private void SwitchStyle(Button button)
         {
@@ -154,10 +175,16 @@ namespace Snake
             SoundEffect.PlayOnOffSound();
         }
 
+        public PlayScreen playScreen;
+
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            
-
+            playScreen = new PlayScreen(gameInit);
+  
+            playScreen.Visibility = Visibility.Visible;
+            playScreen.IsEnabled = true;
+            MainGrid.Children.Add(playScreen);
+            Keyboard.Focus(playScreen);
         }
 
         private void ShuffleButton_Click(object sender, RoutedEventArgs e)

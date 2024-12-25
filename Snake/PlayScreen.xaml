@@ -11,7 +11,9 @@
         Foreground="{StaticResource TextColor}"
         FontFamily="{StaticResource MainFont}"
         PreviewKeyDown="Window_PreviewKeyDown"
-        KeyDown="Window_KeyDown">
+        KeyDown="Window_KeyDown"
+        Focusable="True">
+
     <Viewbox>
         <Grid>
             <Grid.RowDefinitions>
@@ -46,7 +48,7 @@
                 RenderOptions.BitmapScalingMode="HighQuality">
             </UniformGrid>
 
-            <UniformGrid x:Name="GameGrid"
+            <UniformGrid x:Name="GameGrid" FocusVisualStyle="{x:Null}"
                 Width="400"
                 Height="400"
                 HorizontalAlignment="Center"
@@ -55,9 +57,10 @@
                 Margin="20,0,20,20"
                 Grid.Row="1"
                 SnapsToDevicePixels="True"
-                RenderOptions.BitmapScalingMode="HighQuality">
+                RenderOptions.BitmapScalingMode="HighQuality"
+                Focusable="True">
             </UniformGrid>
-
+            <Canvas RenderOptions.BitmapScalingMode="HighQuality" Name="Canva" Margin="20,0,20,20" Grid.Row="1" SnapsToDevicePixels="True"/>
         </Grid>
     </Viewbox>
     </UserControl>
