@@ -92,6 +92,8 @@ namespace Snake
             InitializeComponent();
         }
 
+
+       
         public PlayScreen(GameInit init)
         {
             InitializeComponent();
