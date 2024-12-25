@@ -16,7 +16,7 @@ namespace Snake
 
         protected void MoveBox(Positions pos)
         {
-            Grid[pos.Row, pos.Column].AddFirst((GridValue.Box, Directions.Up));
+            Grid[pos.Row, pos.Column].AddFirst((GridValue.Box, Dir));
         }
 
         protected IEnumerable<Positions> EmptyNotNearOutsidePosition()
@@ -60,8 +60,16 @@ namespace Snake
             Grid[pos.Row, pos.Column].AddFirst((GridValue.Goal, Directions.Up));
         }
 
+        public Positions NeedMoveBox = null;
+
+        public override Positions NeedToMoveBox()
+        {
+            return NeedMoveBox;
+        }
+
         public override void Move()
         {
+            NeedMoveBox = null;
             if (dirChanges.Count > 0)
             {
                 Dir = dirChanges.First.Value;
@@ -111,6 +119,7 @@ namespace Snake
                 }
                 else if (boxHit == GridValue.Goal)
                 {
+                    NeedMoveBox = newHeadPos;
                     SoundEffect.PlayBoxSound();
                     DeleteObject(newHeadPos);
                     DeleteObject(newBoxPos);
@@ -120,6 +129,7 @@ namespace Snake
                 }
                 else
                 {
+                    NeedMoveBox = newHeadPos;
                     DeleteObject(newHeadPos);
                     RemoveTail();
                     AddHead(newHeadPos);
