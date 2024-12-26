@@ -151,7 +151,7 @@
         </Viewbox>
 
         <local:SettingExit2 x:Name="Exit" Visibility="Collapsed" Panel.ZIndex="1"/>
-        <local:Setting x:Name="Setting" Visibility="Collapsed" Panel.ZIndex="1"/>
+        <local:Setting x:Name="SettingControl" Visibility="Collapsed" Panel.ZIndex="1"/>
         <local:UserControl1 x:Name="ChooseMode"  Visibility="Collapsed" Panel.ZIndex="1"
                             KeyboardNavigation.TabNavigation="None"
                   KeyboardNavigation.ControlTabNavigation="None"
