@@ -99,7 +99,7 @@ namespace Snake
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var clickedButton = sender as Button;
-
+            SoundEffect.PlayOnOffSound();
             // Parse the group and value from the Tag property
             string[] tagParts = clickedButton.Tag.ToString().Split(',');
             string groupName = tagParts[0];
@@ -136,6 +136,7 @@ namespace Snake
         {
             // Parse the enum value
             TEnum selectedEnumValue = (TEnum)System.Enum.Parse(typeof(TEnum), enumValue);
+
             Type enumType = selectedEnumValue.GetType();
             if (enumType == typeof(GameMode))
                 gameInit.GameMode = (GameMode)(object)selectedEnumValue;
@@ -180,6 +181,7 @@ namespace Snake
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
+            SoundEffect.PlayOnOffSound();
             GameInit tmp = new GameInit(gameInit);
             playScreen = new PlayScreen(tmp);
   
@@ -206,7 +208,7 @@ namespace Snake
         private void ShuffleButton_Click(object sender, RoutedEventArgs e)
         {
             Random rnd = new Random();
-
+            SoundEffect.PlayOnOffSound();
             // Shuffle Game Mode
             int gameModeIndex = rnd.Next(0, 5);
             switch (gameModeIndex)
@@ -320,6 +322,8 @@ namespace Snake
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
+            SoundEffect.PlayOnOffSound();
+
             SwitchStyle(_selectedButtons[typeof(GameMode)]);
             _selectedButtons.Remove(typeof(GameMode));
             ClassicModeButton.Style = (Style)FindResource("ClassicMode2");

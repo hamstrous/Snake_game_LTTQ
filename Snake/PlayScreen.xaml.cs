@@ -209,9 +209,10 @@ namespace Snake
                         break;
                 }
         }
-
+        bool gameLoop = false;
         private async Task GameLoop()
-        {
+        {   
+
             int delay = GameInit.GameSpeed switch
             {
                 GameSpeed.Slow => 200,

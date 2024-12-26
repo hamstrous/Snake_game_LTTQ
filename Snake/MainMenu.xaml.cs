@@ -66,6 +66,7 @@ namespace Snake
                         chooseScreen.Show();
 
                         this.Close();*/
+            SoundEffect.PlayOnOffSound();
             ChooseMode.Visibility = Visibility.Visible;
             playScreen = ChooseMode.playScreen;
             ChooseMode.Focus();
