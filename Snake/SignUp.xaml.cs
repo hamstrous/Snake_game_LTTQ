@@ -49,6 +49,9 @@ namespace Snake
             {
                 txtErrorMessage.Text = "Registration Successful!!";
                 txtErrorMessage.Visibility = Visibility.Visible;
+                SignIn signin = new SignIn();
+                signin.Show();
+                this.Close();
             }
             else
             {

@@ -46,6 +46,9 @@ namespace Snake
                 currentUserName = txtusername.Text;
                 txtErrorMessage.Text = "Login successful!!";
                 txtErrorMessage.Visibility = Visibility.Visible;
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.Show();
+                this.Close();
             }
             else
             {
