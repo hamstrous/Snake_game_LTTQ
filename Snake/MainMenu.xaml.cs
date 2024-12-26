@@ -75,15 +75,17 @@ namespace Snake
         private void Leaderboard_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayButtonSound();
-            MessageBox.Show("Click");
+            Leaderboard leaderboard = new Leaderboard();
+            leaderboard.Show();
+            this.Close();
         }
 
         private void Setting_Click(object sender, RoutedEventArgs e)
         {
-
             SoundEffect.PlayButtonSound();
-            Setting.Visibility = Visibility.Visible;
+            SettingControl.Visibility = Visibility.Visible; // Sửa Setting thành SettingControl
         }
+
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
