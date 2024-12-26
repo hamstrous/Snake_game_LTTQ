@@ -33,8 +33,17 @@ namespace Snake
         private void SignOut_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
-            Application.Current.Shutdown();
+            
+            SignIn signIn = new SignIn();
+            signIn.Show();
 
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window is not SignIn)
+                {
+                    window.Close();
+                }
+            }
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
