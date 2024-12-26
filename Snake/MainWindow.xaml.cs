@@ -126,22 +126,11 @@ namespace Snake
 
         private async Task SaveScoreCurrent()
         {
-            SignIn.currentUserName = "testuser01";
-
-            Guid? userId = await SaveScore.GetUserIdAsync(SignIn.currentUserName);
-
-            if (userId == null)
-            {
-                MessageBox.Show("Không tìm thấy người dùng.");
-                return;
-            }
-
-
+            //SignIn.CurrentUserName = "testuser01";
             int score = gameState.Score;
             int mode = (int)GameInit.GameMode;
 
-
-            await SaveScore.SavePlayerScore(userId.Value, score, mode);
+            await SaveScore.SavePlayerScore(SignIn.CurrentUserName , score, mode);
         }
 
 
