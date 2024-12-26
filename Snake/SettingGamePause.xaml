@@ -4,15 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Snake"
-             mc:Ignorable="d" Width="628" Height="433">
-    <Grid Margin="0,0,0,-53">
+             mc:Ignorable="d" Width="449" Height="294">
+    <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Setting/board.png" />
         </Grid.Background>
-        <Image Source="/Setting/x.png" HorizontalAlignment="Left" Height="58" Margin="495,64,0,0" VerticalAlignment="Top"
-           Width="57" RenderTransformOrigin="0.518,0.591"  IsHitTestVisible="False"/>
-        <Button Width="56" Height="58" HorizontalAlignment="Left" VerticalAlignment="Top" 
-            Margin="495,64,0,0" Click="CloseButton_Click" Background="Transparent" BorderBrush="Transparent">
+        <Image Source="/Setting/x.png" HorizontalAlignment="Left" Height="33" Margin="359,43,0,0" VerticalAlignment="Top"
+           Width="40" RenderTransformOrigin="0.518,0.591"  IsHitTestVisible="False"/>
+        <Button Width="39" Height="33" HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="359,43,0,0" Click="CloseButton_Click" Background="Transparent" BorderBrush="Transparent">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
@@ -27,13 +27,13 @@
 
         <Image Name="SFX_image"
            Source="/Setting/sound-on.png" Stretch="Fill"
-           HorizontalAlignment="Left" Height="154" Margin="62,127,0,0" VerticalAlignment="Top" Width="141"
+           HorizontalAlignment="Left" Height="90" Margin="57,80,0,0" VerticalAlignment="Top" Width="98"
            IsHitTestVisible="False"/>
         <Button  x:Name="SFX_btn"
-        Margin="62,127,0,0"
+        Margin="57,80,0,0"
         VerticalAlignment="Top"
-        Height="154"
-        Width="141"
+        Height="90"
+        Width="98"
         Background="Transparent"
         BorderBrush="Transparent"
         BorderThickness="2"
@@ -56,19 +56,19 @@
 
         <Image Name="BGM_image"
    Source="/Setting/SFX-on.png" Stretch="Fill"
-   HorizontalAlignment="Left" Height="154" Margin="220,127,0,0" VerticalAlignment="Top" Width="142"
+   HorizontalAlignment="Left" Height="90" Margin="167,80,0,0" VerticalAlignment="Top" Width="99"
    IsHitTestVisible="False"/>
         <Button  x:Name="BGM_btn"
         VerticalAlignment="Top"
-        Height="154"
-        Width="142"
+        Height="90"
+        Width="99"
         Background="Transparent"
         BorderBrush="Transparent"
         BorderThickness="2"
         HorizontalAlignment="Left"
         HorizontalContentAlignment="Center"
         VerticalContentAlignment="Center"
-        Click="BGM_Click" RenderTransformOrigin="0.528,0.5" Margin="220,127,0,0">
+        Click="BGM_Click" RenderTransformOrigin="0.528,0.5" Margin="167,80,0,0">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="{TemplateBinding Background}"
@@ -82,19 +82,19 @@
         </Button>
         <Image x:Name="Window_image"
         Source="/Setting/Sizeup.png" Stretch="Fill"
-        HorizontalAlignment="Left" Height="154" Margin="382,127,0,0" VerticalAlignment="Top" Width="142"
+        HorizontalAlignment="Left" Height="90" Margin="280,80,0,0" VerticalAlignment="Top" Width="99"
         IsHitTestVisible="False"/>
         <Button  x:Name="Window_btn"
         VerticalAlignment="Top"
-        Height="154"
-        Width="142"
+        Height="90"
+        Width="99"
         Background="Transparent"
         BorderBrush="Transparent"
         BorderThickness="2"
         HorizontalAlignment="Left"
         HorizontalContentAlignment="Center"
         VerticalContentAlignment="Center"
-        Click="Window_Click" RenderTransformOrigin="0.528,0.5" Margin="382,127,0,0">
+        Click="Window_Click" RenderTransformOrigin="0.528,0.5" Margin="280,80,0,0">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="{TemplateBinding Background}"
@@ -108,11 +108,11 @@
         </Button>
 
 
-        <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="100" Margin="123,308,0,0" VerticalAlignment="Top" Width="171"/>
+        <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="57" Margin="98,186,0,0" VerticalAlignment="Top" Width="118"/>
         <Button Content="EXIT"
                 VerticalAlignment="Top"
-                Height="94"
-                Width="166"
+                Height="54"
+                Width="116"
                 FontSize="50"
                 FontFamily="Gloucester MT Extra Condensed"
                 Background="Transparent"
@@ -120,7 +120,7 @@
                 BorderThickness="2"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center" Margin="128,308,0,0"
+                VerticalContentAlignment="Center" Margin="100,183,0,0"
                 Foreground="#F29F58">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -142,11 +142,11 @@
             </Button.Template>
         </Button>
 
-        <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="100" Margin="324,308,0,0" VerticalAlignment="Top" Width="171"/>
+        <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="57" Margin="233,186,0,0" VerticalAlignment="Top" Width="139"/>
         <Button Content="RESUME"
                 VerticalAlignment="Top"
-                Height="94"
-                Width="166"
+                Height="54"
+                Width="128"
                 FontSize="50"
                 FontFamily="Gloucester MT Extra Condensed"
                 Background="Transparent"
@@ -154,7 +154,7 @@
                 BorderThickness="2"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center" Margin="329,308,0,0"
+                VerticalContentAlignment="Center" Margin="240,183,0,0"
                 Foreground="#F29F58">
             <Button.Template>
                 <ControlTemplate TargetType="Button">

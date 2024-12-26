@@ -1,69 +1,81 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Github\\Snake_game_LTTQ\\Snake\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\choosescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:choosescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\choosescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:choosescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\playscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:playscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\gameinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:gameinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\playscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\playscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:playscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\leaderboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:leaderboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\admin\\onedrive\\desktop\\snake_game_lttq\\snake\\choosescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:choosescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\playscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:playscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\leaderboard2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:leaderboard2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\leaderboard2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\leaderboard2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:leaderboard2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\leaderboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\leaderboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:leaderboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\settinggameover.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:settinggameover.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\choosescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:choosescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\leaderboardentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:leaderboardentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\setting.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:setting.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\settingexit.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\settingexit.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:settingexit.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|d:\\github\\snake_game_lttq\\snake\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\setting.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:setting.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\leaderboard2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:leaderboard2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\admin\\onedrive\\desktop\\snake_game_lttq\\snake\\settingexit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:settingexit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\admin\\onedrive\\desktop\\snake_game_lttq\\snake\\setting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:setting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|c:\\users\\admin\\onedrive\\desktop\\snake_game_lttq\\snake\\settinggamepause.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:settinggamepause.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\settinggameover.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:settinggameover.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\gameinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:gameinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\leaderboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:leaderboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\leaderboardentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:leaderboardentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CBF0D2C-10F4-4F07-96F1-BBBD5E689009}|Snake.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -74,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,47 +98,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameInit.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\GameInit.cs",
-              "RelativeDocumentMoniker": "GameInit.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\GameInit.cs",
-              "RelativeToolTip": "GameInit.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowFQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T13:32:07.579Z",
+              "DocumentIndex": 10,
+              "Title": "SettingExit.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\SettingExit.xaml",
+              "RelativeDocumentMoniker": "SettingExit.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\SettingExit.xaml",
+              "RelativeToolTip": "SettingExit.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-26T13:58:40.93Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Leaderboard2.xaml",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\Leaderboard2.xaml",
-              "RelativeDocumentMoniker": "Leaderboard2.xaml",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\Leaderboard2.xaml",
-              "RelativeToolTip": "Leaderboard2.xaml",
+              "DocumentIndex": 13,
+              "Title": "SettingGamePause.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\SettingGamePause.xaml",
+              "RelativeDocumentMoniker": "SettingGamePause.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\SettingGamePause.xaml",
+              "RelativeToolTip": "SettingGamePause.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-26T11:39:47.537Z"
+              "WhenOpened": "2024-12-26T13:49:31.55Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
+              "Title": "Setting.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Setting.xaml",
+              "RelativeDocumentMoniker": "Setting.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Setting.xaml",
+              "RelativeToolTip": "Setting.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-26T13:42:59.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameInit.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\GameInit.cs",
+              "RelativeDocumentMoniker": "GameInit.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\GameInit.cs",
+              "RelativeToolTip": "GameInit.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T13:32:07.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Leaderboard2.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Leaderboard2.xaml",
+              "RelativeDocumentMoniker": "Leaderboard2.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Leaderboard2.xaml",
+              "RelativeToolTip": "Leaderboard2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-26T11:39:47.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Leaderboard.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\Leaderboard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Leaderboard.xaml.cs",
               "RelativeDocumentMoniker": "Leaderboard.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\Leaderboard.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Leaderboard.xaml.cs",
               "RelativeToolTip": "Leaderboard.xaml.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAIwBkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T10:44:34.821Z"
+              "WhenOpened": "2024-12-26T10:44:34.821Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ChooseScreen.xaml",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml",
               "RelativeDocumentMoniker": "ChooseScreen.xaml",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml",
               "RelativeToolTip": "ChooseScreen.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-26T10:37:24.841Z",
@@ -134,22 +183,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "Leaderboard.xaml",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\Leaderboard.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Leaderboard.xaml",
               "RelativeDocumentMoniker": "Leaderboard.xaml",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\Leaderboard.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Leaderboard.xaml",
               "RelativeToolTip": "Leaderboard.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-26T10:37:02.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "LeaderboardEntry.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\LeaderboardEntry.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\LeaderboardEntry.cs",
               "RelativeDocumentMoniker": "LeaderboardEntry.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\LeaderboardEntry.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\LeaderboardEntry.cs",
               "RelativeToolTip": "LeaderboardEntry.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -159,105 +208,111 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "PlayScreen.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\PlayScreen.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\PlayScreen.xaml.cs",
               "RelativeDocumentMoniker": "PlayScreen.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\PlayScreen.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\PlayScreen.xaml.cs",
               "RelativeToolTip": "PlayScreen.xaml.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAmwD0AAAA6AAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvx8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T10:34:38.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ChooseScreen.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml.cs",
               "RelativeDocumentMoniker": "ChooseScreen.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\ChooseScreen.xaml.cs",
               "RelativeToolTip": "ChooseScreen.xaml.cs",
-              "ViewState": "AQIAAKwAAAAAAAAAAAAwwLsAAAACAAAA",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAawKwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T11:44:58.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "Leaderboard2.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\Leaderboard2.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Leaderboard2.xaml.cs",
               "RelativeDocumentMoniker": "Leaderboard2.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\Leaderboard2.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Leaderboard2.xaml.cs",
               "RelativeToolTip": "Leaderboard2.xaml.cs",
               "ViewState": "AQIAAGgAAAAAAAAAAAAIwI4AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T11:40:39.644Z"
+              "WhenOpened": "2024-12-26T11:40:39.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "MainMenu.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainMenu.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\MainMenu.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainMenu.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\MainMenu.xaml.cs",
               "RelativeToolTip": "MainMenu.xaml.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAIwFIAAAA4AAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwEQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T11:44:06.914Z"
+              "WhenOpened": "2024-12-26T11:44:06.914Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "PlayScreen.xaml",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\PlayScreen.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\PlayScreen.xaml",
               "RelativeDocumentMoniker": "PlayScreen.xaml",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\PlayScreen.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\PlayScreen.xaml",
               "RelativeToolTip": "PlayScreen.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-26T12:07:30.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SettingGameOver.xaml",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\SettingGameOver.xaml",
-              "RelativeDocumentMoniker": "SettingGameOver.xaml",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\SettingGameOver.xaml",
-              "RelativeToolTip": "SettingGameOver.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-26T12:24:43.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Setting.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\Setting.xaml.cs",
-              "RelativeDocumentMoniker": "Setting.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\Setting.xaml.cs",
-              "RelativeToolTip": "Setting.xaml.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwCAAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T10:36:22.387Z"
+              "WhenOpened": "2024-12-26T12:07:30.125Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "SettingExit.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\SettingExit.xaml.cs",
-              "RelativeDocumentMoniker": "SettingExit.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\SettingExit.xaml.cs",
-              "RelativeToolTip": "SettingExit.xaml.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowCMAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T10:35:16.531Z"
+              "Title": "SettingGameOver.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\SettingGameOver.xaml",
+              "RelativeDocumentMoniker": "SettingGameOver.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\SettingGameOver.xaml",
+              "RelativeToolTip": "SettingGameOver.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-26T12:24:43.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 8,
+              "Title": "Setting.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Setting.xaml.cs",
+              "RelativeDocumentMoniker": "Setting.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\Setting.xaml.cs",
+              "RelativeToolTip": "Setting.xaml.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAIwGQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T10:36:22.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SettingExit.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\SettingExit.xaml.cs",
+              "RelativeDocumentMoniker": "SettingExit.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\SettingExit.xaml.cs",
+              "RelativeToolTip": "SettingExit.xaml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA1wDEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T10:35:16.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AQIAAIQAAAAAAAAAAAAawH8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -267,12 +322,13 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "MainMenu.xaml",
-              "DocumentMoniker": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainMenu.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\MainMenu.xaml",
               "RelativeDocumentMoniker": "MainMenu.xaml",
-              "ToolTip": "D:\\Github\\Snake_game_LTTQ\\Snake\\MainMenu.xaml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\Snake_game_LTTQ\\Snake\\MainMenu.xaml",
               "RelativeToolTip": "MainMenu.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-26T10:33:08.494Z"
+              "WhenOpened": "2024-12-26T10:33:08.494Z",
+              "EditorCaption": ""
             }
           ]
         }

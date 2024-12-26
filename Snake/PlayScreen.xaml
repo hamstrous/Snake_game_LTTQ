@@ -13,7 +13,6 @@
         PreviewKeyDown="Window_PreviewKeyDown"
         KeyDown="Window_KeyDown"
         Focusable="True">
-
     <Viewbox>
         <Grid>
         <Grid>

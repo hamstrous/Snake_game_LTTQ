@@ -59,8 +59,6 @@ namespace Snake
                     break;
             }
 
-            MessageBox.Show(GameInit.GameMode.ToString());
-
             Mode = GameInit.GameMode switch
             {
                 GameMode.Classic => new ClassicModeState(rows, cols, foods),
@@ -185,11 +183,15 @@ namespace Snake
                 case Key.Down:
                     gameState.ChangeDirection(Directions.Down);
                     break;
+                case Key.Escape:
+                    GamePause.Visibility = Visibility.Visible;
+                    break;
             }
         }
-
+        bool gameLoop = false;
         private async Task GameLoop()
-        {
+        {   
+
             int delay = GameInit.GameSpeed switch
             {
                 GameSpeed.Slow => 200,
