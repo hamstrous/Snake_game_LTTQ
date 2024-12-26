@@ -17,11 +17,7 @@ namespace Snake
 {
     public partial class Setting : UserControl
     {
-        private bool isPressed = false;
-        private bool isPressed2 = false;
         private bool isPressed3 = false;
-
-        
 
         public Setting()
         {
@@ -37,7 +33,7 @@ namespace Snake
         private void BGM_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
-            if (isPressed)
+            if (!SoundEffect.CanPlayBGM)
             {
                 SoundEffect.ResumeBGM();
                 BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-on.png", UriKind.Relative));
@@ -48,15 +44,13 @@ namespace Snake
                 BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-off.png", UriKind.Relative));
                 
             }
-            isPressed = !isPressed;
-
 
         }
 
         private void SFX_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
-            if (isPressed2)
+            if (!SoundEffect.CanPlayBGM)
             {
                 SoundEffect.CanPlaySFX = true;
                 SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-on.png", UriKind.Relative));
@@ -67,7 +61,6 @@ namespace Snake
                 SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-off.png", UriKind.Relative));
 
             }
-            isPressed2 = !isPressed2;
         }
         private void Window_Click(object sender, RoutedEventArgs e)
         {

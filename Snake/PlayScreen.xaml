@@ -10,16 +10,15 @@
         Background="{StaticResource BackgroundColor}"
         Foreground="{StaticResource TextColor}"
         FontFamily="{StaticResource MainFont}"
-        PreviewKeyDown="Window_PreviewKeyDown"
         KeyDown="Window_KeyDown"
         Focusable="True">
-
     <Viewbox>
         <Grid>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="15"/>
             </Grid.RowDefinitions>
 
             <TextBlock x:Name="ScoreText" 
@@ -61,7 +60,16 @@
                 RenderOptions.BitmapScalingMode="HighQuality"
                 Focusable="True">
             </UniformGrid>
-            <Canvas RenderOptions.BitmapScalingMode="HighQuality" Name="Canva" Margin="20,0,20,20" Grid.Row="1" SnapsToDevicePixels="True"/>
+            <TextBlock x:Name="OverlayText"
+                        Text=""
+                        FontSize="30"
+                        FontWeight="Bold"                       
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="20,0,20,20"
+                       Grid.Row="1"
+                        TextWrapping="Wrap"/>
+                <Canvas RenderOptions.BitmapScalingMode="HighQuality" Name="Canva" Margin="20,0,20,20" Grid.Row="1" SnapsToDevicePixels="True"/>
 
         </Grid>
             <local:SettingGameOver x:Name="GameOver" Visibility="Collapsed" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center" />

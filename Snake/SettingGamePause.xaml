@@ -121,7 +121,8 @@
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center" Margin="128,308,0,0"
-                Foreground="#F29F58">
+                Foreground="#F29F58"
+                Click="Exit_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
@@ -155,7 +156,8 @@
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center" Margin="329,308,0,0"
-                Foreground="#F29F58">
+                Foreground="#F29F58"
+                Click="CloseButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"

@@ -60,7 +60,7 @@
                         HorizontalAlignment="Left"
                         HorizontalContentAlignment="Center"
                         Foreground="#EED6C4"
-                        Click="Back_click" Margin="137,9,0,8">
+                        Click="Retry_click" Margin="137,9,0,8">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Background="{TemplateBinding Background}"
