@@ -78,7 +78,7 @@ namespace Snake
                     await conn.OpenAsync();
 
                     // Truy vấn để lấy top 5 điểm và tên người dùng từ tất cả các chế độ chơi (Mode)
-                    string query = "WITH RankedScores AS (SELECT ps.\"Mode\", ps.\"Score\", u.\"username\", ROW_NUMBER() OVER(PARTITION BY ps.\"Mode\" ORDER BY ps.\"Score\" DESC) AS rn FROM \"PlayerScores\" ps JOIN \"User\" u ON ps.\"UserId\" = u.\"id\") SELECT \"Mode\", \"Score\", \"username\" FROM RankedScores WHERE rn <= 5 ORDER BY \"Mode\", rn;";
+                    string query = "WITH RankedScores AS (SELECT \"Mode\", \"Score\", \"Username\", ROW_NUMBER() OVER(PARTITION BY \"Mode\" ORDER BY \"Score\" DESC) AS rn FROM \"PlayerScores\") SELECT \"Mode\", \"Score\", \"Username\" FROM RankedScores WHERE rn <= 5 ORDER BY \"Mode\", rn;";
 
 
                     using (var cmd = new NpgsqlCommand(query, conn))
