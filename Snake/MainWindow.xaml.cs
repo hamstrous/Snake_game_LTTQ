@@ -130,7 +130,7 @@ namespace Snake
             int score = gameState.Score;
             int mode = (int)GameInit.GameMode;
 
-            await SaveScore.SavePlayerScore(SignIn.CurrentUserName , score, mode);
+            await SaveScore.SavePlayerScore(SignIn.currentUserName , score, mode);
         }
 
 
