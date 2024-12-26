@@ -172,6 +172,7 @@ namespace Snake
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Collapsed;
+            ResetButton_Click(sender, e);
             SoundEffect.PlayOnOffSound();
         }
 
@@ -185,6 +186,7 @@ namespace Snake
             playScreen.IsEnabled = true;
             MainGrid.Children.Add(playScreen);
             Keyboard.Focus(playScreen);
+            ResetButton_Click(sender, e);
         }
 
         private void ShuffleButton_Click(object sender, RoutedEventArgs e)

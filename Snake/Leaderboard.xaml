@@ -38,14 +38,14 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Header STT -->
-                <TextBlock Text="STT"
-                   HorizontalAlignment="Center"
+                <TextBlock Text="Rank"
+                   HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    FontSize="18"
                    FontWeight="Bold"
                    Foreground="Black"
                    Grid.Column="0"
-                   Margin="0,20,0,0" />
+                   Margin="98,72,0,0" />
                 <!-- Header Name -->
                 <TextBlock Text="Name"
                    HorizontalAlignment="Center"
@@ -54,16 +54,16 @@
                    FontWeight="Bold"
                    Foreground="Black"
                    Grid.Column="1"
-                   Margin="0,20,0,0" />
+                   Margin="0,75,0,0" />
                 <!-- Header Score -->
                 <TextBlock Text="Score"
-                   HorizontalAlignment="Center"
+                   HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    FontSize="18"
                    FontWeight="Bold"
                    Foreground="Black"
                    Grid.Column="2"
-                   Margin="0,20,0,0" />
+                   Margin="44,77,0,0" />
 
                 <!-- Danh sách STT, Name, Score -->
                 <!-- STT -->
@@ -94,17 +94,17 @@
                    FontFamily="Gloucester MT Extra Condensed" FontSize="50" />
         <TextBlock x:Name="gamemode" Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="CLASSIC" VerticalAlignment="Center"
             FontFamily="Gloucester MT Extra Condensed" FontSize="50"/>
-            
+
         <Image Source="/Resources/left-arrow.png" Stretch="Fill"
-           HorizontalAlignment="Left" Height="48" Margin="30,205,0,0" 
-           Grid.Row="2" VerticalAlignment="Top" Width="52"
+           HorizontalAlignment="Left" Height="77" Margin="30,260,0,0" 
+           Grid.Row="2" VerticalAlignment="Top" Width="75"
            IsHitTestVisible="False"/>
 
         <Button Grid.Row="2" 
-                Margin="32,0,0,0"
-                VerticalAlignment="Center"
-                Height="43"
-                Width="50"
+                Margin="33,264,0,0"
+                VerticalAlignment="Top"
+                Height="69"
+                Width="72"
                 FontSize="25"
                 FontFamily="Segoe UI"
                 Background="Transparent"
@@ -128,21 +128,21 @@
 
 
         <Image Source="/Resources/right-arrow.png" Stretch="Fill"
-               HorizontalAlignment="Right" Height="48" Margin="0,205,30,0" 
-               Grid.Row="2" VerticalAlignment="Top" Width="52"
+               HorizontalAlignment="Left" Height="83" Margin="895,250,0,0" 
+               Grid.Row="2" VerticalAlignment="Top" Width="76"
                IsHitTestVisible="False"/>
 
         <Button Grid.Row="2" 
-                Margin="0,0,32,0"
+                Margin="895,0,0,0"
                 VerticalAlignment="Center"
-                Height="43"
-                Width="50"
+                Height="87"
+                Width="76"
                 FontSize="25"
                 FontFamily="Segoe UI"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 BorderThickness="2"
-                HorizontalAlignment="Right"
+                HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 Click="Next_click">

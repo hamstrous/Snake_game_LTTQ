@@ -16,6 +16,7 @@
 
     <Viewbox>
         <Grid>
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
@@ -61,6 +62,12 @@
                 Focusable="True">
             </UniformGrid>
             <Canvas RenderOptions.BitmapScalingMode="HighQuality" Name="Canva" Margin="20,0,20,20" Grid.Row="1" SnapsToDevicePixels="True"/>
+
         </Grid>
+            <local:SettingGameOver x:Name="GameOver" Visibility="Collapsed" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <local:SettingGamePause x:Name="GamePause" Visibility="Collapsed" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </Grid>
+
     </Viewbox>
     </UserControl>

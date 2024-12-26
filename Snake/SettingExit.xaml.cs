@@ -33,7 +33,7 @@ namespace Snake
         private void SignOut_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
-            
+            SoundEffect.PauseBGM();
             SignIn signIn = new SignIn();
             signIn.Show();
 
@@ -50,5 +50,7 @@ namespace Snake
             SoundEffect.PlayOnOffSound();
             Application.Current.Shutdown();
         }
+
+        
     }
 }

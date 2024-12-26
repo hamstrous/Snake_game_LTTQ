@@ -75,9 +75,12 @@ namespace Snake
         private void Leaderboard_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayButtonSound();
-            Leaderboard leaderboard = new Leaderboard();
+            /*Leaderboard leaderboard = new Leaderboard();
             leaderboard.Show();
-            this.Close();
+            this.Close();*/
+
+
+            Leaderboard2.Visibility = Visibility.Visible;
         }
 
         private void Setting_Click(object sender, RoutedEventArgs e)

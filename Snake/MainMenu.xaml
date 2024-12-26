@@ -157,5 +157,6 @@
                   KeyboardNavigation.ControlTabNavigation="None"
                   KeyboardNavigation.DirectionalNavigation="None"
                             Focusable="False" />
+        <local:Leaderboard2 x:Name="Leaderboard2" Visibility="Collapsed" Panel.ZIndex="1"/>
     </Grid>
 </Window>
