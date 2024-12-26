@@ -49,7 +49,7 @@ namespace Snake
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi. Vui lòng thử lại sau.");
+                
                 return false;
             }
         }
@@ -74,7 +74,7 @@ namespace Snake
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi. Vui lòng thử lại sau.");
+                
                 return false;
             }
         }
