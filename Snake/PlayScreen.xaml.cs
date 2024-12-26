@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,9 +21,10 @@ namespace Snake
     /// </summary>
     public partial class PlayScreen : UserControl
     {
+
         private Dictionary<GridValue, System.Windows.Media.ImageSource> gridValtoImage;
 
-        private readonly Dictionary<Directions, int> dirToRotation = new()
+        private Dictionary<Directions, int> dirToRotation = new()
         {
             {Directions.Up, 0 },
             {Directions.Right, 90},
@@ -30,8 +32,8 @@ namespace Snake
             {Directions.Left, 270 }
         };
 
-        private readonly int rows = 17, cols = 15;
-        private readonly Image[,] gridImages;
+        private int rows = 17, cols = 15;
+        private Image[,] gridImages;
         private GameState gameState;
         private bool gameRunning;
         private GameInit GameInit { get; set; }
@@ -129,6 +131,13 @@ namespace Snake
             HeadImage = new Image();
             TailImage = new Image();
             GameGrid.Focus();
+            Loaded += PlayScreen_Loaded;
+            StartGame();
+        }
+
+        private void StartGame()
+        { 
+            RunGame();
         }
 
         private async Task SaveScoreCurrent()
@@ -145,21 +154,24 @@ namespace Snake
         {
             InitMode();
             Draw();
-            await ShowCountDown();
+            await CountDown();
+            gameRunning = true;
             await GameLoop();
+            gameRunning = false;
             SaveScoreCurrent();
             await ShowGameOver();
 
         }
 
-        public async void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        private async Task CountDown()
         {
-            if (!gameRunning)
+            OverlayText.Visibility = Visibility.Visible;
+            for (int i = 3; i >= 1; i--)
             {
-                gameRunning = true;
-                await RunGame();
-                gameRunning = false;
+                OverlayText.Text = i.ToString();
+                await Task.Delay(750);
             }
+            OverlayText.Visibility = Visibility.Hidden;
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -168,25 +180,34 @@ namespace Snake
             {
                 return;
             }
-
-            switch (e.Key)
-            {
-                case Key.Left:
-                    gameState.ChangeDirection(Directions.Left);
-                    break;
-                case Key.Right:
-                    gameState.ChangeDirection(Directions.Right);
-                    break;
-                case Key.Up:
-                    gameState.ChangeDirection(Directions.Up);
-                    break;
-                case Key.Down:
-                    gameState.ChangeDirection(Directions.Down);
-                    break;
-                case Key.Escape:
-                    GamePause.Visibility = Visibility.Visible;
-                    break;
-            }
+            if(gameRunning)
+                switch (e.Key)
+                {
+                    case Key.Left:
+                        gameState.ChangeDirection(Directions.Left);
+                        break;
+                    case Key.Right:
+                        gameState.ChangeDirection(Directions.Right);
+                        break;
+                    case Key.Up:
+                        gameState.ChangeDirection(Directions.Up);
+                        break;
+                    case Key.Down:
+                        gameState.ChangeDirection(Directions.Down);
+                        break;
+                    case Key.Escape:
+                        if (GamePause.Pause) 
+                        {
+                            GamePause.Visibility = Visibility.Hidden;
+                            GamePause.Pause = false;
+                        }
+                        else
+                        {
+                            GamePause.Visibility = Visibility.Visible;
+                            GamePause.Pause = true;
+                        }
+                        break;
+                }
         }
         bool gameLoop = false;
         private async Task GameLoop()
@@ -201,6 +222,11 @@ namespace Snake
             };
             while (!gameState.GameOver)
             {
+                if(GamePause.Pause)
+                {
+                    await Task.Delay(100);
+                    continue;
+                }
                 Mode.Ate = true;
                 gameState.Move();
                 if (!gameState.GameOver && Mode.Moving)
@@ -432,21 +458,51 @@ namespace Snake
                 await Task.Delay(50);
             }
         }
-        private async Task ShowCountDown()
-        {
-            for (int i = 3; i >= 1; i--)
-            {
-                await Task.Delay(500);
-            }
-        }
+
+        public event EventHandler CloseGame;
 
         private async Task ShowGameOver()
         {
             SoundEffect.PlayGameOverSound();
             await DrawDeadSnake();
-            GameOver.Visibility = Visibility.Visible;
+            bool retry = await GameOver.ShowDialogAsync();
+            if (!retry)
+            {
+                OnCloseGame();
+                return;
+            }
             HeadImage = null;
             TailImage = null;
+            StartGame();
+        }
+
+        protected virtual void OnCloseGame()
+        {
+            CloseGame?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void PlayScreen_Loaded(object sender, RoutedEventArgs e)
+        {
+            var parentWindow = Window.GetWindow(this);
+            if (parentWindow != null)
+            {
+                AdjustToWindowSize(parentWindow);
+                parentWindow.SizeChanged += ParentWindow_SizeChanged;
+            }
+        }
+
+        private void ParentWindow_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            AdjustToWindowSize(sender as Window);
+        }
+
+        private void AdjustToWindowSize(Window window)
+        {
+            if (window != null)
+            {
+                this.Width = window.ActualWidth;
+                this.Height = window.ActualHeight;
+            }
         }
     }
 }

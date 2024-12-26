@@ -20,14 +20,29 @@ namespace Snake
     /// </summary>
     public partial class SettingGameOver : UserControl
     {
+        private TaskCompletionSource<bool> _tcs;
         public SettingGameOver()
         {
             InitializeComponent();
         }
 
-        public void Back_click(object sender, RoutedEventArgs e)
+        public Task<bool> ShowDialogAsync()
         {
+            _tcs = new TaskCompletionSource<bool>();
+            this.Visibility = Visibility.Visible;
+            return _tcs.Task;
+        }
 
+        private void Back_click(object sender, RoutedEventArgs e)
+        {
+            _tcs.SetResult(false);
+            this.Visibility = Visibility.Collapsed;
+        }
+
+        private void Retry_click(object sender, RoutedEventArgs e)
+        {
+            _tcs.SetResult(true);
+            this.Visibility = Visibility.Collapsed;
         }
     }
 }

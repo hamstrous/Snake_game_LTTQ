@@ -139,10 +139,7 @@ namespace Snake
 
             Type enumType = selectedEnumValue.GetType();
             if (enumType == typeof(GameMode))
-            {
                 gameInit.GameMode = (GameMode)(object)selectedEnumValue;
-                
-            }
             else if (enumType == typeof(GameSpeed))
                 gameInit.GameSpeed = (GameSpeed)(object)selectedEnumValue;
             else if (enumType == typeof(GameSize))
@@ -190,9 +187,22 @@ namespace Snake
   
             playScreen.Visibility = Visibility.Visible;
             playScreen.IsEnabled = true;
+            playScreen.CloseGame += PlayScreen_CloseGame;
+            playScreen.GamePause.ExitEvent += PlayScreen_CloseGame;
+
             MainGrid.Children.Add(playScreen);
             Keyboard.Focus(playScreen);
-            ResetButton_Click(sender, e);
+
+        }
+
+        private void PlayScreen_CloseGame(object sender, EventArgs e)
+        {
+            if (playScreen != null)
+            {
+                MainGrid.Children.Remove(playScreen);
+                playScreen = null;
+            }
+            ResetButton_Click(null, null);
         }
 
         private void ShuffleButton_Click(object sender, RoutedEventArgs e)
@@ -349,6 +359,7 @@ namespace Snake
             gameInit.GameSize = GameSize.Medium;
             gameInit.FoodType = FoodType.Apple;
             gameInit.FoodAmount = FoodAmount.One;
+            gameInit.SnakeColor = SnakeColor.Blue;
         }
 
     }

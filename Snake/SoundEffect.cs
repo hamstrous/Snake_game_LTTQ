@@ -97,11 +97,13 @@ namespace Snake
 
         public static void PauseBGM()
         {
+            CanPlayBGM = false;
             BGM?.Pause();
         }
 
         public static void ResumeBGM()
         {
+            CanPlayBGM = true;
             BGM?.Play();
         }
     }

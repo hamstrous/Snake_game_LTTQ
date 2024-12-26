@@ -120,8 +120,9 @@
                 BorderThickness="2"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center" Margin="100,183,0,0"
-                Foreground="#F29F58">
+                VerticalContentAlignment="Center" Margin="128,308,0,0"
+                Foreground="#F29F58"
+                Click="Exit_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
@@ -154,8 +155,9 @@
                 BorderThickness="2"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center" Margin="240,183,0,0"
-                Foreground="#F29F58">
+                VerticalContentAlignment="Center" Margin="329,308,0,0"
+                Foreground="#F29F58"
+                Click="CloseButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
