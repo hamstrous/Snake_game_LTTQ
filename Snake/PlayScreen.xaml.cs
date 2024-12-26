@@ -59,6 +59,8 @@ namespace Snake
                     break;
             }
 
+            MessageBox.Show(GameInit.GameMode.ToString());
+
             Mode = GameInit.GameMode switch
             {
                 GameMode.Classic => new ClassicModeState(rows, cols, foods),

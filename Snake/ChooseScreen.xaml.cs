@@ -138,7 +138,10 @@ namespace Snake
             TEnum selectedEnumValue = (TEnum)System.Enum.Parse(typeof(TEnum), enumValue);
             Type enumType = selectedEnumValue.GetType();
             if (enumType == typeof(GameMode))
+            {
                 gameInit.GameMode = (GameMode)(object)selectedEnumValue;
+                MessageBox.Show(gameInit.GameMode.ToString());
+            }
             else if (enumType == typeof(GameSpeed))
                 gameInit.GameSpeed = (GameSpeed)(object)selectedEnumValue;
             else if (enumType == typeof(GameSize))
@@ -180,7 +183,8 @@ namespace Snake
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            playScreen = new PlayScreen(gameInit);
+            GameInit tmp = new GameInit(gameInit);
+            playScreen = new PlayScreen(tmp);
   
             playScreen.Visibility = Visibility.Visible;
             playScreen.IsEnabled = true;

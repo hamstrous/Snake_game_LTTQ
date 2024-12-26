@@ -72,6 +72,17 @@ namespace Snake
             FoodType = FoodType.Apple;
             FoodAmount = FoodAmount.One;
         }
+
+        public GameInit(GameInit other)
+        {
+            this.GameMode = other.GameMode;
+            this.GameSpeed = other.GameSpeed;
+            this.GameSize = other.GameSize;
+            this.FoodType = other.FoodType;
+            this.FoodAmount = other.FoodAmount;
+            this.SnakeColor = other.SnakeColor;
+        }
+
         public GameInit(GameSize gameSize, GameSpeed gameSpeed, SnakeColor snakeColor, GameMode gameMode, FoodAmount foodAmount)
         {
             GameSize = gameSize;
