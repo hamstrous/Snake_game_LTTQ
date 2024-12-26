@@ -440,6 +440,7 @@ namespace Snake
         {
             SoundEffect.PlayGameOverSound();
             await DrawDeadSnake();
+            GameOver.Visibility = Visibility.Visible;
             HeadImage = null;
             TailImage = null;
         }
