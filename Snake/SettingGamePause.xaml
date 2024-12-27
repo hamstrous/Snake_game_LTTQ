@@ -5,26 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Snake"
              mc:Ignorable="d" Width="449" Height="294">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="resources/dic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Setting/board.png" />
         </Grid.Background>
-        <Image Source="/Setting/x.png" HorizontalAlignment="Left" Height="33" Margin="359,43,0,0" VerticalAlignment="Top"
-           Width="40" RenderTransformOrigin="0.518,0.591"  IsHitTestVisible="False"/>
-        <Button Width="39" Height="33" HorizontalAlignment="Left" VerticalAlignment="Top" 
-            Margin="359,43,0,0" Click="CloseButton_Click" Background="Transparent" BorderBrush="Transparent">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="15">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-
+        <Button x:Name="Back" Style="{StaticResource X}" Click="CloseButton_Click" Margin="371,16,0,0" Height="45" Width="55"/>
         <Image Name="SFX_image"
            Source="/Setting/sound-on.png" Stretch="Fill"
            HorizontalAlignment="Left" Height="90" Margin="57,80,0,0" VerticalAlignment="Top" Width="98"

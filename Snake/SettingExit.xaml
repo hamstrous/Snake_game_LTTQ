@@ -21,35 +21,16 @@
     <Grid>
         <Viewbox>
             <Grid>
-                <Image Source="/Setting/board.png"  Height="278"  VerticalAlignment="Center" Stretch="Fill" Margin="143,0,143,0"/>
+                <Image Source="/Setting/board.png"  Height="163"  VerticalAlignment="Center" Stretch="Fill" Margin="143,0,143,0"/>
 
-                <Image Source="/Setting/x.png"  Height="58"  
-                       Width="57" RenderTransformOrigin="0.518,0.591"  IsHitTestVisible="False" Margin="594,210,182,399"/>
-                <Button Width="56" Height="58" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                        Margin="595,210,0,0" Click="CloseButton_Click" Background="Transparent" BorderBrush="Transparent">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}"
-                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                    BorderThickness="{TemplateBinding BorderThickness}"
-                                    CornerRadius="15">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
-                            </Border>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="White"/>
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+                <Button x:Name="Back" Style="{StaticResource X}" Click="CloseButton_Click" Height="32" Width="42" Margin="310,10,0,0"/>
 
-                <Image  Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="120"  VerticalAlignment="Center" Width="180" Margin="226,0,0,0"/>
+                <Image  Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="32"  VerticalAlignment="Center" Width="96" Margin="169,0,0,0"/>
                 <Button Content="SIGN OUT" 
                         VerticalAlignment="Center"
-                        Height="120"
-                        Width="180"
-                        FontSize="50"
+                        Height="33"
+                        Width="96"
+                        FontSize="25"
                         FontFamily="Gloucester MT Extra Condensed"
                         Background="Transparent"
                         BorderBrush="Transparent"
@@ -57,7 +38,7 @@
                         HorizontalAlignment="Left"
                         HorizontalContentAlignment="Center"
                         Foreground="#F29F58"
-                        Click="SignOut_Click" Margin="226,0,0,0">
+                        Click="SignOut_Click" Margin="169,0,0,0">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="{TemplateBinding Background}"
@@ -78,12 +59,12 @@
                     </Button.Template>
                 </Button>
 
-                <Image  Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="120"  VerticalAlignment="Center" Width="180" Margin="427,0,0,0"/>
+                <Image  Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="33"  VerticalAlignment="Center" Width="64" Margin="270,0,0,0"/>
                 <Button Content="EXIT" 
                         VerticalAlignment="Center"
-                        Height="120"
-                        Width="180"
-                        FontSize="50"
+                        Height="33"
+                        Width="60"
+                        FontSize="25"
                         FontFamily="Gloucester MT Extra Condensed"
                         Background="Transparent"
                         BorderBrush="Transparent"
@@ -91,7 +72,7 @@
                         HorizontalAlignment="Left"
                         HorizontalContentAlignment="Center"
                         Foreground="#F29F58"
-                        Click="Exit_Click" Margin="427,0,0,0">
+                        Click="Exit_Click" Margin="274,0,0,0">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="{TemplateBinding Background}"

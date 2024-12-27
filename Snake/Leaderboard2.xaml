@@ -63,8 +63,8 @@
                     <TextBlock x:Name="name5" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,410,0,0" Text="TextBlock" FontSize="33" Grid.Column="1" Visibility="Hidden" Foreground="White"/>
 
                     <!-- Score -->
-                    <TextBlock x:Name="score1" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0" Text="TextBlock" FontSize="50" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
-                    <TextBlock x:Name="score2" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,170,0,0" Text="TextBlock" FontSize="40" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="score1" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,90,0,0" Text="TextBlock" FontSize="50" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="score2" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,170,0,0" Text="TextBlock" FontSize="40" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
                     <TextBlock x:Name="score3" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,250,0,0" Text="TextBlock" FontSize="35" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
                     <TextBlock x:Name="score4" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,330,0,0" Text="TextBlock" FontSize="33" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
                     <TextBlock x:Name="score5" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,410,0,0" Text="TextBlock" FontSize="33" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
@@ -74,7 +74,7 @@
             <Image HorizontalAlignment="Center" Height="88" VerticalAlignment="Center" Width="308" Source="Setting/board.png" Stretch="Fill"/>
             <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="LEADERBOARD" VerticalAlignment="Center"
            FontFamily="Gloucester MT Extra Condensed" FontSize="50" Foreground="Black" />
-            <TextBlock x:Name="gamemode" Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="CLASSIC" VerticalAlignment="Center"
+            <TextBlock x:Name="gamemode" Grid.Row="1" HorizontalAlignment="Left" Margin="362,0,0,0" TextWrapping="Wrap" Text="CLASSIC" VerticalAlignment="Center"
     FontFamily="Gloucester MT Extra Condensed" FontSize="50"/>
 
 
@@ -103,6 +103,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+            <Image x:Name="Mode" Source="LeaderBoard/Classic.png" Stretch="Fill" HorizontalAlignment="Left" Height="100" Margin="522,0,0,0" VerticalAlignment="Center" Width="102" Grid.Row="1"/>
 
         </Grid>
 

@@ -136,6 +136,15 @@ namespace Snake
             SoundEffect.PlayOnOffSound();
             mode = (mode + 1) % 5;
             GameMode GAMEMODE = (GameMode)mode;
+            string ModeImageSource = GAMEMODE switch
+            {
+                GameMode.Classic => "LeaderBoard/Classic.png",
+                GameMode.Box => "LeaderBoard/Box.png",
+                GameMode.Reverse => "LeaderBoard/Reverse.png",
+                GameMode.Wall => "LeaderBoard/Wall.png",
+                GameMode.Direction => "LeaderBoard/Direction.png",
+            };
+            Mode.Source = new BitmapImage(new Uri(ModeImageSource, UriKind.RelativeOrAbsolute));
             gamemode.Text = GAMEMODE.ToString().ToUpper();
             LoadLeaderboard(mode);
         }
