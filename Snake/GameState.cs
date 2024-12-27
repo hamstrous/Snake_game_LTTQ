@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Snake
 {
@@ -21,8 +22,11 @@ namespace Snake
         public int Score { get; protected set; }
         public int FoodCount { get; set; }
         public int HighScore { get; protected set; }
+        public List<int> HighScores { get; protected set; } = new List<int> { 0, 0, 0, 0, 0 };
+
         public bool GameOver { get; protected set; }
         public bool Ate { get; set; }
+        public static int nowMode { get; set; }
         public GameMode Mode { get; protected set; }
 
         protected readonly LinkedList<Directions> dirChanges = new LinkedList<Directions>();
@@ -232,16 +236,43 @@ namespace Snake
         public void SaveHighScore()
         {
             Grid[HeadPosition().Row, HeadPosition().Column].First.Value = (GridValue.Snake, Dir);
-            File.WriteAllText("highscore.txt", HighScore.ToString());
+
+            int currentMode = nowMode;
+
+            if (currentMode >= 0 && currentMode <= 4 && HighScores[currentMode] < HighScore)
+            {
+                HighScores[currentMode] = HighScore;
+            }
+
+            string Scores = string.Join(" ", HighScores.Select(score => score.ToString()).ToArray());
+
+            File.WriteAllText("highscore.txt", Scores);
+
         }
 
         public void LoadHighScore()
         {
-            HighScore = 0;
+            HighScores.Clear();
+
             if (File.Exists("highscore.txt"))
             {
-                string savedScore = File.ReadAllText("highscore.txt");
-                HighScore = int.Parse(savedScore);
+                string savedScores = File.ReadAllText("highscore.txt");
+                string[] scoreStrings = savedScores.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var scoreString in scoreStrings)
+                {
+                    if (int.TryParse(scoreString, out int score))
+                    {
+                        HighScores.Add(score);
+                    }
+                }
+            }
+
+            HighScore = 0;
+            int currentMode = nowMode;
+
+            if ( currentMode >= 0 && currentMode <= 4)
+            {
+                HighScore = HighScores[currentMode];
             }
 
         }
