@@ -12,32 +12,36 @@
         FontFamily="{StaticResource MainFont}"
         KeyDown="Window_KeyDown"
         Focusable="True">
+
     <Viewbox>
         <Grid>
-        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="15"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="19*"/>
+                <RowDefinition Height="61*"/>
             </Grid.RowDefinitions>
+            <Grid Grid.RowSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="15"/>
+                </Grid.RowDefinitions>
 
-            <TextBlock x:Name="ScoreText" 
-               FontFamily="Gloucester MT Extra Condensed"
+                <TextBlock x:Name="ScoreText" 
                HorizontalAlignment="Left"
                VerticalAlignment="Center"
                Text="SCORE 0"
                FontSize="22"
                Margin="10"/>
 
-            <TextBlock x:Name="HighScoreText"
-                FontFamily="Gloucester MT Extra Condensed"
+                <TextBlock x:Name="HighScoreText"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
                 Text="HIGHSCORE 0"
                 FontSize="22"
                 Margin="10"/>
 
-            <UniformGrid x:Name="BackGroundGrid"
+                <UniformGrid x:Name="BackGroundGrid"
                 Width="400"
                 Height="400"
                 HorizontalAlignment="Center"
@@ -48,9 +52,9 @@
                 Background="{StaticResource GridBackgroundColor}"
                 SnapsToDevicePixels="True"
                 RenderOptions.BitmapScalingMode="HighQuality">
-            </UniformGrid>
+                </UniformGrid>
 
-            <UniformGrid x:Name="GameGrid" FocusVisualStyle="{x:Null}"
+                <UniformGrid x:Name="GameGrid" FocusVisualStyle="{x:Null}"
                 Width="400"
                 Height="400"
                 HorizontalAlignment="Center"
@@ -61,8 +65,8 @@
                 SnapsToDevicePixels="True"
                 RenderOptions.BitmapScalingMode="HighQuality"
                 Focusable="True">
-            </UniformGrid>
-            <TextBlock x:Name="OverlayText"
+                </UniformGrid>
+                <TextBlock x:Name="OverlayText"
                         Text=""
                         FontSize="30"
                         FontWeight="Bold"                       
@@ -73,11 +77,25 @@
                         TextWrapping="Wrap"/>
                 <Canvas RenderOptions.BitmapScalingMode="HighQuality" Name="Canva" Margin="20,0,20,20" Grid.Row="1" SnapsToDevicePixels="True"/>
 
-        </Grid>
-            <local:SettingGameOver x:Name="GameOver" Visibility="Collapsed" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            <local:SettingGamePause x:Name="GamePause" Visibility="Collapsed" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Canvas Grid.RowSpan="3" Margin="-30,0,-30,0">
+                <Grid Width="{Binding ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas}}"
+          Height="{Binding ActualHeight, RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas}}">
 
+                    <local:SettingGameOver x:Name="GameOver"
+                        Visibility="Collapsed"
+                        Panel.ZIndex="1"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+
+                    <local:SettingGamePause x:Name="GamePause"
+                        Visibility="Collapsed"
+                        Panel.ZIndex="1"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                </Grid>
+            </Canvas>
         </Grid>
 
     </Viewbox>
-    </UserControl>
+</UserControl>

@@ -46,7 +46,7 @@ namespace Snake
             }
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        public void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Collapsed;
             Pause = false;

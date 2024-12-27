@@ -22,6 +22,23 @@ namespace Snake
         public Setting()
         {
             InitializeComponent();
+            if (SoundEffect.CanPlayBGM)
+            {
+                BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-on.png", UriKind.Relative));
+            }
+            else
+            {
+                BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-off.png", UriKind.Relative));
+            }
+
+            if (SoundEffect.CanPlaySFX)
+            {
+                SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-on.png", UriKind.Relative));
+            }
+            else
+            {
+                SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-off.png", UriKind.Relative));
+            }
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -50,7 +67,7 @@ namespace Snake
         private void SFX_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
-            if (!SoundEffect.CanPlayBGM)
+            if (!SoundEffect.CanPlaySFX)
             {
                 SoundEffect.CanPlaySFX = true;
                 SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-on.png", UriKind.Relative));
