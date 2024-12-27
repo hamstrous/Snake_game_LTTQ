@@ -62,84 +62,90 @@ namespace Snake
 
             try
             {
-                // Kiểm tra và tạo file nếu chưa tồn tại
-                if (!File.Exists(filePath))
+                // Xử lý file điểm
+                if (File.Exists(filePath))
                 {
-                    File.Create(filePath).Dispose();
+                    File.WriteAllText(filePath, string.Empty); // Xoá nội dung nếu file tồn tại
+                }
+                else
+                {
+                    using (File.Create(filePath)) { } // Tạo file mới
                 }
 
-                if (!File.Exists(filePath2))
+                // Xử lý file tên người dùng
+                if (File.Exists(filePath2))
                 {
-                    File.Create(filePath2).Dispose();
+                    File.WriteAllText(filePath2, string.Empty); // Xoá nội dung nếu file tồn tại
+                }
+                else
+                {
+                    using (File.Create(filePath2)) { } // Tạo file mới
                 }
 
                 using (var conn = new NpgsqlConnection(ConnectionString))
                 {
                     await conn.OpenAsync();
 
-                    // Truy vấn để lấy top 5 điểm và tên người dùng từ tất cả các chế độ chơi (Mode)
-                    string query = "WITH RankedScores AS (SELECT \"Mode\", \"Score\", \"Username\", ROW_NUMBER() OVER(PARTITION BY \"Mode\" ORDER BY \"Score\" DESC) AS rn FROM \"PlayerScores\") SELECT \"Mode\", \"Score\", \"Username\" FROM RankedScores WHERE rn <= 5 ORDER BY \"Mode\", rn;";
-
+                    // Truy vấn lấy top 5 điểm theo chế độ chơi
+                    string query = @"WITH RankedScores AS (SELECT ""Mode"", ""Score"", ""Username"", ROW_NUMBER() OVER(PARTITION BY ""Mode"" ORDER BY ""Score"" DESC) AS rn FROM ""PlayerScores"") SELECT ""Mode"", ""Score"", ""Username"" FROM RankedScores WHERE rn <= 5 ORDER BY ""Mode"", rn;";
 
                     using (var cmd = new NpgsqlCommand(query, conn))
+                    using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        using (var reader = await cmd.ExecuteReaderAsync())
+                        // Khởi tạo Dictionary để lưu kết quả
+                        var modeScores = new Dictionary<int, List<int>>();
+                        var modeUsernames = new Dictionary<int, List<string>>();
+
+                        while (await reader.ReadAsync())
                         {
-                            // Dictionary để lưu trữ kết quả, mỗi Mode là một danh sách các điểm và tên người dùng
-                            var modeScores = new Dictionary<int, List<int>>();
-                            var modeUsernames = new Dictionary<int, List<string>>();
+                            int mode = Convert.ToInt32(reader["Mode"]);
+                            int score = Convert.ToInt32(reader["Score"]);
+                            string username = reader["Username"].ToString();
 
-                            while (await reader.ReadAsync())
+                            if (!modeScores.ContainsKey(mode))
                             {
-                                int mode = Convert.ToInt32(reader["Mode"]);
-                                int score = Convert.ToInt32(reader["Score"]);
-                                string username = reader["Username"].ToString();
-
-                                if (!modeScores.ContainsKey(mode))
-                                {
-                                    modeScores[mode] = new List<int>();
-                                    modeUsernames[mode] = new List<string>();
-                                }
-
-                                // Thêm điểm và tên người dùng vào danh sách của chế độ tương ứng
-                                if (modeScores[mode].Count < 5)
-                                {
-                                    modeScores[mode].Add(score);
-                                    modeUsernames[mode].Add(username);
-                                }
+                                modeScores[mode] = new List<int>();
+                                modeUsernames[mode] = new List<string>();
                             }
 
-                            // Ghi dữ liệu ra file .txt cho điểm
-                            using (var writer = new StreamWriter(filePath, false)) // Ghi đè nếu file đã tồn tại
+                            // Chỉ lưu tối đa 5 giá trị cho mỗi mode
+                            if (modeScores[mode].Count < 5)
                             {
-                                for (int mode = 0; mode < 6; mode++) // Giả định có 6 mode (0-5)
+                                modeScores[mode].Add(score);
+                                modeUsernames[mode].Add(username);
+                            }
+                        }
+
+                        // Ghi dữ liệu ra file .txt cho điểm
+                        using (var writer = new StreamWriter(filePath, false)) // Ghi đè nội dung
+                        {
+                            for (int mode = 0; mode < 5; mode++) // Giả định có 5 chế độ chơi (0-4)
+                            {
+                                if (modeScores.ContainsKey(mode))
                                 {
-                                    if (modeScores.ContainsKey(mode))
-                                    {
-                                        string line = string.Join(" ", modeScores[mode]);
-                                        writer.WriteLine(line);
-                                    }
-                                    else
-                                    {
-                                        writer.WriteLine();
-                                    }
+                                    string line = string.Join(" ", modeScores[mode]);
+                                    writer.WriteLine(line);
+                                }
+                                else
+                                {
+                                    writer.WriteLine();
                                 }
                             }
+                        }
 
-                            // Ghi dữ liệu ra file .txt cho tên người dùng (filePath2)
-                            using (var writer2 = new StreamWriter(filePath2, false)) // Ghi đè nếu file đã tồn tại
+                        // Ghi dữ liệu ra file .txt cho tên người dùng
+                        using (var writer2 = new StreamWriter(filePath2, false)) // Ghi đè nội dung
+                        {
+                            for (int mode = 0; mode < 5; mode++) // Giả định có 5 chế độ chơi (0-4)
                             {
-                                for (int mode = 0; mode < 6; mode++) // Giả định có 6 mode (0-5)
+                                if (modeUsernames.ContainsKey(mode))
                                 {
-                                    if (modeUsernames.ContainsKey(mode))
-                                    {
-                                        string line = string.Join(" ", modeUsernames[mode]);
-                                        writer2.WriteLine(line);
-                                    }
-                                    else
-                                    {
-                                        writer2.WriteLine();
-                                    }
+                                    string line = string.Join(" ", modeUsernames[mode]);
+                                    writer2.WriteLine(line);
+                                }
+                                else
+                                {
+                                    writer2.WriteLine();
                                 }
                             }
                         }
@@ -148,7 +154,7 @@ namespace Snake
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Có lỗi xảy ra khi lấy dữ liệu: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show("Có lỗi xảy ra khi lấy dữ liệu: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

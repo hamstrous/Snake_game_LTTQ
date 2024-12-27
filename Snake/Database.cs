@@ -49,7 +49,6 @@ namespace Snake
             }
             catch (Exception ex)
             {
-                
                 return false;
             }
         }
@@ -74,7 +73,6 @@ namespace Snake
             }
             catch (Exception ex)
             {
-                
                 return false;
             }
         }

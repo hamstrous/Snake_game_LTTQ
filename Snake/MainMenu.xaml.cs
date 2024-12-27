@@ -74,16 +74,13 @@ namespace Snake
             Keyboard.Focus(ChooseMode);
         }
 
-        private void Leaderboard_Click(object sender, RoutedEventArgs e)
+        private async void Leaderboard_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayButtonSound();
-            /*Leaderboard leaderboard = new Leaderboard();
-            leaderboard.Show();
-            this.Close();*/
-
-
+            await Leaderboard2.RefreshDataAsync();
             Leaderboard2.Visibility = Visibility.Visible;
         }
+
 
         private void Setting_Click(object sender, RoutedEventArgs e)
         {
