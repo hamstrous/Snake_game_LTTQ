@@ -96,7 +96,9 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="ButtonImage" Property="Source" Value="/Choose/back02.png"/>
                         </Trigger>
-                        
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonImage" Property="Source" Value="/Choose/back01.png"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -1326,6 +1328,9 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/play02.png"/>
                         </Trigger>
+                        <Trigger Property="IsPressed"  Value="True">
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/play01.png"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -1351,6 +1356,9 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/shuffle02.png"/>
                         </Trigger>
+                        <Trigger Property="IsPressed"  Value="True">
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/shuffle01.png"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -1375,6 +1383,38 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/reset02.png"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed"  Value="True">
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/Choose/reset01.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    <!--Left arrow-->
+    <Style x:Key="Left-Arrow" TargetType="Button">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Image x:Name="ReverseImage" Source="/LeaderBoard/left-arrow.png" Stretch="Fill"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/LeaderBoard/left-arrow_Dark.png"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed"  Value="True">
+                            <Setter TargetName="ReverseImage" Property="Source" Value="/LeaderBoard/left-arrow.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

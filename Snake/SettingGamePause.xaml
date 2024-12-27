@@ -108,7 +108,7 @@
         </Button>
 
 
-        <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="57" Margin="98,186,0,0" VerticalAlignment="Top" Width="118"/>
+        <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="57" Margin="78,186,0,0" VerticalAlignment="Top" Width="121"/>
         <Button Content="EXIT"
                 VerticalAlignment="Top"
                 Height="54"
@@ -120,7 +120,7 @@
                 BorderThickness="2"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center" Margin="128,308,0,0"
+                VerticalContentAlignment="Center" Margin="83,183,0,0"
                 Foreground="#F29F58"
                 Click="Exit_Click">
             <Button.Template>
@@ -143,11 +143,11 @@
             </Button.Template>
         </Button>
 
-        <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="57" Margin="233,186,0,0" VerticalAlignment="Top" Width="139"/>
+        <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="60" Margin="237,184,0,0" VerticalAlignment="Top" Width="147"/>
         <Button Content="RESUME"
                 VerticalAlignment="Top"
-                Height="54"
-                Width="128"
+                Height="53"
+                Width="134"
                 FontSize="50"
                 FontFamily="Gloucester MT Extra Condensed"
                 Background="Transparent"
@@ -155,15 +155,15 @@
                 BorderThickness="2"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center" Margin="329,308,0,0"
+                VerticalContentAlignment="Center" Margin="245,184,0,0"
                 Foreground="#F29F58"
                 Click="CloseButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
-            BorderBrush="{TemplateBinding BorderBrush}"
-            BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="15">
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="15">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter"/>
                     </Border>
                     <ControlTemplate.Triggers>

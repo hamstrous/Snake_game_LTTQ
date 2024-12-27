@@ -22,6 +22,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock x:Name="ScoreText" 
+               FontFamily="Gloucester MT Extra Condensed"
                HorizontalAlignment="Left"
                VerticalAlignment="Center"
                Text="SCORE 0"
@@ -29,6 +30,7 @@
                Margin="10"/>
 
             <TextBlock x:Name="HighScoreText"
+                FontFamily="Gloucester MT Extra Condensed"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
                 Text="HIGHSCORE 0"

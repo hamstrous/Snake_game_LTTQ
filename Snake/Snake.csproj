@@ -21,7 +21,6 @@
     <None Remove="Assets\DeadBody.png" />
     <None Remove="Assets\DeadHead.png" />
     <None Remove="Assets\DirectionPad.png" />
-    <None Remove="Assets\DroidSansMono.ttf" />
     <None Remove="Assets\Empty.png" />
     <None Remove="Assets\Food.png" />
     <None Remove="Assets\Goal.png" />
@@ -95,6 +94,10 @@
     <None Remove="Choose\Wall.png" />
     <None Remove="Choose\Wall_Dark.png" />
     <None Remove="LeaderBoard\board.png" />
+    <None Remove="LeaderBoard\left-arrow.png" />
+    <None Remove="LeaderBoard\left-arrow_Dark.png" />
+    <None Remove="LeaderBoard\right-arrow.png" />
+    <None Remove="LeaderBoard\right-arrow_Dark.png" />
     <None Remove="MainMenu\board.png" />
     <None Remove="Resources\background.jpg" />
     <None Remove="Resources\board.png" />
@@ -221,6 +224,10 @@
     <Resource Include="Choose\Wall.png" />
     <Resource Include="Choose\Wall_Dark.png" />
     <Resource Include="LeaderBoard\board.png" />
+    <Resource Include="LeaderBoard\left-arrow.png" />
+    <Resource Include="LeaderBoard\left-arrow_Dark.png" />
+    <Resource Include="LeaderBoard\right-arrow.png" />
+    <Resource Include="LeaderBoard\right-arrow_Dark.png" />
     <Resource Include="MainMenu\board.png" />
     <Resource Include="Resources\anhgo.png" />
     <Resource Include="Assets\Body.png" />
@@ -228,7 +235,6 @@
     <Resource Include="Assets\DeadBody.png" />
     <Resource Include="Assets\DeadHead.png" />
     <Resource Include="Assets\DirectionPad.png" />
-    <Resource Include="Assets\DroidSansMono.ttf" />
     <Resource Include="Assets\Empty.png" />
     <Resource Include="Assets\Food.png" />
     <Resource Include="Assets\Goal.png" />
