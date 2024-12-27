@@ -77,8 +77,8 @@ namespace Snake
         private async void Leaderboard_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayButtonSound();
-            await Leaderboard2.RefreshDataAsync();
             Leaderboard2.Visibility = Visibility.Visible;
+            await Leaderboard2.RefreshDataAsync(); 
         }
 
 
