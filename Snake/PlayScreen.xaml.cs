@@ -198,8 +198,7 @@ namespace Snake
                     case Key.Escape:
                         if (GamePause.Pause) 
                         {
-                            GamePause.Visibility = Visibility.Hidden;
-                            GamePause.Pause = false;
+                            GamePause.CloseButton_Click(null, null);
                         }
                         else
                         {

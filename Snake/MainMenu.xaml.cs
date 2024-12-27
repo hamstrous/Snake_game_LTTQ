@@ -3,6 +3,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Snake
 {
@@ -87,6 +88,23 @@ namespace Snake
         private void Setting_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayButtonSound();
+            if (SoundEffect.CanPlayBGM)
+            {
+                SettingControl.BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-on.png", UriKind.Relative));
+            }
+            else
+            {
+                SettingControl.BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-off.png", UriKind.Relative));
+            }
+
+            if (SoundEffect.CanPlaySFX)
+            {
+                SettingControl.SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-on.png", UriKind.Relative));
+            }
+            else
+            {
+                SettingControl.SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-off.png", UriKind.Relative));
+            }
             SettingControl.Visibility = Visibility.Visible; // Sửa Setting thành SettingControl
         }
 

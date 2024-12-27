@@ -111,8 +111,8 @@
         <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="57" Margin="98,186,0,0" VerticalAlignment="Top" Width="118"/>
         <Button Content="EXIT"
                 VerticalAlignment="Top"
-                Height="54"
-                Width="116"
+                Height="53"
+                Width="110"
                 FontSize="50"
                 FontFamily="Gloucester MT Extra Condensed"
                 Background="Transparent"
@@ -120,7 +120,7 @@
                 BorderThickness="2"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center" Margin="128,308,0,0"
+                VerticalContentAlignment="Center" Margin="105,184,0,0"
                 Foreground="#F29F58"
                 Click="Exit_Click">
             <Button.Template>
@@ -146,8 +146,8 @@
         <Image Source="/Choose/choose-button.png" Stretch="Fill" HorizontalAlignment="Left" Height="57" Margin="233,186,0,0" VerticalAlignment="Top" Width="139"/>
         <Button Content="RESUME"
                 VerticalAlignment="Top"
-                Height="54"
-                Width="128"
+                Height="55"
+                Width="130"
                 FontSize="50"
                 FontFamily="Gloucester MT Extra Condensed"
                 Background="Transparent"
@@ -155,7 +155,7 @@
                 BorderThickness="2"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center" Margin="329,308,0,0"
+                VerticalContentAlignment="Center" Margin="240,182,0,0"
                 Foreground="#F29F58"
                 Click="CloseButton_Click">
             <Button.Template>
