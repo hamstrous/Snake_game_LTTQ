@@ -33,13 +33,17 @@ namespace Snake
         private async Task startGet()
         {
             mode = 0;
-            await GetLeaderBoards("topScores.txt", "topUser.txt");
-            await LoadLeaderboard(mode);
             GameMode GAMEMODE = (GameMode)mode;
             gamemode.Text = GAMEMODE.ToString().ToUpper();
+
+            if (await GetLeaderBoards("topScores.txt", "topUser.txt") == false)
+            {
+                 this.Visibility = Visibility.Collapsed;
+            }
+            await LoadLeaderboard(mode);
         }
 
-        private async Task GetLeaderBoards(string filePath, string filePath2)
+        private async Task<bool> GetLeaderBoards(string filePath, string filePath2)
         {
             try
             {
@@ -69,22 +73,23 @@ namespace Snake
 
                     leaderboardData.Add(modeData);
                 }
+                return true;
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Error getting leaderboard data: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
             }
         }
 
 
-        private async Task LoadLeaderboard(int mode)
+        private async Task<bool> LoadLeaderboard(int mode)
         {
             try
             {
                 if (mode < 0 || mode >= leaderboardData.Count || leaderboardData[mode] == null)
                 {
                     //MessageBox.Show("Không có dữ liệu cho chế độ chơi này.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
+                    return false;
                 }
 
                 var scores = leaderboardData[mode];
@@ -113,22 +118,36 @@ namespace Snake
                         if (nameBlock != null) nameBlock.Visibility = Visibility.Collapsed;
                     }
                 }
+                return true;
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Error loading leaderboard: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Visibility = Visibility.Collapsed;
+                return false;
             }
         }
 
 
 
-        private void Back_click(object sender, RoutedEventArgs e)
+        private async void Back_click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
             mode = (mode - 1 + 5) % 5;
             GameMode GAMEMODE = (GameMode)mode;
+            string ModeImageSource = GAMEMODE switch
+            {
+                GameMode.Classic => "LeaderBoard/Classic.png",
+                GameMode.Box => "LeaderBoard/Box.png",
+                GameMode.Reverse => "LeaderBoard/Reverse.png",
+                GameMode.Wall => "LeaderBoard/Wall.png",
+                GameMode.Direction => "LeaderBoard/Direction.png",
+            };
+            Mode.Source = new BitmapImage(new Uri(ModeImageSource, UriKind.RelativeOrAbsolute));
             gamemode.Text = GAMEMODE.ToString().ToUpper();
-            LoadLeaderboard(mode);
+            if (await LoadLeaderboard(mode) == false)
+            {
+                this.Visibility = Visibility.Collapsed;
+            }
         }
 
         private async void Next_click(object sender, RoutedEventArgs e)
@@ -146,7 +165,10 @@ namespace Snake
             };
             Mode.Source = new BitmapImage(new Uri(ModeImageSource, UriKind.RelativeOrAbsolute));
             gamemode.Text = GAMEMODE.ToString().ToUpper();
-            LoadLeaderboard(mode);
+            if (await LoadLeaderboard(mode) == false)
+            {
+                this.Visibility = Visibility.Collapsed;
+            }
         }
 
 
