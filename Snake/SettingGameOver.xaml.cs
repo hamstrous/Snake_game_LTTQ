@@ -20,6 +20,10 @@ namespace Snake
     /// </summary>
     public partial class SettingGameOver : UserControl
     {
+
+        public int CurrentScore { get; set; }
+        public int HighScore { get; set; }
+
         private TaskCompletionSource<bool> _tcs;
         public SettingGameOver()
         {
@@ -31,6 +35,38 @@ namespace Snake
             _tcs = new TaskCompletionSource<bool>();
             this.Visibility = Visibility.Visible;
             return _tcs.Task;
+        }
+
+        public void UpdateGameOverScreen(int score, int highscore)
+        {
+            // Hiển thị điểm hiện tại và high score trên UI
+            Score.Text = score.ToString();
+            Highscore.Text = highscore.ToString();
+        }
+
+        public void SetGameMode(GameMode gameMode)
+        {
+            string modeImageSource = gameMode switch
+            {
+                GameMode.Classic =>  "/Choose/Classic.png",
+                GameMode.Wall => "Choose/Wall.png",
+                GameMode.Box => "Choose/Box.png",
+                GameMode.Reverse => "Choose/Reverse.png",
+                GameMode.Direction => "Choose/Direction.png",
+            };
+            NameMode.Source = new BitmapImage(new Uri(modeImageSource, UriKind.RelativeOrAbsolute));
+        }
+        public void SetFoodType(FoodType foodType)
+        {
+            string foodImageSource = foodType switch
+            {
+                FoodType.Apple => "Choose/apple.png",
+                FoodType.Banana => "Choose/banana.png",
+                FoodType.Grape => "Choose/grape.png",
+                FoodType.Radish => "Choose/raddish.png",
+                FoodType.Peach => "Choose/peach.png",
+            };
+            NameFood.Source = new BitmapImage(new Uri(foodImageSource, UriKind.RelativeOrAbsolute));
         }
 
         private void Back_click(object sender, RoutedEventArgs e)

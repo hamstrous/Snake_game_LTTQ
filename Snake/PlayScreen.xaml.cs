@@ -408,6 +408,7 @@ namespace Snake
             DrawGrid();
             //DrawSnakeHead();
             DrawSnakeTail();
+
             ScoreText.Text = $"SCORE {gameState.Score}";
             HighScoreText.Text = $"HIGHSCORE {gameState.HighScore}";
         }
@@ -463,6 +464,14 @@ namespace Snake
         private async Task ShowGameOver()
         {
             SoundEffect.PlayGameOverSound();
+            int ScoreText = gameState.Score;
+            int HighScoreText = gameState.HighScore;
+
+            GameOver.SetGameMode(GameInit.GameMode);
+            GameOver.SetFoodType(GameInit.FoodType); 
+            
+            GameOver.UpdateGameOverScreen(ScoreText, HighScoreText);
+
             await DrawDeadSnake();
             bool retry = await GameOver.ShowDialogAsync();
             if (!retry)

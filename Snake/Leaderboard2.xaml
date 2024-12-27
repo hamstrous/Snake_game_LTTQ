@@ -38,106 +38,49 @@
                     <!-- Định nghĩa các cột: STT, Name, Score -->
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
-                        <!-- Cột STT -->
+                        <!-- Cột Rank -->
                         <ColumnDefinition Width="2*" />
                         <!-- Cột Name -->
                         <ColumnDefinition Width="1*" />
                         <!-- Cột Score -->
                     </Grid.ColumnDefinitions>
 
-                    <!-- Header STT -->
-                    <TextBlock Text="Rank"
-           HorizontalAlignment="Left"
-           VerticalAlignment="Top"
-           FontSize="30"
-           FontWeight="Bold"
-           Foreground="Black"
-           Grid.Column="0"
-           Margin="89,65,0,0" />
-                    <!-- Header Name -->
-                    <TextBlock Text="Name"
-           HorizontalAlignment="Center"
-           VerticalAlignment="Top"
-           FontSize="30"
-           FontWeight="Bold"
-           Foreground="Black"
-           Grid.Column="1"
-           Margin="0,65,0,0" />
-                    <!-- Header Score -->
-                    <TextBlock Text="Score"
-           HorizontalAlignment="Left"
-           VerticalAlignment="Top"
-           FontSize="30"
-           FontWeight="Bold"
-           Foreground="Black"
-           Grid.Column="1"
-           Margin="384,70,0,0" Grid.ColumnSpan="2" />
+
 
                     <!-- Danh sách Rank, Name, Score -->
                     <!-- Rank -->
-                    <TextBlock x:Name="stt1" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,115,0,0" Text="1" FontSize="40" Grid.Column="0" Visibility="Visible"/>
-                    <TextBlock x:Name="stt2" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40,190,0,0" Text="2" FontSize="35" Grid.Column="0" Visibility="Hidden"/>
-                    <TextBlock x:Name="stt3" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40,270,0,0" Text="3" FontSize="30" Grid.Column="0" Visibility="Hidden"/>
-                    <TextBlock x:Name="stt4" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40,350,0,0" Text="4" FontSize="30" Grid.Column="0" Visibility="Hidden"/>
-                    <TextBlock x:Name="stt5" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40,430,0,0" Text="5" FontSize="30" Grid.Column="0" Visibility="Hidden"/>
+                    <TextBlock x:Name="stt1" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="105,90,0,0" Text="1." FontSize="50" Grid.Column="0" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="stt2" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40,170,0,0" Text="2." FontSize="40" Grid.Column="0" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="stt3" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40,250,0,0" Text="3." FontSize="35" Grid.Column="0" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="stt4" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40,330,0,0" Text="4." FontSize="33" Grid.Column="0" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="stt5" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="40,410,0,0" Text="5." FontSize="33" Grid.Column="0" Visibility="Hidden" Foreground="White"/>
 
                     <!-- Name -->
-                    <TextBlock x:Name="name1" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,110,0,0" Text="TextBlock" FontSize="38" Grid.Column="1" Visibility="Hidden"/>
-                    <TextBlock x:Name="name2" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,190,0,0" Text="TextBlock" FontSize="35" Grid.Column="1" Visibility="Hidden"/>
-                    <TextBlock x:Name="name3" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,270,0,0" Text="TextBlock" FontSize="33" Grid.Column="1" Visibility="Hidden"/>
-                    <TextBlock x:Name="name4" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Text="TextBlock" FontSize="33" Grid.Column="1" Visibility="Hidden"/>
-                    <TextBlock x:Name="name5" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,430,0,0" Text="TextBlock" FontSize="33" Grid.Column="1" Visibility="Hidden"/>
+                    <TextBlock x:Name="name1" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" Text="TextBlock" FontSize="50" Grid.Column="1" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="name2" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,170,0,0" Text="TextBlock" FontSize="40" Grid.Column="1" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="name3" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,250,0,0" Text="TextBlock" FontSize="35" Grid.Column="1" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="name4" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,330,0,0" Text="TextBlock" FontSize="33" Grid.Column="1" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="name5" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,410,0,0" Text="TextBlock" FontSize="33" Grid.Column="1" Visibility="Hidden" Foreground="White"/>
 
                     <!-- Score -->
-                    <TextBlock x:Name="score1" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,110,0,0" Text="TextBlock" FontSize="38" Grid.Column="2" Visibility="Hidden"/>
-                    <TextBlock x:Name="score2" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,190,0,0" Text="TextBlock" FontSize="35" Grid.Column="2" Visibility="Hidden"/>
-                    <TextBlock x:Name="score3" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,270,0,0" Text="TextBlock" FontSize="30" Grid.Column="2" Visibility="Hidden"/>
-                    <TextBlock x:Name="score4" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,350,0,0" Text="TextBlock" FontSize="30" Grid.Column="2" Visibility="Hidden"/>
-                    <TextBlock x:Name="score5" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,430,0,0" Text="TextBlock" FontSize="30" Grid.Column="2" Visibility="Hidden"/>
+                    <TextBlock x:Name="score1" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0" Text="TextBlock" FontSize="50" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="score2" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,170,0,0" Text="TextBlock" FontSize="40" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="score3" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,250,0,0" Text="TextBlock" FontSize="35" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="score4" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,330,0,0" Text="TextBlock" FontSize="33" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
+                    <TextBlock x:Name="score5" FontFamily="Gloucester MT Extra Condensed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,410,0,0" Text="TextBlock" FontSize="33" Grid.Column="2" Visibility="Hidden" Foreground="White"/>
 
                 </Grid>
             </Border>
-
+            <Image HorizontalAlignment="Center" Height="88" VerticalAlignment="Center" Width="308" Source="Setting/board.png" Stretch="Fill"/>
             <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="LEADERBOARD" VerticalAlignment="Center"
-           FontFamily="Gloucester MT Extra Condensed" FontSize="50" />
+           FontFamily="Gloucester MT Extra Condensed" FontSize="50" Foreground="Black" />
             <TextBlock x:Name="gamemode" Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="CLASSIC" VerticalAlignment="Center"
     FontFamily="Gloucester MT Extra Condensed" FontSize="50"/>
 
 
             <Button Click="Back_click" x:Name="Leftarrow2" Style="{StaticResource Left-Arrow}" Width="82" Margin="16,0,0,0" Grid.Row="2" Height="88" VerticalAlignment="Center"   />
 
-
-            <Image Source="/Resources/right-arrow.png" Stretch="Fill"
-       HorizontalAlignment="Left" Height="83" Margin="895,250,0,0" 
-       Grid.Row="2" VerticalAlignment="Top" Width="76"
-       IsHitTestVisible="False"/>
-
-            <Button Grid.Row="2" 
-        Margin="895,0,0,0"
-        VerticalAlignment="Center"
-        Height="87"
-        Width="76"
-        FontSize="25"
-        FontFamily="Segoe UI"
-        Background="Transparent"
-        BorderBrush="Transparent"
-        BorderThickness="2"
-        HorizontalAlignment="Left"
-        HorizontalContentAlignment="Center"
-        VerticalContentAlignment="Center"
-        Click="Next_click">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}"
-                    CornerRadius="15">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-
+            <Button Click="Next_click" x:Name="Rightarrow2" Style="{StaticResource Right-Arrow}" Width="82" Margin="895,0,0,0" Grid.Row="2" Height="88" VerticalAlignment="Center"   />
 
             <Button Content="BACK" FontSize="35"  FontFamily="Gloucester MT Extra Condensed"
                     Click="Return_click" BorderBrush="Transparent" Background="Transparent"  HorizontalAlignment="Left" Margin="16,11,0,0" VerticalAlignment="Top"  Height="39" Width="75">
@@ -160,6 +103,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+
         </Grid>
 
     </Viewbox>

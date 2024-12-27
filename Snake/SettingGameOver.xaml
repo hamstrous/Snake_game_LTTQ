@@ -13,10 +13,10 @@
 
                 <TextBlock Text="Game Over" FontFamily="Gloucester MT Extra Condensed" FontSize="50" FontWeight="Bold" Foreground="White" 
                            HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="48,24,0,0" />
-                <Image Source="Choose/apple.png" Margin="41,97,162,85" />
-                <TextBlock Text="0" FontSize="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="56,155,0,46" />
-                <Image Source="Choose/classic.png" Margin="163,97,31,85" />
-                <TextBlock Text="0" FontSize="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="185,155,0,46" />
+                <Image x:Name="NameFood" Source="Choose/apple.png" Margin="32,87,158,83" />
+                <TextBlock x:Name="Score" Text="0" FontSize="30" FontWeight="Bold" Foreground="White" TextAlignment="Center" Margin="42,151,168,51" />
+                <Image x:Name="NameMode" Source="Choose/classic.png" Margin="150,92,35,84" />
+                <TextBlock x:Name="Highscore" Text="0" FontSize="30" FontWeight="Bold" Foreground="White" TextAlignment="Center"  Margin="164,151,49,50" />
                 <Image Source="Setting/Snake_end.png" HorizontalAlignment="Center" Height="38" Margin="0,202,0,0" VerticalAlignment="Top" Width="154"/>
             </Grid>
             <Grid Grid.Row="1" Background="#6B4F4F">

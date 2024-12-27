@@ -96,7 +96,7 @@ namespace Snake
                     {
                         //if (sttBlock != null)
                         {
-                            sttBlock.Text = (i + 1).ToString();
+                            sttBlock.Text = (i + 1).ToString() + ".";
                             sttBlock.Visibility = Visibility.Visible;
                         }
 
@@ -129,7 +129,7 @@ namespace Snake
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show("Click!!");
+            SoundEffect.PlayOnOffSound();
             mode = (mode - 1 + 4) % 5;
             GameMode GAMEMODE = (GameMode)mode;
             gamemode.Text = GAMEMODE.ToString().ToUpper();
@@ -138,6 +138,7 @@ namespace Snake
 
         private async void Next_click(object sender, RoutedEventArgs e)
         {
+            SoundEffect.PlayOnOffSound();
             mode = (mode + 1) % 5;
             GameMode GAMEMODE = (GameMode)mode;
             gamemode.Text = GAMEMODE.ToString().ToUpper();
