@@ -120,6 +120,7 @@
     <None Remove="Choose\Wall_light.png" />
     <None Remove="LeaderBoard\board.png" />
     <None Remove="LeaderBoard\Box.png" />
+    <None Remove="LeaderBoard\choose-button.png" />
     <None Remove="LeaderBoard\Classic.png" />
     <None Remove="LeaderBoard\Direction.png" />
     <None Remove="LeaderBoard\left-arrow.png" />
@@ -282,6 +283,7 @@
     <Resource Include="Choose\Wall_light.png" />
     <Resource Include="LeaderBoard\board.png" />
     <Resource Include="LeaderBoard\Box.png" />
+    <Resource Include="LeaderBoard\choose-button.png" />
     <Resource Include="LeaderBoard\Classic.png" />
     <Resource Include="LeaderBoard\Direction.png" />
     <Resource Include="LeaderBoard\left-arrow.png" />

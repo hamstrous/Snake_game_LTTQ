@@ -175,6 +175,8 @@ namespace Snake
         private void Return_click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Collapsed;
+            string ModeImageSource = "LeaderBoard/Classic.png";
+            Mode.Source = new BitmapImage(new Uri(ModeImageSource, UriKind.RelativeOrAbsolute));
             SoundEffect.PlayOnOffSound();
         }
 
