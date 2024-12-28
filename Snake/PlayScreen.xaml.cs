@@ -71,6 +71,9 @@ namespace Snake
                 _ => new ClassicModeState(rows, cols, foods)
             };
             gameState = Mode;
+
+            GameState.nowMode = (int)GameInit.GameMode;
+
             InitSnakeSmoothMovement();
         }
 
@@ -142,7 +145,6 @@ namespace Snake
 
         private async Task SaveScoreCurrent()
         {
-            //SignIn.currentUserName = "testuser01";
             int score = gameState.Score;
             int mode = (int)GameInit.GameMode;
 
@@ -471,6 +473,8 @@ namespace Snake
             GameOver.SetFoodType(GameInit.FoodType); 
             
             GameOver.UpdateGameOverScreen(ScoreText, HighScoreText);
+
+
 
             await DrawDeadSnake();
             bool retry = await GameOver.ShowDialogAsync();
