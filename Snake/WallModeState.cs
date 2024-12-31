@@ -35,7 +35,7 @@ namespace Snake
             {
                 for (int c = 0; c < Cols; c++)
                 {
-                    if (Grid[r, c].Last.Value == GridValue.Empty && !WallAround(new Positions(r, c)))
+                    if (Grid[r, c].First.Value == GridValue.Empty && !WallAround(new Positions(r, c)))
                     {
                         yield return new Positions(r, c);
                     }
