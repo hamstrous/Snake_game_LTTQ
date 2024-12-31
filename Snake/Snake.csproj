@@ -125,6 +125,7 @@
     <None Remove="LeaderBoard\Direction.png" />
     <None Remove="LeaderBoard\left-arrow.png" />
     <None Remove="LeaderBoard\left-arrow_Dark.png" />
+    <None Remove="LeaderBoard\lightbrown.jpg" />
     <None Remove="LeaderBoard\Reverse.png" />
     <None Remove="LeaderBoard\right-arrow.png" />
     <None Remove="LeaderBoard\right-arrow_Dark.png" />
@@ -157,6 +158,8 @@
     <None Remove="Setting\x.png" />
     <None Remove="Setting\x_dark.png" />
     <None Remove="Setting\x_light.png" />
+    <None Remove="Sigin-up\background.jpg" />
+    <None Remove="Sigin-up\snake.jpg" />
     <None Remove="Sounds\bgm.mp3" />
     <None Remove="Sounds\box-break.mp3" />
     <None Remove="Sounds\button-click.mp3" />
@@ -288,12 +291,12 @@
     <Resource Include="LeaderBoard\Direction.png" />
     <Resource Include="LeaderBoard\left-arrow.png" />
     <Resource Include="LeaderBoard\left-arrow_Dark.png" />
+    <Resource Include="LeaderBoard\lightbrown.jpg" />
     <Resource Include="LeaderBoard\Reverse.png" />
     <Resource Include="LeaderBoard\right-arrow.png" />
     <Resource Include="LeaderBoard\right-arrow_Dark.png" />
     <Resource Include="LeaderBoard\Wall.png" />
     <Resource Include="MainMenu\board.png" />
-    <Resource Include="Resources\anhgo.png" />
     <Resource Include="Assets\Body.png" />
     <Resource Include="Assets\Box.png" />
     <Resource Include="Assets\DeadBody.png" />
@@ -305,16 +308,7 @@
     <Resource Include="Assets\Head.png" />
     <Resource Include="Assets\icon.ico" />
     <Resource Include="Assets\Wall.png" />
-    <Resource Include="Resources\background.jpg" />
-    <Resource Include="Resources\brown.jpg" />
-    <Resource Include="Resources\brownlight.jpg" />
-    <Resource Include="Resources\darkgreen.jpg" />
     <Resource Include="Resources\dic.xaml" />
-    <Resource Include="Resources\greengrass.jpg" />
-    <Resource Include="Resources\left-arrow.png" />
-    <Resource Include="Resources\lightbrown.jpg" />
-    <Resource Include="Resources\right-arrow.png" />
-    <Resource Include="Resources\snake.jpg" />
     <Resource Include="Setting\board.png" />
     <Resource Include="Setting\SFX-off.png" />
     <Resource Include="Setting\SFX-on.png" />
@@ -328,6 +322,8 @@
     <Resource Include="Setting\x.png" />
     <Resource Include="Setting\x_dark.png" />
     <Resource Include="Setting\x_light.png" />
+    <Resource Include="Sigin-up\background.jpg" />
+    <Resource Include="Sigin-up\snake.jpg" />
     <Resource Include="Sounds\bgm.mp3" />
     <Resource Include="Sounds\box-break.mp3" />
     <Resource Include="Sounds\button-click.mp3" />

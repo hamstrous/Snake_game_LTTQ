@@ -103,7 +103,6 @@ namespace Snake
         {
             InitializeComponent();
             GameInit = init;
-            //GameInit = new GameInit(GameSize.Medium, GameSpeed.Medium, GameBackgroundColor.Dark, SnakeColor.Green, GameMode.Reverse);
             switch (GameInit.GameSize)
             {
                 case GameSize.Small:
@@ -259,17 +258,8 @@ namespace Snake
         {
             double cellWidth = GameGrid.Width / GameGrid.Columns;
             double cellHeight = GameGrid.Height / GameGrid.Rows;
-
-
-
-            // Calculate position within the UniformGrid
             double x = col * cellWidth;
             double y = row * cellHeight;
-
-            // Transform to screen coordinates
-            //Point gridPosition = GameGrid.TranslatePoint(new , null);
-            //MessageBox.Show(gridPosition.ToString());
-
             return new Point(x, y);
         }
 
@@ -297,10 +287,10 @@ namespace Snake
             Canva.Children.Add(HeadImage);
             Canva.Children.Add(TailImage);
 
-            Canvas.SetLeft(HeadImage, HeadPos.X); // X position
-            Canvas.SetTop(HeadImage, HeadPos.Y);  // Y position
-            Canvas.SetLeft(TailImage, TailPos.X); // X position
-            Canvas.SetTop(TailImage, TailPos.Y);  // Y position
+            Canvas.SetLeft(HeadImage, HeadPos.X); 
+            Canvas.SetTop(HeadImage, HeadPos.Y);  
+            Canvas.SetLeft(TailImage, TailPos.X);
+            Canvas.SetTop(TailImage, TailPos.Y); 
         }
 
         private async Task SnakeSmoothMovement(int delay)
@@ -346,8 +336,8 @@ namespace Snake
             Point point = GetCellPosition((int)pos.Row, (int)pos.Column);
 
             Canva.Children.Add(image);
-            Canvas.SetLeft(image, point.X); // X position
-            Canvas.SetTop(image, point.Y);  // Y position
+            Canvas.SetLeft(image, point.X); 
+            Canvas.SetTop(image, point.Y); 
 
             int steps = delay / 10;
             double increment = cellSize / steps;
@@ -408,7 +398,6 @@ namespace Snake
         private void Draw()
         {
             DrawGrid();
-            //DrawSnakeHead();
             DrawSnakeTail();
 
             ScoreText.Text = $"SCORE {gameState.Score}";
@@ -435,7 +424,6 @@ namespace Snake
             Positions headPos = gameState.HeadPosition();
             Image image = gridImages[headPos.Row, headPos.Column];
             image.Source = Images.Head;
-
         }
 
         private void DrawSnakeTail()
@@ -473,8 +461,6 @@ namespace Snake
             GameOver.SetFoodType(GameInit.FoodType); 
             
             GameOver.UpdateGameOverScreen(ScoreText, HighScoreText);
-
-
 
             await DrawDeadSnake();
             bool retry = await GameOver.ShowDialogAsync();

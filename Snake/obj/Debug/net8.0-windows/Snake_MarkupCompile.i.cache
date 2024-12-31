@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Admin\OneDrive\Desktop\Snake_game_LTTQ\Snake\App.xaml
-121781930934
+11636127447
 
-35-977765978
+341128966236
 206614537002
-ChooseScreen.xaml;Leaderboard.xaml;Leaderboard2.xaml;MainMenu.xaml;MainWindow.xaml;PlayScreen.xaml;Setting.xaml;SettingExit.xaml;SettingGameOver.xaml;SettingGamePause.xaml;Signin.xaml;SignUp.xaml;
+ChooseScreen.xaml;Leaderboard.xaml;MainMenu.xaml;MainWindow.xaml;PlayScreen.xaml;Setting.xaml;SettingExit.xaml;SettingGameOver.xaml;SettingGamePause.xaml;Signin.xaml;SignUp.xaml;
 
-True
+False
 

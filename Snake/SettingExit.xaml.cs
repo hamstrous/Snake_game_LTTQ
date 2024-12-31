@@ -51,6 +51,5 @@ namespace Snake
             Application.Current.Shutdown();
         }
 
-        
     }
 }

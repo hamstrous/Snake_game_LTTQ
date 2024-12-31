@@ -46,10 +46,8 @@ namespace Snake
             gameInit.FoodAmount = FoodAmount.One;
 
             var allElements = GetAllElements(this);
-            // Process the elements as needed
             foreach (var element in allElements)
             {
-                // Example: Set Focusable to false for all elements
                 if (element is UIElement uiElement)
                 {
                     uiElement.Focusable = false;
@@ -63,7 +61,6 @@ namespace Snake
             return elements;
         }
 
-        // Recursive method to traverse the visual tree
         private void GetAllElementsRecursive(DependencyObject parent, List<DependencyObject> elements)
         {
             if (parent == null) return;
@@ -80,7 +77,6 @@ namespace Snake
         {
             ResourceDictionary resourceDictionary = this.Resources.MergedDictionaries[0];
 
-            // Find the key for the current style
             string styleName = resourceDictionary.Keys
                 .OfType<string>()
                 .FirstOrDefault(key => resourceDictionary[key] == button.Style);
@@ -100,12 +96,9 @@ namespace Snake
         {
             var clickedButton = sender as Button;
             SoundEffect.PlayOnOffSound();
-            // Parse the group and value from the Tag property
             string[] tagParts = clickedButton.Tag.ToString().Split(',');
             string groupName = tagParts[0];
             string enumValue = tagParts[1];
-
-            // Handle each group independently
             if (groupName == nameof(GameMode))
             {
                 HandleButtonSelection<GameMode>(clickedButton, _selectedButtons, enumValue);
@@ -134,7 +127,6 @@ namespace Snake
 
         private void HandleButtonSelection<TEnum>(Button clickedButton, Dictionary<Type, Button> selectedButtons, string enumValue)
         {
-            // Parse the enum value
             TEnum selectedEnumValue = (TEnum)System.Enum.Parse(typeof(TEnum), enumValue);
 
             Type enumType = selectedEnumValue.GetType();
@@ -150,17 +142,14 @@ namespace Snake
                 gameInit.FoodAmount = (FoodAmount)(object)selectedEnumValue;
             else if (enumType == typeof(SnakeColor))
                 gameInit.SnakeColor = (SnakeColor)(object)selectedEnumValue;
-
-            // Deselect the currently selected button for this group (if any)
             if (selectedButtons.ContainsKey(enumType))
             {
                 Button previousButton = selectedButtons[enumType];
                 SwitchStyle(previousButton);
-                selectedButtons.Remove(enumType); // Remove old selection
+                selectedButtons.Remove(enumType); 
             }
 
-            // Select the new button
-            SwitchStyle(clickedButton); // Set selected color
+            SwitchStyle(clickedButton); 
             selectedButtons[enumType] = clickedButton;
 
         }
@@ -209,7 +198,6 @@ namespace Snake
         {
             Random rnd = new Random();
             SoundEffect.PlayOnOffSound();
-            // Shuffle Game Mode
             int gameModeIndex = rnd.Next(0, 5);
             switch (gameModeIndex)
             {
@@ -230,7 +218,6 @@ namespace Snake
                     break;
             }
 
-            // Shuffle Game Size
             int gameSizeIndex = rnd.Next(0, 3);
             switch (gameSizeIndex)
             {
@@ -245,7 +232,6 @@ namespace Snake
                     break;
             }
 
-            // Shuffle Game Speed
             int gameSpeedIndex = rnd.Next(0, 3);
             switch (gameSpeedIndex)
             {
@@ -260,7 +246,6 @@ namespace Snake
                     break;
             }
 
-            // Shuffle Food Amount
             int foodAmountIndex = rnd.Next(0, 3);
             switch (foodAmountIndex)
             {
@@ -275,7 +260,6 @@ namespace Snake
                     break;
             }
 
-            // Shuffle Snake Color (Example)
             int snakeColorIndex = rnd.Next(0, 6);
             switch (snakeColorIndex)
             {
