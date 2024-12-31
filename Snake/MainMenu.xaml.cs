@@ -20,11 +20,9 @@ namespace Snake
 
         private void MainMenu_Loaded(object sender, RoutedEventArgs e)
         {
-            // Call the method to set Focusable to false for all elements
             SetAllElementsFocusable(this, false);
         }
 
-        // Method to set Focusable property for all elements in the visual tree
         private void SetAllElementsFocusable(DependencyObject parent, bool focusable)
         {
             if (parent == null) return;
@@ -37,11 +35,7 @@ namespace Snake
                 {
                     uiElement.Focusable = focusable;
                 }
-
-                // Recursively set Focusable for child elements
                 SetAllElementsFocusable(child, focusable);
-
-                // Handle ContentControl and ItemsControl separately
                 if (child is ContentControl contentControl && contentControl.Content is DependencyObject content)
                 {
                     SetAllElementsFocusable(content, focusable);
@@ -62,11 +56,6 @@ namespace Snake
 
         private void StartGame_Click(object sender, RoutedEventArgs e)
         {
-            /*
-                        ChooseScreen chooseScreen = new ChooseScreen();
-                        chooseScreen.Show();
-
-                        this.Close();*/
             SoundEffect.PlayOnOffSound();
             ChooseMode.Visibility = Visibility.Visible;
             playScreen = ChooseMode.playScreen;
@@ -102,7 +91,7 @@ namespace Snake
             {
                 SettingControl.SFX_image.Source = new BitmapImage(new Uri("/Setting/sound-off.png", UriKind.Relative));
             }
-            SettingControl.Visibility = Visibility.Visible; // Sửa Setting thành SettingControl
+            SettingControl.Visibility = Visibility.Visible; 
         }
 
 

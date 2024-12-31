@@ -22,7 +22,7 @@
 
                 <StackPanel Width="345" Height="426">
                     <Border CornerRadius="40" ClipToBounds="True">
-                        <Image Source="Resources/snake.jpg" Stretch="Fill" Height="426" Width="350">
+                        <Image Source="Sigin-up/snake.jpg" Stretch="Fill" Height="426" Width="350">
                             <Image.Clip>
                                 <RectangleGeometry RadiusX="40" RadiusY="40" Rect="0,0,330,426"/>
                             </Image.Clip>
