@@ -14,7 +14,6 @@ namespace Snake
         public MainMenu()
         {
             InitializeComponent();
-            SoundEffect.PlayBGM();
 
             this.Loaded += MainMenu_Loaded;
         }

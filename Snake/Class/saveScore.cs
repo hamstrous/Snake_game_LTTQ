@@ -18,7 +18,7 @@ namespace Snake
 
         public static async Task SavePlayerScore(string username, int score, int mode)
         {
-            string privateConnectionString = ConnectionString + ";Timeout=30";
+            string privateConnectionString = ConnectionString + ";Timeout=5";
             if (string.IsNullOrEmpty(privateConnectionString))
             {
                 MessageBox.Show("Không tìm thấy chuỗi kết nối! Vui lòng kiểm tra file cấu hình.");

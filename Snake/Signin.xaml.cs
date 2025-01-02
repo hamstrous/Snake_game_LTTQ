@@ -28,6 +28,7 @@ namespace Snake
         public SignIn()
         {
             InitializeComponent();
+            openMainMenu = false;
         }
 
         private async void btnSignIn_Click (object sender, RoutedEventArgs e)
@@ -48,9 +49,7 @@ namespace Snake
                 currentUserName = txtusername.Text;
                 txtErrorMessage.Text = "Login successful!!";
                 txtErrorMessage.Visibility = Visibility.Visible;
-                SoundEffect.CanPlayBGM = true;
-                SoundEffect.CanPlaySFX = true;
-                SoundEffect.PlayBGM();
+                
 
                 List<int> list = await SaveScore.GetPlayerScoresForAllModes(currentUserName);
                 string Scores = string.Join(" ", list.Select(score => score.ToString()).ToArray());
@@ -58,6 +57,9 @@ namespace Snake
 
                 if (!openMainMenu)
                 {
+                    SoundEffect.CanPlayBGM = true;
+                    SoundEffect.CanPlaySFX = true;
+                    SoundEffect.PlayBGM();
                     MainMenu mainMenu = new MainMenu();
                     openMainMenu = true;
                     mainMenu.Show();
