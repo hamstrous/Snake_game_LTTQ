@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.IO;
 
 namespace Snake
 {
@@ -50,6 +51,11 @@ namespace Snake
                 SoundEffect.CanPlayBGM = true;
                 SoundEffect.CanPlaySFX = true;
                 SoundEffect.PlayBGM();
+
+                List<int> list = await SaveScore.GetPlayerScoresForAllModes(currentUserName);
+                string Scores = string.Join(" ", list.Select(score => score.ToString()).ToArray());
+                File.WriteAllText("highscore.txt", Scores);
+
                 if (!openMainMenu)
                 {
                     MainMenu mainMenu = new MainMenu();
