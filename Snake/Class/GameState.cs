@@ -242,6 +242,7 @@ namespace Snake
             if (currentMode >= 0 && currentMode <= 4 && HighScores[currentMode] < HighScore)
             {
                 HighScores[currentMode] = HighScore;
+                SaveScore.SaveOrUpdateHighScore(SignIn.currentUserName, currentMode, HighScore);
             }
 
             string Scores = string.Join(" ", HighScores.Select(score => score.ToString()).ToArray());

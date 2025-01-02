@@ -54,10 +54,8 @@ namespace Snake
                         }
                     }
 
-                    // Kiểm tra nếu điểm mới đủ điều kiện để thêm vào top 5
                     if (minScore == null || totalCount < 5 || score > minScore)
                     {
-                        // Thêm điểm mới vào bảng
                         string insertScoreQuery = @"
                     INSERT INTO ""PlayerScores"" (""Username"", ""Score"", ""Mode"", ""Timestamp"")
                     VALUES (@Username, @Score, @Mode, NOW());
@@ -72,7 +70,6 @@ namespace Snake
                             await cmd.ExecuteNonQueryAsync();
                         }
 
-                        // Loại bỏ điểm thấp hơn top 5 trong chế độ chơi hiện tại
                         string deleteLowScoresQuery = @"
                     WITH RankedScores AS (
                         SELECT ""Id"", ROW_NUMBER() OVER (PARTITION BY ""Mode"" ORDER BY ""Score"" DESC) AS rn
@@ -97,14 +94,57 @@ namespace Snake
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Có lỗi xảy ra khi lưu điểm: " + ex.Message);
+
             }
         }
 
 
+        public static async Task<List<int>> GetPlayerScoresForAllModes(string username)
+        {
+            string privateConnectionString = ConnectionString + ";Timeout=30";
+            if (string.IsNullOrEmpty(privateConnectionString))
+            {
+                MessageBox.Show("Không tìm thấy chuỗi kết nối! Vui lòng kiểm tra file cấu hình.");
+                return new List<int> { 0, 0, 0, 0, 0 };
+            }
 
+            var scores = new List<int> { 0, 0, 0, 0, 0 };
 
+            try
+            {
+                using (var conn = new NpgsqlConnection(privateConnectionString))
+                {
+                    await conn.OpenAsync();
 
+                    string query = @"SELECT ""mode"", ""highscore""FROM ""ownscore""WHERE ""username"" = @Username AND ""mode"" BETWEEN 0 AND 4;";
+
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("Username", username);
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                int mode = Convert.ToInt32(reader["mode"]);
+                                int highscore = Convert.ToInt32(reader["highscore"]);
+
+                                if (mode >= 0 && mode <= 4)
+                                {
+                                    scores[mode] = highscore;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return scores;
+        }
 
         public static async Task GetTopPlayersAsync(string filePath, string filePath2)
         {
@@ -116,37 +156,34 @@ namespace Snake
 
             try
             {
-                // Xử lý file điểm
                 if (File.Exists(filePath))
                 {
-                    File.WriteAllText(filePath, string.Empty); // Xoá nội dung nếu file tồn tại
+                    File.WriteAllText(filePath, string.Empty);
                 }
                 else
                 {
-                    using (File.Create(filePath)) { } // Tạo file mới
+                    using (File.Create(filePath)) { }
                 }
 
-                // Xử lý file tên người dùng
                 if (File.Exists(filePath2))
                 {
-                    File.WriteAllText(filePath2, string.Empty); // Xoá nội dung nếu file tồn tại
+                    File.WriteAllText(filePath2, string.Empty);
                 }
                 else
                 {
-                    using (File.Create(filePath2)) { } // Tạo file mới
+                    using (File.Create(filePath2)) { }
                 }
 
                 using (var conn = new NpgsqlConnection(ConnectionString))
                 {
                     await conn.OpenAsync();
 
-                    // Truy vấn lấy top 5 điểm theo chế độ chơi
                     string query = "SELECT \"Mode\", \"Score\", \"Username\" FROM \"PlayerScores\" ORDER BY \"Mode\", \"Score\" DESC;";
 
                     using (var cmd = new NpgsqlCommand(query, conn))
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        // Khởi tạo Dictionary để lưu kết quả
+
                         var modeScores = new Dictionary<int, List<int>>();
                         var modeUsernames = new Dictionary<int, List<string>>();
 
@@ -162,7 +199,6 @@ namespace Snake
                                 modeUsernames[mode] = new List<string>();
                             }
 
-                            // Chỉ lưu tối đa 5 giá trị cho mỗi mode
                             if (modeScores[mode].Count < 5)
                             {
                                 modeScores[mode].Add(score);
@@ -172,10 +208,9 @@ namespace Snake
 
                         conn.Close();
 
-                        // Ghi dữ liệu ra file .txt cho điểm
-                        using (var writer = new StreamWriter(filePath, false)) // Ghi đè nội dung
+                        using (var writer = new StreamWriter(filePath, false))
                         {
-                            for (int mode = 0; mode < 5; mode++) // Giả định có 5 chế độ chơi (0-4)
+                            for (int mode = 0; mode < 5; mode++)
                             {
                                 if (modeScores.ContainsKey(mode))
                                 {
@@ -189,10 +224,9 @@ namespace Snake
                             }
                         }
 
-                        // Ghi dữ liệu ra file .txt cho tên người dùng
-                        using (var writer2 = new StreamWriter(filePath2, false)) // Ghi đè nội dung
+                        using (var writer2 = new StreamWriter(filePath2, false))
                         {
-                            for (int mode = 0; mode < 5; mode++) // Giả định có 5 chế độ chơi (0-4)
+                            for (int mode = 0; mode < 5; mode++)
                             {
                                 if (modeUsernames.ContainsKey(mode))
                                 {
@@ -210,10 +244,43 @@ namespace Snake
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Có lỗi xảy ra khi lấy dữ liệu: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
         }
 
+
+        public static async Task SaveOrUpdateHighScore(string username, int mode, int newHighScore)
+        {
+            string privateConnectionString = ConnectionString + ";Timeout=30";
+            if (string.IsNullOrEmpty(privateConnectionString))
+            {
+                MessageBox.Show("Không tìm thấy chuỗi kết nối! Vui lòng kiểm tra file cấu hình.");
+                return;
+            }
+
+            try
+            {
+                using (var conn = new NpgsqlConnection(privateConnectionString))
+                {
+                    await conn.OpenAsync();
+
+                    string query = @"INSERT INTO ""ownscore"" (""username"", ""mode"", ""highscore"") VALUES (@Username, @Mode, @NewHighScore) ON CONFLICT (""username"", ""mode"")DO UPDATE SET ""highscore"" = GREATEST(""ownscore"".""highscore"", EXCLUDED.""highscore"");";
+
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("Username", username);
+                        cmd.Parameters.AddWithValue("Mode", mode);
+                        cmd.Parameters.AddWithValue("NewHighScore", newHighScore);
+
+                        await cmd.ExecuteNonQueryAsync();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }
 
