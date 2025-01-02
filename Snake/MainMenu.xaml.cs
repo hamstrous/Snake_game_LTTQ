@@ -15,12 +15,14 @@ namespace Snake
         {
             InitializeComponent();
             SoundEffect.PlayBGM();
+
             this.Loaded += MainMenu_Loaded;
         }
 
         private void MainMenu_Loaded(object sender, RoutedEventArgs e)
         {
             SetAllElementsFocusable(this, false);
+
         }
 
         private void SetAllElementsFocusable(DependencyObject parent, bool focusable)
@@ -77,6 +79,7 @@ namespace Snake
             if (SoundEffect.CanPlayBGM)
             {
                 SettingControl.BGM_image.Source = new BitmapImage(new Uri("/Setting/SFX-on.png", UriKind.Relative));
+                
             }
             else
             {
@@ -97,7 +100,6 @@ namespace Snake
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-
             SoundEffect.PlayButtonSound();
             Exit.Visibility = Visibility.Visible;
         }

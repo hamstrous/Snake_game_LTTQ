@@ -34,9 +34,9 @@ namespace Snake
         {
             SoundEffect.PlayOnOffSound();
             SoundEffect.PauseBGM();
+            SoundEffect.CanPlayBGM = false;
             SignIn signIn = new SignIn();
             signIn.Show();
-
             foreach (Window window in Application.Current.Windows)
             {
                 if (window is not SignIn)
