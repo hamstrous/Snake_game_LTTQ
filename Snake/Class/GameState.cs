@@ -254,6 +254,11 @@ namespace Snake
         {
             HighScores.Clear();
 
+            if (!File.Exists("highscore.txt"))
+            {
+                File.WriteAllText("highscore.txt", "0 0 0 0 0");
+            }
+
             if (File.Exists("highscore.txt"))
             {
                 string savedScores = File.ReadAllText("highscore.txt");
