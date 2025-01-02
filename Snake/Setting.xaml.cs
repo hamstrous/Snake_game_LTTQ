@@ -96,16 +96,14 @@ namespace Snake
             var parentWindow = Window.GetWindow(this);
             if (parentWindow != null)
             {
-                if (parentWindow.WindowStyle == WindowStyle.None)
+                if (parentWindow.WindowState == WindowState.Normal)
                 {
-                    parentWindow.WindowState = WindowState.Normal;
-                    parentWindow.WindowStyle = WindowStyle.SingleBorderWindow;
-                    parentWindow.ResizeMode = ResizeMode.CanResize;
+                    parentWindow.WindowState = WindowState.Maximized;
+                    parentWindow.ResizeMode = ResizeMode.NoResize;
                 }
                 else
                 {
-                    parentWindow.WindowState = WindowState.Maximized;
-                    parentWindow.WindowStyle = WindowStyle.None;
+                    parentWindow.WindowState = WindowState.Normal;
                     parentWindow.ResizeMode = ResizeMode.NoResize;
                 }
             }

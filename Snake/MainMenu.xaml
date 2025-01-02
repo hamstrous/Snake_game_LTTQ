@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
-        Title="MainMenu" Height="800" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
+        Title="Snake" Height="800" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
         FocusVisualStyle="{x:Null}"
         KeyboardNavigation.TabNavigation="None"
         KeyboardNavigation.ControlTabNavigation="None"
         KeyboardNavigation.DirectionalNavigation="None"
-        Focusable="False">
+        Focusable="False"
+        Icon="Assets/icon.ico"
+        WindowStyle="None">
     <Window.Background>
         <ImageBrush ImageSource="Assets/MainMenuBackground.jpg" Stretch="UniformToFill"/>
     </Window.Background>

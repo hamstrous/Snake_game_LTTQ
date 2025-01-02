@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Snake"
-        
+        Icon="Assets/icon.ico"
         mc:Ignorable="d"
-        Title="Window1" Height="476" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  >
+        Title="Sign In" Height="476" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  >
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
