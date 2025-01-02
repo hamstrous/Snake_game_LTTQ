@@ -35,7 +35,7 @@ namespace Snake
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                txtErrorMessage.Text = "Please enter all the required information.";
+                txtErrorMessage.Text = "Please enter correctlly!!";
                 txtErrorMessage.Visibility = Visibility.Visible;
                 return;
             }
@@ -55,6 +55,9 @@ namespace Snake
                 txtErrorMessage.Text = "Incorrect username or password!!";
                 txtErrorMessage.Visibility = Visibility.Visible;
             }
+            SoundEffect.CanPlayBGM = true;
+            SoundEffect.CanPlaySFX = true;
+            SoundEffect.PlayBGM();
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
