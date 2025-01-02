@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
-        Title="Signin" Height="600" Width="450"
+        Title="Sign Up" Height="600" Width="450"
         ResizeMode="NoResize"
+        Icon="Assets/icon.ico"
         WindowStartupLocation="CenterScreen"
         Background="Transparent">
     <Window.Resources>

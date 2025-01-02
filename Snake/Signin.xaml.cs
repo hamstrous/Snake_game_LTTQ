@@ -23,6 +23,7 @@ namespace Snake
     public partial class SignIn : Window
     {
         public static string currentUserName { get; set; }
+        public bool openMainMenu = false;
         public SignIn()
         {
             InitializeComponent();
@@ -46,8 +47,15 @@ namespace Snake
                 currentUserName = txtusername.Text;
                 txtErrorMessage.Text = "Login successful!!";
                 txtErrorMessage.Visibility = Visibility.Visible;
-                MainMenu mainMenu = new MainMenu();
-                mainMenu.Show();
+                SoundEffect.CanPlayBGM = true;
+                SoundEffect.CanPlaySFX = true;
+                SoundEffect.PlayBGM();
+                if (!openMainMenu)
+                {
+                    MainMenu mainMenu = new MainMenu();
+                    openMainMenu = true;
+                    mainMenu.Show();
+                }
                 this.Close();
             }
             else
@@ -55,9 +63,6 @@ namespace Snake
                 txtErrorMessage.Text = "Incorrect username or password!!";
                 txtErrorMessage.Visibility = Visibility.Visible;
             }
-            SoundEffect.CanPlayBGM = true;
-            SoundEffect.CanPlaySFX = true;
-            SoundEffect.PlayBGM();
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
