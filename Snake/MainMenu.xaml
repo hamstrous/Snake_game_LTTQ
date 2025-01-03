@@ -17,6 +17,14 @@
         <ImageBrush ImageSource="Assets/MainMenuBackground.jpg" Stretch="UniformToFill"/>
     </Window.Background>
 
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="resources/dic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
         <Viewbox>
             <Grid KeyboardNavigation.TabNavigation="None"
@@ -31,6 +39,12 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="0.8*"/>
                     </Grid.RowDefinitions>
+
+                    <Button  Style="{StaticResource Tutorial }" Grid.Row="0" Click="Book_click"
+                             Height="90" Width="80" Margin="897,10,0,0"/>
+
+
+
 
                     <Image Source="/MainMenu/board.png" Stretch="Fill" Grid.Row="1"
                 Height="116" Width="248" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -160,5 +174,7 @@
                   KeyboardNavigation.DirectionalNavigation="None"
                             Focusable="False" />
         <local:Leaderboard2 x:Name="Leaderboard2" Visibility="Collapsed" Panel.ZIndex="1"/>
+
+        <local:Tutorial x:Name="Book" Visibility="Collapsed" Panel.ZIndex="1"/>
     </Grid>
 </Window>

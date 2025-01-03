@@ -1,5 +1,5 @@
 ﻿<UserControl x:Class="Snake.Setting"
-                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
@@ -21,11 +21,7 @@
             <Grid>
 
                 <Image Source="/Setting/board.png"  Height="375"  VerticalAlignment="Center" Stretch="Fill" Margin="98,0,98,0"/>
-
-
-
                 <Button x:Name="Back" Click="CloseButton_Click" Style="{StaticResource X}" Height="66" Width="59" Margin="519,10,0,0"/>
-
                 <Image Name="SFX_image"
         Source="/Setting/sound-on.png" Stretch="Fill"
         HorizontalAlignment="Left" Height="141" Margin="154,0,0,0" VerticalAlignment="Center" Width="123"

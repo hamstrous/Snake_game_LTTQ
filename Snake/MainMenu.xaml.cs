@@ -96,7 +96,11 @@ namespace Snake
             SettingControl.Visibility = Visibility.Visible; 
         }
 
-
+        private void Book_click(object sender, RoutedEventArgs e)
+        {
+            SoundEffect.PlayButtonSound();
+            Book.Visibility = Visibility.Visible;
+        }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayButtonSound();

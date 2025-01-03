@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Snake.Tutorial"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Snake"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="Assets/MainMenuBackground.jpg"/>
+    </UserControl.Background>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="resources/dic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Viewbox>
+        <Grid>
+
+            <local:Tutorial2 x:Name="Tutorial2" Visibility="Collapsed" Panel.ZIndex="1"/>
+            <Grid Height="800" Width="1000">
+            <Image Source="LeaderBoard/board.png" Stretch="Fill" Margin="82,0,82,0" />
+            <Button Style="{StaticResource Right-Arrow}" Content="Button"  Click="Next_click"
+                    Margin="904,0,0,0" VerticalAlignment="Center"  Height="70" Width="72"/>
+            
+        </Grid>
+        </Grid>
+    </Viewbox>
+</UserControl>
