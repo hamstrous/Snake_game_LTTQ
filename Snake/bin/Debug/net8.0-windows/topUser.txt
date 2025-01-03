@@ -1,5 +1,5 @@
-PNamDZ testuser04 PNamDZ testuser04 PNamDZ
-1 1 PNamDZ 1 testuser03
-aaa 1 1234 1 1
-PNamDZ PNamDZ PNamDZ testuser04 testuser04
-a PNamDZ PNamDZ testuser04 PNamDZ
+PNamDZ cblnam 1 cbl08nam
+1 testuser03 cblnam
+1 1 cblnam
+PNamDZ 1
+a PNamDZ

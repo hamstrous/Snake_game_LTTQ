@@ -34,6 +34,12 @@
     <Compile Update="ChooseScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Tutorial.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Tutorial2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Leaderboard.xaml">
@@ -64,6 +70,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ChooseScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tutorial.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tutorial2.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Resource Update="Resources\dic.xaml">
