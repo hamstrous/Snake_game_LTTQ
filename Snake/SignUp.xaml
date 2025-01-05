@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Snake"
         mc:Ignorable="d"
-        Title="Sign Up" Height="600" Width="450"
+        Title="Sign Up" Height="800" Width="1000"
         ResizeMode="NoResize"
         Icon="Assets/icon.ico"
         WindowStartupLocation="CenterScreen"
-        Background="Transparent">
+    >
+    <Window.Background>
+        <ImageBrush ImageSource="Sigin-up\background.jpg"></ImageBrush>
+    </Window.Background>
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -17,90 +20,71 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Border CornerRadius="50"            >
-        <Border.Background>
-            <ImageBrush ImageSource="/Sigin-up/background.jpg"
-                        Stretch="Fill"/>
-        </Border.Background>
-        <StackPanel Orientation="Vertical"
-                    Margin="70,103,70,55">
+    <Viewbox>
+        <Grid>
+
+            <Button
+            Style="{StaticResource button}"                                
+            BorderThickness="2" 
+            x:Name="btnBack" Click="btnBack_Click" Content="Back" Height="100" Width="200" FontSize="45" Margin="0,531,551,0"
+            VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <Button
+            Style="{StaticResource signinbutton}"
+            BorderThickness="0" 
+            x:Name="btnCreateAccount" Click="btnCreateAccount_Click" Content="Create" Height="100" Width="200" FontSize="45" Margin="0,531,262,0"
+            VerticalAlignment="Top" HorizontalAlignment="Right"/>
             <TextBlock Height="84"
-                       Text="CREATE ACCOUNT"
-                       HorizontalAlignment="Center"
-                       FontWeight="Medium"
-                       FontSize="45"
-                       FontFamily="Gloucester MT Extra Condensed"
-                       Foreground="#31511E">
+             Text="CREATE ACCOUNT"
+             HorizontalAlignment="Center"
+             FontWeight="Medium"
+             FontSize="80"
+             FontFamily="Gloucester MT Extra Condensed"
+             Foreground="#31511E" Margin="0,149,0,551">
             </TextBlock>
 
-            <TextBlock x:Name="txtErrorMessage" Text="" Foreground="Red" FontSize="25" HorizontalAlignment="Center" Margin="0,0,0,10" Visibility="Collapsed"/>
+            <TextBlock x:Name="txtErrorMessage" Text="" Foreground="Red" FontSize="25" HorizontalAlignment="Center"  TextWrapping="Wrap" TextAlignment="Center" Margin="0,234,0,495" Width="1000"/>
 
 
-            <TextBlock Height="37"
-           Text="Username"
-           HorizontalAlignment="Center"
-           FontWeight="Light"
-           FontSize="30"
-           FontFamily="Gloucester MT Extra Condensed"
-           Foreground="#54473F" Width="286">
-            </TextBlock>
+            <TextBlock
+             Text="Username"
+             HorizontalAlignment="Left"
+             FontWeight="Light"
+             FontSize="50"
+             FontFamily="Gloucester MT Extra Condensed"
+            VerticalAlignment="Top" 
+             Foreground="#54473F" Width="288" Height ="69" Margin="343,264,0,0"/>
 
             <TextBox x:Name="txtUser"
-                     FontSize="20"
-                     FontWeight="Medium"
-                     Background="Transparent"
-                     CaretBrush="Black"
-                     Foreground="#54473F"
-                     BorderBrush="Black"
-                     BorderThickness="0,0,0,1"
-                     Margin="0,5,0,0" Width="285"
-                     Height="28">
-
-            </TextBox>
+           FontSize="40"
+           FontWeight="Medium"
+           Background="Transparent"
+           CaretBrush="Black"
+           Foreground="#54473F"
+           BorderBrush="Black"
+           BorderThickness="0,0,0,1"
+           Margin="347,315,368,420" Width="285"/>
 
 
-            <TextBlock Height="34"
-                    Text="Password"
-                    HorizontalAlignment="Center"
-                    FontWeight="Light"
-                    FontSize="30"
-                    FontFamily="Gloucester MT Extra Condensed"
-                    Foreground="#54473F" Width="286"
-                       Margin="0,25,0,0">
-            </TextBlock>
+            <TextBlock
+          Text="Password"
+           HorizontalAlignment="Left"
+ FontWeight="Light"
+ FontSize="50"
+ FontFamily="Gloucester MT Extra Condensed"
+VerticalAlignment="Top" 
+ Foreground="#54473F" Width="288" Height ="69" Margin="343,400,0,0"/>
 
             <TextBox x:Name="txtPass"
-          FontSize="20"
-          FontWeight="Medium"
-          Background="Transparent"
-          CaretBrush="Black"
-          Foreground="#54473F"
-          BorderBrush="Black"
-          BorderThickness="0,0,0,1"
-          Margin="0,5,0,40" Width="285">
+            FontSize="40"
+            FontWeight="Medium"
+            Background="Transparent"
+            CaretBrush="Black"
+            Foreground="#54473F"
+            BorderBrush="Black"
+            BorderThickness="0,0,0,1"
+            Margin="345,449,370,290" Width="285">
 
             </TextBox>
-
-            <Grid Height="61" Width="315" RenderTransformOrigin="0.513,0.521">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="78*"/>
-                    <ColumnDefinition Width="77*"/>
-                </Grid.ColumnDefinitions >
-                <Button Grid.Column="0"  
-                    Style="{StaticResource button}"                                
-                    BorderThickness="2" 
-                    x:Name="btnBack" Click="btnBack_Click" Content="Back" Width="120" FontSize="23" Margin="10,0,29,0">
-                </Button>
-
-
-                <Button Grid.Column="1"
-                        Style="{StaticResource signinbutton}"
-                        BorderThickness="0" 
-                        x:Name="btnCreateAccount" Click="btnCreateAccount_Click" Content="Create" Width="112" FontSize="23" Margin="22,0,22,0">
-
-                </Button>
-
-            </Grid>
-        </StackPanel>
-    </Border>
+        </Grid>
+    </Viewbox>
 </Window>

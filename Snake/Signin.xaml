@@ -6,8 +6,9 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Snake"
         Icon="Assets/icon.ico"
+        Background="#F6FCDF"
         mc:Ignorable="d"
-        Title="Sign In" Height="476" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  >
+        Title="Sign In" Height="800" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -15,56 +16,36 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid ClipToBounds="True" Background="Black">
-        <Border  CornerRadius="40" Background="#F6FCDF" Margin="0,13,0,10" ClipToBounds="True">
-
-            <StackPanel Orientation="Horizontal">
-
-                <StackPanel Width="345" Height="426">
-                    <Border CornerRadius="40" ClipToBounds="True">
-                        <Image Source="Sigin-up/snake.jpg" Stretch="Fill" Height="426" Width="350">
-                            <Image.Clip>
-                                <RectangleGeometry RadiusX="40" RadiusY="40" Rect="0,0,330,426"/>
-                            </Image.Clip>
-                        </Image>
-                    </Border>
-                </StackPanel>
-
-
-                <StackPanel Width="306" Height="422">
-                    <StackPanel Margin="5 70" Width="230">
-                        <TextBlock Text="SIGN IN" Margin="20,20,20,10" Foreground="#31511E" TextAlignment="Center" FontSize="55" FontFamily="Gloucester MT Extra Condensed" Height="57"/>
-
-                        <TextBlock x:Name="txtErrorMessage" Text="" Foreground="Red" FontSize="14" HorizontalAlignment="Center" Margin="0,0,0,10" Visibility="Collapsed"/>
-
-                        <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
-                            <TextBlock x:Name="textusername" Text="Username" Style="{StaticResource textHint}" Width="67"/>
-                            <TextBox x:Name="txtusername" Margin="10 0" Width="132" Height="21"/>
-                            
-                        </StackPanel>
-
-                        
-                        <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
-                            <TextBlock x:Name="textpassword" Text="Password" Style="{StaticResource textHint}" Width="68"/>
-                            <PasswordBox x:Name="txtpassword" Margin="10 0" Width="130" Height="21" BorderThickness="0"/>
-                        </StackPanel>
-
-                        <StackPanel Margin="0 15 0 0" HorizontalAlignment="Center">
-                            <Button  Style="{StaticResource signinbutton}"                                
-                                    BorderThickness="2" 
-                                    x:Name="btnSignIn" Click="btnSignIn_Click" Content="Sign in" Width="112" FontSize="18"/>
-                        </StackPanel>
-
-                        <StackPanel Margin="10" HorizontalAlignment="Center">
-                            <Button Style="{StaticResource button}"
-                                    BorderThickness="2" 
-                                    
-                                    x:Name="btnSignUp" Click="btnSignUp_Click" Content="Sign up" Width="101" Height="53" FontSize="16"/>
-                        </StackPanel>
-                        
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
+    <Grid Background="#F6FCDF" >
+        <Border BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="20,22,476,29">
+            <Image Source="Sigin-up/snake.jpg" Stretch="Fill"/>
         </Border>
+        <TextBlock x:Name="textusername" Text="Username" Style="{StaticResource textHint}" Margin="565,227,243,491" FontSize="40"/>
+        <Grid>
+            <TextBox x:Name="txtusername" Height="40" Width="200" 
+             VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,242,36,0" FontSize="30"/>
+        </Grid>
+        <TextBlock Text="SIGN IN" Margin="638,96,107,576" Foreground="#31511E" TextAlignment="Center" FontSize="80" FontFamily="Gloucester MT Extra Condensed"/>
+
+        <TextBlock x:Name="txtErrorMessage" Text="" TextWrapping="Wrap" TextAlignment="Center" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="534,178,0,0" Visibility="Visible" Width="462" FontSize="30" Height="52"/>
+
+        <TextBlock x:Name="textpassword" Text="Password" Style="{StaticResource textHint}" Margin="565,299,243,400" FontSize="40"/>
+        <Grid>
+            <PasswordBox x:Name="txtpassword" BorderThickness="0" Height="40" Width="200"
+                         VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,306,36,0" FontSize="30"/>
+        </Grid>
+        <Grid>
+            <Button  Style="{StaticResource signinbutton}"                                
+                BorderThickness="2" 
+                x:Name="btnSignIn" Click="btnSignIn_Click" Content="Sign in" FontSize="35" Margin="0,393,140,0"
+                VerticalAlignment="Top" HorizontalAlignment="Right"
+                     Height="100" Width="180"/>
+        </Grid>
+        <Grid Margin="-4,-2,4,2">
+            <Button Style="{StaticResource button}"
+                BorderThickness="2" 
+                x:Name="btnSignUp" Click="btnSignUp_Click" Content="Sign up" FontSize="35" Margin="0,513,135,0"
+                VerticalAlignment="Top" HorizontalAlignment="Right" Height="100" Width="180"/>
+        </Grid>
     </Grid>
 </Window>

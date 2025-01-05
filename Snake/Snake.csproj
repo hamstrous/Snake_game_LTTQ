@@ -29,6 +29,7 @@
     <None Remove="Assets\icon.ico" />
     <None Remove="Assets\MainMenuBackground.jpg" />
     <None Remove="Assets\Peach.png" />
+    <None Remove="Assets\pixel_snake.png" />
     <None Remove="Assets\Radish.png" />
     <None Remove="Assets\Wall.png" />
     <None Remove="Choose\apple.png" />
@@ -202,6 +203,7 @@
     <Resource Include="Assets\Grape.png" />
     <Resource Include="Assets\MainMenuBackground.jpg" />
     <Resource Include="Assets\Peach.png" />
+    <Resource Include="Assets\pixel_snake.png" />
     <Resource Include="Assets\Radish.png" />
     <Resource Include="Choose\apple.png" />
     <Resource Include="Choose\apple_Dark.png" />

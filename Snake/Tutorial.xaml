@@ -18,14 +18,23 @@
     </UserControl.Resources>
     <Viewbox>
         <Grid>
-
-            <local:Tutorial2 x:Name="Tutorial2" Visibility="Collapsed" Panel.ZIndex="1"/>
             <Grid Height="800" Width="1000">
-            <Image Source="LeaderBoard/board.png" Stretch="Fill" Margin="82,0,82,0" />
-            <Button Style="{StaticResource Right-Arrow}" Content="Button"  Click="Next_click"
+                <Image Source="LeaderBoard/board.png" Stretch="Fill" Margin="82,0,82,0" />
+                <Button Style="{StaticResource Right-Arrow}" Content="Button"  Click="Right_Click"
                     Margin="904,0,0,0" VerticalAlignment="Center"  Height="70" Width="72"/>
-            
-        </Grid>
+                <Button Click="Exit_Click" Style="{StaticResource X}" Content="Button" HorizontalAlignment="Left" Margin="804,27,0,0" VerticalAlignment="Top" Height="76" Width="68"/>
+                <TextBlock HorizontalAlignment="Center" 
+                           Foreground="Wheat" 
+                           Margin="0,91,0,0" TextWrapping="Wrap" Text="GIỚI THIỆU TRÒ CHƠI" VerticalAlignment="Top" Height="65" Width="364"
+                           FontSize ="35" 
+                           FontWeight ="Bold"/>
+                <TextBlock HorizontalAlignment="Center" 
+                           Foreground="White" 
+                           Margin="0,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="676" FontSize ="35" TextAlignment="Justify">
+                    <Run Text="Trò chơi con rắn là một game đơn giản nhưng cực kỳ thú vị và mang tính giải trí cao. Trong trò chơi, bạn điều khiển một chú rắn di chuyển trên màn hình để ăn các &quot;thức ăn&quot; xuất hiện ngẫu nhiên. Mỗi lần ăn được thức ăn, chú rắn sẽ dài thêm và bạn sẽ ghi điểm. "/><Run Language="en-gb" Text="Bạn cần tránh va chạm vào chướng ngại vật và thân để sống sót."/></TextBlock>
+                <Image Margin="202,455,202,72" Source="/Assets/pixel_snake.png" Stretch="Fill"/>
+
+            </Grid>
         </Grid>
     </Viewbox>
 </UserControl>

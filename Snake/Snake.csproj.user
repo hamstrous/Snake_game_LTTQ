@@ -25,6 +25,9 @@
     <Compile Update="SettingGamePause.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Tutorial3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SignUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SettingGamePause.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tutorial3.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignUp.xaml">
