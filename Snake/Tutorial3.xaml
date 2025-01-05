@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Snake.Tutorial3"
+
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Snake"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="Assets/MainMenuBackground.jpg"/>
+    </UserControl.Background>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="resources/dic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Viewbox>
+        <Grid Height="800" Width="1000">
+            <!-- Hình ảnh -->
+            <Image Source="LeaderBoard/board.png" Stretch="Fill" Margin="82,0,82,0" />
+
+            <Button Click="Exit_Click" Style="{StaticResource X}" Content="Button" HorizontalAlignment="Left" Margin="804,27,0,0" VerticalAlignment="Top" Height="76" Width="68"/>
+            <Button Style="{StaticResource Left-Arrow}" Content="Button"   Click="Left_Click"
+                    Margin="10,0,0,0"  Height="70" Width="72" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" 
+           Foreground="Wheat" 
+           Margin="381,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="356"
+           FontSize ="35" 
+           FontWeight ="Bold"><Run Text="CÁC "/><Run Text="TÙY CHỌN"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="474,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" FontSize ="35" TextAlignment="Justify"><Run Language="en-gb" Text="Kích thước"/></TextBlock>
+            <Image Margin="319,110,531,540" Source="/Choose/medium.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="472,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify" Text="Tốc độ"/>
+            <Image Margin="319,230,531,420" Source="/Choose/ava.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="472,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontSize ="35" TextAlignment="Justify"><Run Text="Số "/><Run Language="en-gb" Text="lượng"/><Run Text=" thức ăn"/></TextBlock>
+            <Image Margin="315,348,535,302" Source="/Choose/one.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="472,514,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Language="en-gb" Text="Loại thứ ăn"/></TextBlock>
+            <Image Margin="315,454,535,196" Source="/Choose/apple.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="472,608,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Language="en-gb" Text="Màu rắn"/></TextBlock>
+            <Image Margin="315,568,535,82" Source="/Choose/blue.png" Stretch="Fill"/>
+        </Grid>
+
+    </Viewbox>
+</UserControl>

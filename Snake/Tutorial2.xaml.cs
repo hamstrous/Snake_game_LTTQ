@@ -20,15 +20,23 @@ namespace Snake
     /// </summary>
     public partial class Tutorial2 : UserControl
     {
+        public event Action EventLeftButton;
+        public event Action EventRightButton;
+        public event Action EventExitButton;
         public Tutorial2()
         {
             InitializeComponent();
         }
-
-        private void Back_click(object sender, RoutedEventArgs e)
+        private void Right_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
-            this.Visibility = Visibility.Hidden;
+            EventRightButton?.Invoke();
+        }
+
+        private void Left_Click(object sender, RoutedEventArgs e)
+        {
+            SoundEffect.PlayOnOffSound();
+            EventLeftButton?.Invoke();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -36,6 +44,7 @@ namespace Snake
             
             SoundEffect.PlayOnOffSound();
             this.Visibility = Visibility.Collapsed;
+            EventExitButton?.Invoke();
         }
     }
 }

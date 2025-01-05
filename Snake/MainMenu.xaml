@@ -176,5 +176,7 @@
         <local:Leaderboard2 x:Name="Leaderboard2" Visibility="Collapsed" Panel.ZIndex="1"/>
 
         <local:Tutorial x:Name="Book" Visibility="Collapsed" Panel.ZIndex="1"/>
+        <local:Tutorial2 x:Name="Book2" Visibility="Collapsed" Panel.ZIndex="1"/>
+        <local:Tutorial3 x:Name="Book3" Visibility="Collapsed" Panel.ZIndex="1"/>
     </Grid>
 </Window>

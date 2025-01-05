@@ -20,28 +20,28 @@ namespace Snake
     /// </summary>
     public partial class Tutorial : UserControl
     {
+
+        public event Action EventRightButton;
+        public event Action EventExitButton;
         public Tutorial()
         {
             InitializeComponent();
-            Tutorial2.IsVisibleChanged += Tutorial2_IsVisibleChanged;
-            
         }
 
         
 
-        private void Next_click(object sender, RoutedEventArgs e)
+        private void Right_Click(object sender, RoutedEventArgs e)
         {
             SoundEffect.PlayOnOffSound();
-            Tutorial2.Visibility = Visibility.Visible;
+            EventRightButton?.Invoke();
         }
 
-        private void Tutorial2_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            if (Tutorial2.Visibility == Visibility.Collapsed)
-            {
-                // Khi Tutorial2 ẩn, ẩn cả Tutorial
-                this.Visibility = Visibility.Collapsed;
-            }
+
+            SoundEffect.PlayOnOffSound();
+            this.Visibility = Visibility.Collapsed;
+            EventExitButton?.Invoke();
         }
     }
 }

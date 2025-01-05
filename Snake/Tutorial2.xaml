@@ -22,9 +22,37 @@
             <Image Source="LeaderBoard/board.png" Stretch="Fill" Margin="82,0,82,0" />
 
             <Button Click="Exit_Click" Style="{StaticResource X}" Content="Button" HorizontalAlignment="Left" Margin="804,27,0,0" VerticalAlignment="Top" Height="76" Width="68"/>
-            <Button Style="{StaticResource Left-Arrow}" Content="Button"   Click="Back_click"
+            <Button Style="{StaticResource Left-Arrow}" Content="Button"   Click="Left_Click"
                     Margin="10,0,0,0"  Height="70" Width="72" VerticalAlignment="Center"/>
-
+            <TextBlock HorizontalAlignment="Center" 
+           Foreground="Wheat" 
+           Margin="0,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="324"
+           FontSize ="35" 
+           FontWeight ="Bold" Text="CÁC CHẾ ĐỘ CHƠI"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="291,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify">
+                <Run Text="Chế độ thường: rắn ăn thức ăn và dài lên"/>
+            </TextBlock>
+            <Image Margin="141,104,709,546" Source="/Choose/Classic.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="291,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Chế độ hộp: rắn đẩy hộp tới đích để lấy thức ăn"/></TextBlock>
+            <Image Margin="141,224,709,426" Source="/Choose/Box.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="291,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Chế độ tường: khi rắn ăn, ngẫu nhiên tạo tường là chướng ngại vật"/></TextBlock>
+            <Image Margin="141,342,709,308" Source="/Choose/Wall.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="291,475,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Chế độ hai đầu: khi rắn ăn sẽ thay đổi chiều di chuyển"/></TextBlock>
+            <Image Margin="141,448,709,202" Source="/Choose/Reverse.png" Stretch="Fill"/>
+            <TextBlock HorizontalAlignment="Left" 
+                Foreground="White" 
+                Margin="291,569,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Chế độ hướng: tại ô rắn đổi hướng khi quay lại phải di chuyển theo hướng cũ"/></TextBlock>
+            <Image Margin="141,552,709,98" Source="/Choose/Direction.png" Stretch="Fill"/>
+            <Button Style="{StaticResource Right-Arrow}" Content="Button"  Click="Right_Click"
+                Margin="904,0,0,0" VerticalAlignment="Center"  Height="70" Width="72"/>
         </Grid>
 
     </Viewbox>

@@ -9,13 +9,72 @@ namespace Snake
 {
     public partial class MainMenu : Window
     {
-
+        int curBook = 0;
+        const int maxBook = 2;
         private Setting settingControl;
         public MainMenu()
         {
             InitializeComponent();
-
             this.Loaded += MainMenu_Loaded;
+            Book.EventRightButton += Book_EventNextButton;
+            Book2.EventLeftButton += Book_EventBackButton;
+            Book2.EventRightButton += Book_EventNextButton;
+            Book3.EventLeftButton += Book_EventBackButton;
+
+            Book.EventExitButton += Book_EventExitButton;
+            Book2.EventExitButton += Book_EventExitButton;
+        }
+
+        public void Book_EventNextButton()
+        {
+            switch(curBook)
+            {
+                case 0:
+                    Book.Visibility = Visibility.Collapsed;
+                    Book2.Visibility = Visibility.Visible;
+                    curBook = 1;
+                    break;
+                case 1:
+                    Book3.Visibility = Visibility.Visible;
+                    Book2.Visibility = Visibility.Collapsed;
+                    curBook = 2;
+                    break;
+                case 2:
+                    Book3.Visibility = Visibility.Collapsed;
+                    Book.Visibility = Visibility.Visible;
+                    curBook = 0;
+                    break;
+
+            }
+        }
+
+        public void Book_EventBackButton()
+        {
+            switch (curBook)
+            {
+                case 0:
+                    Book.Visibility = Visibility.Collapsed;
+                    Book3.Visibility = Visibility.Visible;
+                    curBook = 2;
+                    break;
+                case 1:
+                    Book.Visibility = Visibility.Visible;
+                    Book2.Visibility = Visibility.Collapsed;
+                    curBook = 0;
+                    break;
+                case 2:
+                    Book2.Visibility = Visibility.Visible;
+                    Book3.Visibility = Visibility.Collapsed;
+                    curBook = 1;
+                    break;
+            }
+        }
+
+        public void Book_EventExitButton()
+        {
+            Book.Visibility = Visibility.Collapsed;
+            Book2.Visibility = Visibility.Collapsed;
+            curBook = 0;
         }
 
         private void MainMenu_Loaded(object sender, RoutedEventArgs e)
