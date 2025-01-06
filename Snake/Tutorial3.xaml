@@ -25,31 +25,33 @@
             <Button Click="Exit_Click" Style="{StaticResource X}" Content="Button" HorizontalAlignment="Left" Margin="804,27,0,0" VerticalAlignment="Top" Height="76" Width="68"/>
             <Button Style="{StaticResource Left-Arrow}" Content="Button"   Click="Left_Click"
                     Margin="10,0,0,0"  Height="70" Width="72" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Left" 
+            <TextBlock HorizontalAlignment="Left" FontFamily="Gloucester MT Extra Condensed"
            Foreground="Wheat" 
-           Margin="381,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="356"
-           FontSize ="35" 
-           FontWeight ="Bold"><Run Text="CÁC "/><Run Text="TÙY CHỌN"/></TextBlock>
+           Margin="360,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="287"
+           FontSize ="60" 
+           FontWeight ="Bold">
+                <Run Text="GAME OPTIONS "/>
+            </TextBlock>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="474,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" FontSize ="35" TextAlignment="Justify"><Run Language="en-gb" Text="Kích thước"/></TextBlock>
-            <Image Margin="319,110,531,540" Source="/Choose/medium.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="360,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" FontSize ="40" TextAlignment="Justify"><Run  Text="MAP SIZE"/></TextBlock>
+            <Image Margin="168,165,640,450" Source="/Choose/medium.png" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="472,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify" Text="Tốc độ"/>
-            <Image Margin="319,230,531,420" Source="/Choose/ava.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="360,427,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" FontSize ="40" TextAlignment="Justify" Text="SPEED" RenderTransformOrigin="0.698,0.802"/>
+            <Image Margin="188,372,652,271" Source="/Choose/ava.png" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="472,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontSize ="35" TextAlignment="Justify"><Run Text="Số "/><Run Language="en-gb" Text="lượng"/><Run Text=" thức ăn"/></TextBlock>
-            <Image Margin="315,348,535,302" Source="/Choose/one.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="479,593,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize ="40" TextAlignment="Justify"><Run Text="FOOD QUANTITY"/></TextBlock>
+            <Image Margin="314,534,521,102" Source="/Choose/one.png" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="472,514,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Language="en-gb" Text="Loại thứ ăn"/></TextBlock>
-            <Image Margin="315,454,535,196" Source="/Choose/apple.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="658,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontSize ="40" TextAlignment="Justify"><Run Text="FOOD TYPE"/></TextBlock>
+            <Image Margin="496,182,354,468" Source="/Choose/apple.png" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="472,608,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Language="en-gb" Text="Màu rắn"/></TextBlock>
-            <Image Margin="315,568,535,82" Source="/Choose/blue.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="658,427,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" FontSize ="40" TextAlignment="Justify"><Run  Text="SNAKE COLOR"/></TextBlock>
+            <Image Margin="507,380,354,279" Source="/Choose/blue.png" Stretch="Fill"/>
         </Grid>
 
     </Viewbox>

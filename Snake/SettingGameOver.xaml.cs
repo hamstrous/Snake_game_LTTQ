@@ -52,7 +52,7 @@ namespace Snake
                 GameMode.Wall => "Choose/Wall.png",
                 GameMode.Box => "Choose/Box.png",
                 GameMode.Reverse => "Choose/Reverse.png",
-                GameMode.Direction => "Choose/Direction.png",
+                GameMode.Direction => "Choose/Direction_light.png",
             };
             NameMode.Source = new BitmapImage(new Uri(modeImageSource, UriKind.RelativeOrAbsolute));
         }

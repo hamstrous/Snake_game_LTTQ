@@ -26,6 +26,7 @@ namespace Snake
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
+            SoundEffect.PlayOnOffSound();
             SignIn signin = new SignIn();
             signin.Show();
             txtErrorMessage.Visibility = Visibility.Collapsed;
@@ -34,6 +35,7 @@ namespace Snake
 
         private async void btnCreateAccount_Click(object sender, RoutedEventArgs e)
         {
+            SoundEffect.PlayOnOffSound();
             string username = txtUser.Text;
             string password = txtPass.Text;
 
@@ -52,6 +54,7 @@ namespace Snake
                 SignIn signin = new SignIn();
                 signin.Show();
                 this.Close();
+
             }
             else
             {

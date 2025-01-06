@@ -25,14 +25,25 @@
                 <Button Click="Exit_Click" Style="{StaticResource X}" Content="Button" HorizontalAlignment="Left" Margin="804,27,0,0" VerticalAlignment="Top" Height="76" Width="68"/>
                 <TextBlock HorizontalAlignment="Center" 
                            Foreground="Wheat" 
-                           Margin="0,91,0,0" TextWrapping="Wrap" Text="GIỚI THIỆU TRÒ CHƠI" VerticalAlignment="Top" Height="65" Width="364"
-                           FontSize ="35" 
+                           FontFamily="Gloucester MT Extra Condensed"
+                           Margin="0,91,0,0" TextWrapping="Wrap" Text="GAME INTRODUCTION" VerticalAlignment="Top" Height="53" Width="332"
+                           FontSize ="50" 
                            FontWeight ="Bold"/>
                 <TextBlock HorizontalAlignment="Center" 
+                           FontFamily="Gloucester MT Extra Condensed"
                            Foreground="White" 
-                           Margin="0,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="676" FontSize ="35" TextAlignment="Justify">
-                    <Run Text="Trò chơi con rắn là một game đơn giản nhưng cực kỳ thú vị và mang tính giải trí cao. Trong trò chơi, bạn điều khiển một chú rắn di chuyển trên màn hình để ăn các &quot;thức ăn&quot; xuất hiện ngẫu nhiên. Mỗi lần ăn được thức ăn, chú rắn sẽ dài thêm và bạn sẽ ghi điểm. "/><Run Language="en-gb" Text="Bạn cần tránh va chạm vào chướng ngại vật và thân để sống sót."/></TextBlock>
-                <Image Margin="202,455,202,72" Source="/Assets/pixel_snake.png" Stretch="Fill"/>
+                           Margin="0,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="676" FontSize ="50" TextAlignment="Justify" Height="406">
+                    <Run Text="The Snake Game is a simple yet highly entertaining and engaging game. In this game, you control a snake moving on the screen to eat randomly appearing food. Each time the snake eats food, it grows longer, and you earn points. You need to avoid colliding with obstacles and the snake's own body to survive."/></TextBlock>
+                <Image Margin="172,486,232,41" Source="/Assets/pixel_snake.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-4.326"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
 
             </Grid>
         </Grid>

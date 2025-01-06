@@ -26,31 +26,31 @@
                     Margin="10,0,0,0"  Height="70" Width="72" VerticalAlignment="Center"/>
             <TextBlock HorizontalAlignment="Center" 
            Foreground="Wheat" 
-           Margin="0,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="324"
-           FontSize ="35" 
-           FontWeight ="Bold" Text="CÁC CHẾ ĐỘ CHƠI"/>
+           Margin="0,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="209"
+           FontSize ="50" FontFamily="Gloucester MT Extra Condensed"
+           FontWeight ="Bold" Text="GAME MODES"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="291,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify">
-                <Run Text="Chế độ thường: rắn ăn thức ăn và dài lên"/>
+                Foreground="White"  FontFamily="Gloucester MT Extra Condensed"
+                Margin="286,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="531" FontSize ="35" TextAlignment="Justify">
+                <Run Text="Classic Mode: The snake eats food and grows longer."/>
             </TextBlock>
-            <Image Margin="141,104,709,546" Source="/Choose/Classic.png" Stretch="Fill"/>
+            <Image Margin="150,114,714,556" Source="/Choose/Classic.png" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="291,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Chế độ hộp: rắn đẩy hộp tới đích để lấy thức ăn"/></TextBlock>
-            <Image Margin="141,224,709,426" Source="/Choose/Box.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="287,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Box Mode: The snake pushes a box to the target to obtain food."/></TextBlock>
+            <Image Margin="151,234,718,436" Source="/Choose/Box.png" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="291,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Chế độ tường: khi rắn ăn, ngẫu nhiên tạo tường là chướng ngại vật"/></TextBlock>
-            <Image Margin="141,342,709,308" Source="/Choose/Wall.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="291,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Wall Mode: When the snake eats food, random walls are generated as obstacles."/></TextBlock>
+            <Image Margin="146,346,713,327" Source="/Choose/Wall.png" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="291,475,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Chế độ hai đầu: khi rắn ăn sẽ thay đổi chiều di chuyển"/></TextBlock>
-            <Image Margin="141,448,709,202" Source="/Choose/Reverse.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="292,483,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Reverse Mode: When the snake eats food, its direction of movement changes."/></TextBlock>
+            <Image Margin="150,461,709,214" Source="/Choose/Reverse.png" Stretch="Fill"/>
             <TextBlock HorizontalAlignment="Left" 
-                Foreground="White" 
-                Margin="291,569,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Chế độ hướng: tại ô rắn đổi hướng khi quay lại phải di chuyển theo hướng cũ"/></TextBlock>
-            <Image Margin="141,552,709,98" Source="/Choose/Direction.png" Stretch="Fill"/>
+                Foreground="White" FontFamily="Gloucester MT Extra Condensed"
+                Margin="292,580,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" FontSize ="35" TextAlignment="Justify"><Run Text="Direction Mode: At specific tiles, the snake changes direction, but when turning back, it must follow its previous direction."/></TextBlock>
+            <Image Margin="141,569,718,98" Source="/Choose/Direction.png" Stretch="Fill"/>
             <Button Style="{StaticResource Right-Arrow}" Content="Button"  Click="Right_Click"
                 Margin="904,0,0,0" VerticalAlignment="Center"  Height="70" Width="72"/>
         </Grid>
