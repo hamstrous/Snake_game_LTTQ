@@ -23,6 +23,7 @@ namespace Snake
 
             Book.EventExitButton += Book_EventExitButton;
             Book2.EventExitButton += Book_EventExitButton;
+            Book3.EventExitButton += Book_EventExitButton;
         }
 
         public void Book_EventNextButton()
@@ -74,6 +75,7 @@ namespace Snake
         {
             Book.Visibility = Visibility.Collapsed;
             Book2.Visibility = Visibility.Collapsed;
+            Book3.Visibility = Visibility.Collapsed;
             curBook = 0;
         }
 
